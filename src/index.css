@@ -1,1 +1,60 @@
 @import "tailwindcss";
+
+:root {
+  --incub8-deep: #0C2E3A; /* deep ocean */
+  --incub8-sea: #118084;  /* teal sea */
+  --incub8-sand: #D8B790; /* sand */
+  --incub8-wood: #6A3B12; /* wood */
+  --incub8-coral: #FF6A3D; /* coral accent */
+}
+
+html, body, #root { height: 100%; }
+body {
+  background: linear-gradient(180deg, var(--incub8-deep) 0%, #0f3846 30%, var(--incub8-sea) 80%, var(--incub8-deep) 100%);
+  color: #fff;
+}
+
+/* Equal sizing for all event cards */
+.event-card {
+  aspect-ratio: auto;
+  min-height: 360px;
+  height: 420px;           /* default for mobile/tablet */
+  padding: 1.25rem;        /* match card default */
+  border-radius: 20px;
+}
+
+/* Compact variant for landing page (title + description only) */
+.event-card-compact {
+  aspect-ratio: auto;
+  min-height: 240px;
+  height: auto;
+  padding: 1.25rem;
+  border-radius: 20px;
+}
+
+/* Interactive hover utility for all-events cards */
+.interactive-card {
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  cursor: pointer;
+}
+.interactive-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 14px 40px rgba(17, 128, 132, 0.25), 0 0 30px rgba(255, 106, 61, 0.15);
+}
+
+@media (min-width: 768px) { /* md */
+  .event-card { height: 480px; }
+}
+
+@media (min-width: 1024px) { /* lg */
+  .event-card { height: 520px; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up {
+  animation: fadeUp 600ms ease-out both;
+}
