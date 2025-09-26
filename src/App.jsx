@@ -1,7 +1,9 @@
+import LandingPage from "./sections/LandingPage"
+
 function App() {
   return (
     <>
-     <p className="text-2xl font-bold">Incub8</p>
+      <LandingPage />
     </>
   )
 }
