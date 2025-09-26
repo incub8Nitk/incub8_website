@@ -2,7 +2,7 @@ import { useRef, useEffect, useCallback, useState } from 'react';
 import { gsap } from 'gsap';
 import './MagicBento.css';
 
-const DEFAULT_PARTICLE_COUNT = 12;
+const DEFAULT_PARTICLE_COUNT = 20;
 const DEFAULT_SPOTLIGHT_RADIUS = 300;
 const DEFAULT_GLOW_COLOR = '132, 0, 255';
 const MOBILE_BREAKPOINT = 768;
@@ -51,15 +51,16 @@ const createParticleElement = (x, y, color = DEFAULT_GLOW_COLOR) => {
   el.className = 'particle';
   el.style.cssText = `
     position: absolute;
-    width: 4px;
-    height: 4px;
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
-    background: rgba(${color}, 1);
-    box-shadow: 0 0 6px rgba(${color}, 0.6);
+    background: radial-gradient(circle, rgba(${color}, 1) 0%, rgba(${color}, 0.3) 70%, transparent 100%);
+    box-shadow: 0 0 12px rgba(${color}, 0.8), 0 0 24px rgba(${color}, 0.4);
     pointer-events: none;
     z-index: 100;
     left: ${x}px;
     top: ${y}px;
+    filter: blur(0.5px);
   `;
   return el;
 };
@@ -98,6 +99,7 @@ export const ParticleCard = ({
   const memoizedParticles = useRef([]);
   const particlesInitialized = useRef(false);
   const magnetismAnimationRef = useRef(null);
+  const hoverAnimationRef = useRef(null);
 
   const initializeParticles = useCallback(() => {
     if (particlesInitialized.current || !cardRef.current) return;
@@ -113,12 +115,13 @@ export const ParticleCard = ({
     timeoutsRef.current.forEach(clearTimeout);
     timeoutsRef.current = [];
     magnetismAnimationRef.current?.kill();
+    hoverAnimationRef.current?.kill();
 
     particlesRef.current.forEach(particle => {
       gsap.to(particle, {
         scale: 0,
         opacity: 0,
-        duration: 0.3,
+        duration: 0.4,
         ease: 'back.in(1.7)',
         onComplete: () => {
           particle.parentNode?.removeChild(particle);
@@ -143,26 +146,47 @@ export const ParticleCard = ({
         cardRef.current.appendChild(clone);
         particlesRef.current.push(clone);
 
-        gsap.fromTo(clone, { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: 'back.out(1.7)' });
+        // Enhanced particle entrance
+        gsap.fromTo(clone, 
+          { scale: 0, opacity: 0, rotation: 0 },
+          { 
+            scale: 1, 
+            opacity: 1, 
+            duration: 0.6, 
+            ease: 'back.out(2)',
+            delay: Math.random() * 0.2
+          }
+        );
 
+        // Floating animation with more organic movement
         gsap.to(clone, {
-          x: (Math.random() - 0.5) * 100,
-          y: (Math.random() - 0.5) * 100,
-          rotation: Math.random() * 360,
+          x: (Math.random() - 0.5) * 120,
+          y: (Math.random() - 0.5) * 120,
+          rotation: Math.random() * 720,
+          duration: 3 + Math.random() * 4,
+          ease: 'sine.inOut',
+          repeat: -1,
+          yoyo: true
+        });
+
+        // Pulsing opacity for breathing effect
+        gsap.to(clone, {
+          opacity: 0.2 + Math.random() * 0.4,
+          duration: 1.5 + Math.random() * 1,
+          ease: 'sine.inOut',
+          repeat: -1,
+          yoyo: true
+        });
+
+        // Scale pulsing
+        gsap.to(clone, {
+          scale: 0.8 + Math.random() * 0.4,
           duration: 2 + Math.random() * 2,
-          ease: 'none',
+          ease: 'sine.inOut',
           repeat: -1,
           yoyo: true
         });
-
-        gsap.to(clone, {
-          opacity: 0.3,
-          duration: 1.5,
-          ease: 'power2.inOut',
-          repeat: -1,
-          yoyo: true
-        });
-      }, index * 100);
+      }, index * 80);
 
       timeoutsRef.current.push(timeoutId);
     });
@@ -177,11 +201,24 @@ export const ParticleCard = ({
       isHoveredRef.current = true;
       animateParticles();
 
+      // Enhanced hover animation
+      hoverAnimationRef.current = gsap.timeline()
+        .to(element, {
+          scale: 1.02,
+          duration: 0.3,
+          ease: 'power2.out'
+        })
+        .to(element, {
+          boxShadow: '0 20px 60px rgba(17, 128, 132, 0.3), 0 0 40px rgba(255, 106, 61, 0.2)',
+          duration: 0.3,
+          ease: 'power2.out'
+        }, 0);
+
       if (enableTilt) {
         gsap.to(element, {
-          rotateX: 5,
-          rotateY: 5,
-          duration: 0.3,
+          rotateX: 8,
+          rotateY: 8,
+          duration: 0.4,
           ease: 'power2.out',
           transformPerspective: 1000
         });
@@ -192,11 +229,25 @@ export const ParticleCard = ({
       isHoveredRef.current = false;
       clearAllParticles();
 
+      // Smooth reset animation
+      hoverAnimationRef.current?.kill();
+      gsap.timeline()
+        .to(element, {
+          scale: 1,
+          duration: 0.4,
+          ease: 'power2.out'
+        })
+        .to(element, {
+          boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
+          duration: 0.4,
+          ease: 'power2.out'
+        }, 0);
+
       if (enableTilt) {
         gsap.to(element, {
           rotateX: 0,
           rotateY: 0,
-          duration: 0.3,
+          duration: 0.4,
           ease: 'power2.out'
         });
       }
@@ -205,7 +256,7 @@ export const ParticleCard = ({
         gsap.to(element, {
           x: 0,
           y: 0,
-          duration: 0.3,
+          duration: 0.4,
           ease: 'power2.out'
         });
       }
@@ -221,8 +272,8 @@ export const ParticleCard = ({
       const centerY = rect.height / 2;
 
       if (enableTilt) {
-        const rotateX = ((y - centerY) / centerY) * -10;
-        const rotateY = ((x - centerX) / centerX) * 10;
+        const rotateX = ((y - centerY) / centerY) * -15;
+        const rotateY = ((x - centerX) / centerX) * 15;
 
         gsap.to(element, {
           rotateX,
@@ -234,13 +285,13 @@ export const ParticleCard = ({
       }
 
       if (enableMagnetism) {
-        const magnetX = (x - centerX) * 0.05;
-        const magnetY = (y - centerY) * 0.05;
+        const magnetX = (x - centerX) * 0.08;
+        const magnetY = (y - centerY) * 0.08;
 
         magnetismAnimationRef.current = gsap.to(element, {
           x: magnetX,
           y: magnetY,
-          duration: 0.3,
+          duration: 0.2,
           ease: 'power2.out'
         });
       }
@@ -260,17 +311,19 @@ export const ParticleCard = ({
         Math.hypot(x - rect.width, y - rect.height)
       );
 
+      // Enhanced ripple effect
       const ripple = document.createElement('div');
       ripple.style.cssText = `
         position: absolute;
         width: ${maxDistance * 2}px;
         height: ${maxDistance * 2}px;
         border-radius: 50%;
-        background: radial-gradient(circle, rgba(${glowColor}, 0.4) 0%, rgba(${glowColor}, 0.2) 30%, transparent 70%);
+        background: radial-gradient(circle, rgba(${glowColor}, 0.6) 0%, rgba(${glowColor}, 0.3) 30%, transparent 70%);
         left: ${x - maxDistance}px;
         top: ${y - maxDistance}px;
         pointer-events: none;
         z-index: 1000;
+        filter: blur(1px);
       `;
 
       element.appendChild(ripple);
@@ -282,11 +335,23 @@ export const ParticleCard = ({
           opacity: 1
         },
         {
-          scale: 1,
+          scale: 1.2,
           opacity: 0,
-          duration: 0.8,
+          duration: 1.2,
           ease: 'power2.out',
           onComplete: () => ripple.remove()
+        }
+      );
+
+      // Card bounce effect on click
+      gsap.fromTo(element, 
+        { scale: 1.02 },
+        { 
+          scale: 0.98,
+          duration: 0.1,
+          ease: 'power2.out',
+          yoyo: true,
+          repeat: 1
         }
       );
     };

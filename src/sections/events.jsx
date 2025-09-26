@@ -223,7 +223,7 @@ export default function EventsHome() {
             to="/events"
             className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-full transition-colors"
             style={{
-              border: '1px solid color-mix(in oklab, var(--incub8-coral), white 25%)',
+              border: '.5px solid color-mix(in oklab, var(--incub8-coral), white 25%)',
               background: 'color-mix(in oklab, var(--incub8-coral), transparent 80%)',
               color: 'white'
             }}
