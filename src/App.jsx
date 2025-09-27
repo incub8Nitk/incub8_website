@@ -5,6 +5,10 @@ function App() {
   return (
     <>
       <LandingPage />
+<<<<<<< HEAD
+=======
+      <Whatisincub8 />
+>>>>>>> aboutandpast
       <EventsHome />
     </>
   )
