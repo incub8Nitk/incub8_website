@@ -1,18 +1,15 @@
-import React, { useState, useRef } from 'react'
-import LandingPage from "./sections/LandingPage"
-import EventsHome from "./sections/events"
-import Whatisincub8 from "./sections/whatisincub8"
+import React from 'react';
+import LandingPage from './sections/LandingPage';
+import AboutAndEvents from './sections/AboutAndEvents'; // Import the new combined component
 
 function App() {
-
-
   return (
-    <>
+    <div>
       <LandingPage />
-      <Whatisincub8 />
-      <EventsHome />
-    </>
-  )
+      <AboutAndEvents /> {/* This now contains both the "About" and "Events" sections */}
+      {/* Other sections of your website */}
+    </div>
+  );
 }
 
-export default App
+export default App;

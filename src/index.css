@@ -10,7 +10,7 @@
 
 html, body, #root { height: 100%; }
 body {
-  background: linear-gradient(180deg, var(--incub8-deep) 0%, #0f3846 30%, var(--incub8-sea) 80%, var(--incub8-deep) 100%);
+  background: var(--incub8-deep);
   color: #fff;
 }
 
@@ -57,4 +57,20 @@ body {
 
 .fade-up {
   animation: fadeUp 600ms ease-out both;
+}
+
+.scroll-reveal-container {
+  will-change: transform, filter, opacity;
+}
+
+/* Animated Border Styles */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animated-border-container {
+  position: relative;
+  background: transparent;
 }
