@@ -1,14 +1,17 @@
 import React from 'react';
 import LandingPage from './sections/LandingPage';
-import AboutAndEvents from './sections/AboutAndEvents'; // Import the new combined component
+import EventsHome from './sections/events';
+import PastSpeakers from './sections/PastSpeakers';
+import PastSponcers from './sections/pastSponcers';
 
 function App() {
   return (
-    <div>
+    <>
       <LandingPage />
-      <AboutAndEvents /> {/* This now contains both the "About" and "Events" sections */}
-      {/* Other sections of your website */}
-    </div>
+      <EventsHome />
+      <PastSpeakers />
+      <PastSponcers />
+    </>
   );
 }
 

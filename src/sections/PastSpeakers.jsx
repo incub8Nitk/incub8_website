@@ -1,4 +1,5 @@
 import React from 'react';
+import SpotlightCard from './SpotlightCard';
 
 const speakersData = [
   {
@@ -46,51 +47,52 @@ export default function PastSpeakers() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
           {speakersData.map((speaker, index) => (
-            <div 
-              key={index} 
-              className="fade-up flex flex-col items-center"
-              style={{ animationDelay: `${index * 150}ms` }}
-            >
+            <SpotlightCard key={index} spotlightColor="rgba(17, 128, 132, 0.28)">
               <div 
-                style={{
-                  width: '280px',
-                  height: '280px',
-                  borderRadius: '12px',
-                  overflow: 'hidden',
-                  marginBottom: '24px'
-                }}
+                className="fade-up flex flex-col items-center"
+                style={{ animationDelay: `${index * 150}ms` }}
               >
-                <img
-                  src={speaker.image}
-                  alt={speaker.name}
+                <div 
                   style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'contain',
-                    objectPosition: 'center',
-                    display: 'block'
+                    width: '280px',
+                    height: '280px',
+                    borderRadius: '12px',
+                    overflow: 'hidden',
+                    marginBottom: '24px'
                   }}
-                />
-              </div>
-
-              <div className="text-center">
-                <h3 
-                  className="text-xl font-semibold mb-2"
-                  style={{ color: 'var(--incub8-sand)' }}
                 >
-                  {speaker.name}
-                </h3>
-                <p className="text-white/90 text-sm mb-1 font-medium">
-                  {speaker.title}
-                </p>
-                <p className="text-white/70 text-sm mb-3">
-                  {speaker.company}
-                </p>
-                <p className="text-white/80 text-xs max-w-xs">
-                  {speaker.description}
-                </p>
+                  <img
+                    src={speaker.image}
+                    alt={speaker.name}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'contain',
+                      objectPosition: 'center',
+                      display: 'block'
+                    }}
+                  />
+                </div>
+
+                <div className="text-center">
+                  <h3 
+                    className="text-xl font-semibold mb-2"
+                    style={{ color: 'var(--incub8-sand)' }}
+                  >
+                    {speaker.name}
+                  </h3>
+                  <p className="text-white/90 text-sm mb-1 font-medium">
+                    {speaker.title}
+                  </p>
+                  <p className="text-white/70 text-sm mb-3">
+                    {speaker.company}
+                  </p>
+                  <p className="text-white/80 text-xs max-w-xs">
+                    {speaker.description}
+                  </p>
+                </div>
               </div>
-            </div>
+            </SpotlightCard>
           ))}
         </div>
 
