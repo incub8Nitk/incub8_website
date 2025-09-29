@@ -3,6 +3,8 @@ import Whatisincub8 from './Whatisincub8';
 import EventsPage from './EventsPage';
 import PastSpeakers from './PastSpeakers';
 import imageincubbgext from '/imageincubbgext.jpg';
+import PastSponcers from './pastSponcers';
+
 
 export default function AboutAndEvents() {
   return (
@@ -17,6 +19,7 @@ export default function AboutAndEvents() {
       <Whatisincub8 />
       <EventsPage />
       <PastSpeakers />
+      <PastSponcers />
     </div>
   );
 }
