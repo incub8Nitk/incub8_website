@@ -27,7 +27,7 @@ const speakersData = [
 
 export default function PastSpeakers() {
   return (
-    <section className="relative text-white py-16">
+    <section id="past-speakers" className="relative text-white py-16">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
         <div className="mb-12 text-center">
           <h1 

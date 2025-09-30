@@ -3,7 +3,7 @@ import ScrollReveal from '../components/ScrollReveal';
 
 export default function Whatisincub8() {
   return (
-    <div style={{
+    <div id="whatisincub8" style={{
       padding: '40px 20px 20px', // Reduced top padding from 80px to 40px, bottom from 10px to 20px
       textAlign: 'center',
       maxWidth: '1200px', // Increased width for the content container
