@@ -10,7 +10,9 @@ export default function LandingPage() {
         // Prevent the default anchor link behavior
         e.preventDefault();
         const targetId = e.currentTarget.getAttribute('href');
-        gsap.to(window, { duration: 1.5, scrollTo: { y: targetId, offsetY: 70 }, ease: 'power2.inOut' });
+        gsap.to(window, { duration: 0.5, scrollTo: { y: targetId, offsetY: 70 },
+            ease: "sine.inOut" 
+            });
     };
 
     return (
@@ -28,7 +30,7 @@ export default function LandingPage() {
                     <li><a href="#events-section" onClick={handleNavClick} className="hover:text-gray-300 transition-colors">Events</a></li>
                     <li><a href="#past-speakers" onClick={handleNavClick} className="hover:text-gray-300 transition-colors">Past Speakers</a></li>
                     <li><a href="#gallery" onClick={handleNavClick} className="hover:text-gray-300 transition-colors">Gallery</a></li>
-                    <li><a href="#contact" onClick={handleNavClick} className="hover:text-gray-300 transition-colors">Contact</a></li>
+                    <li><a href="#ocean-footer" onClick={handleNavClick} className="hover:text-gray-300 transition-colors">Contact</a></li>
                 </ul>
             </nav>
             <div className="relative z-10 flex flex-col items-start mt-29 ml-20 h-full text-white">

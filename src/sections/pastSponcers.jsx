@@ -1,17 +1,28 @@
 import React from 'react'
 import LogoLoop from './LogoLoop'
-import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss } from 'react-icons/si'
 
-const techLogos = [
-  { node: <SiReact />, title: "React", href: "https://react.dev" },
-  { node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
-  { node: <SiTypescript />, title: "TypeScript", href: "https://www.typescriptlang.org" },
-  { node: <SiTailwindcss />, title: "Tailwind CSS", href: "https://tailwindcss.com" },
+const imageLogos = [
+  { src: "/pastSponcers/StartupVisors.jpg", alt: "StartupVisors"},
+  { src: "/pastSponcers/IMFS.jpg", alt: "IMFS" },
+  { src: "/pastSponcers/Adrenalin.jpg", alt: "Adrenalin" },
+  { src: "/pastSponcers/Aethos.jpg", alt: "Aethos" },
+  { src: "/pastSponcers/ProductFolks.jpg", alt: "ProductFolks" },
+  { src: "/pastSponcers/IndiaAccelerator.jpg", alt: "IndiaAccelerator" },
+  { src: "/pastSponcers/MastersUnion.jpg", alt: "MastersUnion" },
+  { src: "/pastSponcers/StartupLab.jpg", alt: "StartupLab" },
+  { src: "/pastSponcers/InterviewBuddy.jpg", alt: "InterviewBuddy" },
+  { src: "/pastSponcers/IMS.jpg", alt: "IMS" },
+  { src: "/pastSponcers/Abhibus.jpg", alt: "Abhibus" },
+  { src: "/pastSponcers/DAD.jpg", alt: "DAD" },
+  { src: "/pastSponcers/EaseMyTrip.jpg", alt: "EaseMyTrip" },
+  { src: "/pastSponcers/MathWorks.jpg", alt: "MathWorks" },
+  { src: "/pastSponcers/Unstop.jpg", alt: "Unstop" },
+  { src: "/pastSponcers/TruScholar.jpg", alt: "TruScholar" },
 ]
 
 export default function PastSponcers() {
   return (
-    <section className="relative text-white py-16">
+    <section id="past-sponsors" className="relative text-white py-16">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
         <div className="mb-8 text-center">
           <h2 className="text-3xl md:text-4xl font-semibold" style={{ color: 'var(--incub8-sand)' }}>
@@ -24,7 +35,7 @@ export default function PastSponcers() {
 
         <div style={{ height: '140px', position: 'relative', overflow: 'hidden', background: 'linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0))', borderRadius: '16px' }}>
           <LogoLoop
-            logos={techLogos}
+            logos={imageLogos}
             speed={120}
             direction="left"
             logoHeight={48}
