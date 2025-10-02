@@ -14,7 +14,7 @@ export default function Footer() {
     const targetId = e.currentTarget.getAttribute('href');
     gsap.to(window, { 
       duration: 0.5, 
-      scrollTo: { y: targetId, offsetY: 70 },
+      scrollTo: { y: targetId, offsetY: 71 },
       ease: "sine.inOut" 
     });
   };

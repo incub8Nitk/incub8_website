@@ -390,7 +390,7 @@ export default function DomeGallery({
           let vy = vMagY * dirY;
           if (Math.abs(vx) < 0.001 && Math.abs(vy) < 0.001 && Array.isArray(movement)) {
             const [mx, my] = movement;
-            vx = clamp((mx / dragSensitivity) * 0.02, -1.2, 1.2);
+            vx = clamp((mx / dragSensitivity) * 0.03, -1.2, 1.2);
             vy = clamp((my / dragSensitivity) * 0.02, -1.2, 1.2);
           }
           if (Math.abs(vx) > 0.005 || Math.abs(vy) > 0.005) {

@@ -30,7 +30,7 @@ function createTextTexture(gl, text, font = 'bold 30px monospace', color = 'blac
   context.font = font;
   const metrics = context.measureText(text);
   const textWidth = Math.ceil(metrics.width);
-  const textHeight = Math.ceil(parseInt(font, 10) * 1.2);
+  const textHeight = Math.ceil(parseInt(font, 10) * 1.3);
   canvas.width = textWidth + 20;
   canvas.height = textHeight + 20;
   context.font = font;
