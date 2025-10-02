@@ -4,47 +4,47 @@ import './DomeGallery.css';
 
 const DEFAULT_IMAGES = [
   {
-    src: '/Gallery/DSC03049.JPG',
+    src: '/Gallery/DSC03049.jpg',
     alt: 'DSC03049'
   },
   {
-    src: '/Gallery/Nova_1.JPG',
+    src: '/Gallery/Nova_1.jpg',
     alt: 'Nova_1'
   },
   {
-    src: '/Gallery/Nova_2.JPG',
+    src: '/Gallery/Nova_2.jpg',
     alt: 'Nova_2'
   },
   {
-    src: '/Gallery/speakers.JPG',
+    src: '/Gallery/speakers.jpg',
     alt: 'Speakers'
   },
   {
-    src: '/Gallery/Incub8_Main.JPG',
+    src: '/Gallery/Incub8_Main.jpg',
     alt: 'Incub8 Main'
   },
   {
-    src: '/Gallery/grover.JPG',
+    src: '/Gallery/grover.jpg',
     alt: 'Grover'
   },
   { 
-    src: '/Gallery/grover_2.JPG',
+    src: '/Gallery/grover_2.jpg',
     alt: 'Grover_2' 
   },
   {
-    src: '/Gallery/opening.JPG',
+    src: '/Gallery/opening.jpg',
     alt: 'Opening'
   },
   {
-    src: '/Gallery/audience.JPG',
+    src: '/Gallery/audience.jpg',
     alt: 'Audience'
   },
   {
-    src: '/Gallery/striver_1.JPG',
+    src: '/Gallery/striver_1.jpg',
     alt: 'Striver_1'
   },
   {
-    src: '/Gallery/striver_2.JPG',
+    src: '/Gallery/striver_2.jpg',
     alt: 'Striver_2'
   }
 ];
