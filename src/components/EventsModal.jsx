@@ -29,11 +29,11 @@ export default function EventsModal({ isOpen, onClose }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       {/* Backdrop */}
-      <div 
+      <div
         className="absolute inset-0 bg-black bg-opacity-80 backdrop-blur-sm"
         onClick={onClose}
       />
-      
+
       {/* Modal Content */}
       <div className="relative w-full max-w-7xl mx-4 max-h-[90vh] overflow-hidden">
         <div className="bg-gradient-to-br from-slate-900/95 to-slate-800/95 backdrop-blur-md rounded-2xl border border-white/10 shadow-2xl">
@@ -56,7 +56,7 @@ export default function EventsModal({ isOpen, onClose }) {
               </svg>
             </button>
           </div>
-          
+
           {/* Events Grid */}
           <div className="p-6 max-h-[calc(90vh-120px)] overflow-y-auto">
             <div className="flex flex-wrap justify-center gap-6">
@@ -67,7 +67,7 @@ export default function EventsModal({ isOpen, onClose }) {
                   style={{
                     animationDelay: `${idx * 50}ms`,
                     width: '323px',
-                    height: '365px',
+                    height: '400px',
                     flexShrink: 0
                   }}
                 >
@@ -97,7 +97,7 @@ export default function EventsModal({ isOpen, onClose }) {
                         {event.title}
                       </h3>
                       <p className="text-white/95 mb-3 text-sm flex-1 overflow-hidden">{event.short}</p>
-                      
+
                       <div className="space-y-2 text-sm">
                         <div className="flex flex-col gap-1">
                           <span className="text-xs font-medium" style={{ color: 'var(--incub8-sea)' }}>
@@ -105,14 +105,14 @@ export default function EventsModal({ isOpen, onClose }) {
                           </span>
                           <span className="text-white/90 text-xs">{event.why}</span>
                         </div>
-                        
+
                         <div className="flex flex-col gap-1">
                           <span className="text-xs font-medium" style={{ color: 'var(--incub8-sea)' }}>
                             How it works:
                           </span>
                           <span className="text-white/90 text-xs">{event.how}</span>
                         </div>
-                        
+
                         <div className="flex flex-col gap-1">
                           <span className="text-xs font-medium" style={{ color: 'var(--incub8-sea)' }}>
                             Outcome:
@@ -121,8 +121,28 @@ export default function EventsModal({ isOpen, onClose }) {
                         </div>
                       </div>
                     </div>
-                    
-                    <div className="h-1 w-full mt-4" style={{ background: 'linear-gradient(90deg, var(--incub8-coral), var(--incub8-wood))', opacity: 0.9 }} />
+                    {event.applyLink && (
+                      <button
+                        className="cursor-pointer inline-flex items-center gap-2 px-4 py-2 mt-4 rounded-full transition-colors text-sm"
+                        style={{
+                          border: '.5px solid color-mix(in oklab, var(--incub8-coral), white 25%)',
+                          background: 'color-mix(in oklab, var(--incub8-coral), transparent 80%)',
+                          color: 'white'
+                        }}
+                        onClick={() => {
+                          window.open(event.applyLink, '_blank');
+                        }}
+                        onMouseEnter={e => {
+                          e.currentTarget.style.background = 'color-mix(in oklab, var(--incub8-coral), transparent 65%)';
+                        }}
+                        onMouseLeave={e => {
+                          e.currentTarget.style.background = 'color-mix(in oklab, var(--incub8-coral), transparent 80%)';
+                        }}
+                      >
+                        Apply
+                      </button>
+                    )}
+                    {/* <div className="h-1 w-full mt-4" style={{ background: 'linear-gradient(90deg, var(--incub8-coral), var(--incub8-wood))', opacity: 0.9 }} /> */}
                   </ParticleCard>
                 </div>
               ))}
