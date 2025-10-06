@@ -159,7 +159,7 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Newsletter */}
+            {/* Newsletter
             <div className="space-y-6">
               <h3 className="text-xl font-semibold text-white">Stay Updated</h3>
               <p className="text-blue-200/80 text-sm">
@@ -177,7 +177,7 @@ export default function Footer() {
                   </svg>
                 </button>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Bottom Bar */}

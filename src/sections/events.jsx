@@ -4,7 +4,7 @@ import { ParticleCard } from './MagicBento'
 
 export const eventsData = [
   {
-    title: "Case Study Challenge – Crack the Code of Business! 📊",
+    title: "Case Study Challenge - Crack the Code of Business! 📊",
     short:
       "Teams act as business consultants, solving a real-world business case by analysing problems, developing solutions, and presenting to judges.",
     details:
@@ -13,9 +13,10 @@ export const eventsData = [
       "Fosters critical thinking, problem-solving, and strategic consulting skills.",
     how: "Report submission → Shortlisting → Live presentations.",
     outcome: "Best actionable solution wins.",
+    applyLink: "https://forms.gle/riSjp7pDQPNAKC4z9"
   },
   {
-    title: "Ideathon – Where Ideas Meet Innovation 💡",
+    title: "Ideathon - Where Ideas Meet Innovation 💡",
     short:
       "Participants act as entrepreneurs, creating innovative business models or prototypes in Business or Tech tracks to address problem statements.",
     details:
@@ -23,9 +24,10 @@ export const eventsData = [
     why: "Encourages entrepreneurial thinking, creativity, and pitching skills.",
     how: "Teams design and present business models or functional prototypes.",
     outcome: "Most innovative and feasible idea wins.",
+    applyLink: "https://forms.gle/cyrkGfACoCETthP96"
   },
   {
-    title: "Local to Vocal – Amplify the Unsung Heroes 📢",
+    title: "Local to Vocal - Amplify the Unsung Heroes 📢",
     short:
       "Participants create and implement a digital marketing strategy to uplift a local small-scale business, showcasing real-world impact.",
     details:
@@ -34,9 +36,10 @@ export const eventsData = [
       "Hands-on marketing with social impact, combining creativity with real-world results.",
     how: "Submit marketing plan → Execute strategy → Final presentations.",
     outcome: "Team with the greatest real impact wins.",
+    applyLink: "https://forms.gle/oUhYFtKPKKkkoB5w6"
   },
   {
-    title: "Market Mavericks – The Trading Clash 📈",
+    title: "Market Mavericks - The Trading Clash 📈",
     short:
       "An online stock market simulation where participants trade virtually, testing financial acumen, risk management, and adaptability.",
     details:
@@ -45,9 +48,10 @@ export const eventsData = [
     how:
       "Participants trade on a virtual platform over a set time period.",
     outcome: "Highest net profit wins.",
+    applyLink: "https://forms.gle/TyT1dtEZbx9KvLfw8"
   },
   {
-    title: "Youth Parliament – Debate the Future 🗣️",
+    title: "Youth Parliament - Debate the Future 🗣️",
     short:
       "A parliament-style debate where participants argue over controversial business topics.",
     details:
@@ -56,9 +60,10 @@ export const eventsData = [
     how:
       "Structured moderated rounds with arguments, rebuttals, and cross-questions.",
     outcome: "Most persuasive debaters declared winners.",
+    applyLink: "https://forms.gle/p7jpjFWnsDmcxpFy6"
   },
   {
-    title: "Product Advertising – Sell the Unsellable! 🎯",
+    title: "Product Advertising - Sell the Unsellable! 🎯",
     short:
       "Teams market ordinary or “boring” products in the most creative way possible.",
     details:
@@ -66,9 +71,10 @@ export const eventsData = [
     why: "Improves creativity, salesmanship, and communication.",
     how: "Teams design and pitch ads for given products.",
     outcome: "Most entertaining and persuasive pitch wins.",
+    applyLink: "https://forms.gle/9egRiSY3B2TBEmRh7"
   },
   {
-    title: "Mock IPL Auction – The Game Behind the Game 🏏💰",
+    title: "Mock IPL Auction - The Game Behind the Game 🏏💰",
     short:
       "A simulated IPL-style auction where teams act as franchise owners.",
     details:
@@ -76,6 +82,7 @@ export const eventsData = [
     why: "Combines cricket knowledge, budgeting, and strategy.",
     how: "Finance/Cricket quiz → Top teams qualify → Auction round.",
     outcome: "Best balanced team strategy wins.",
+    applyLink: "https://forms.gle/JDYQf5qyQWCPtwx17"
   },
   {
     title: "Pitch to VC",
@@ -86,16 +93,18 @@ export const eventsData = [
     how:
       "Teams create business plans and pitch decks, then present to VCs.",
     outcome: "Most convincing and investable pitch wins.",
+    applyLink: "https://forms.gle/oHNN5K9frihDuHei9"
   },
   {
     title: "Hackathon",
     short:
-      "A 24–48 hour coding competition to build software/hardware solutions for a problem.",
+      "A 24-48 hour coding competition to build software/hardware solutions for a problem.",
     details:
-      "A 24–48 hour coding competition where teams solve a given problem through software or hardware solutions.",
+      "A 24-48 hour coding competition where teams solve a given problem through software or hardware solutions.",
     why: "Encourages innovation, teamwork, and technical excellence.",
     how: "Coding sprint → Prototype submission → Presentations.",
     outcome: "Most innovative and functional prototype wins.",
+    applyLink: "https://forms.gle/PtdXATbxaCLJ2nEv6"
   },
   {
     title: "Find your Mentor",
@@ -106,6 +115,7 @@ export const eventsData = [
     why: "One-on-one guidance and speed-mentoring opportunities.",
     how: "Networking sessions + reflections submission.",
     outcome: "Strongest engaged participants recognised.",
+    // No applyLink provided
   },
   {
     title: "Startup EXPO",
@@ -117,9 +127,10 @@ export const eventsData = [
     how: "Teams set up booths for demonstrations.",
     outcome:
       "Startup with strongest innovation and market potential wins.",
+    applyLink: "https://forms.gle/TRdcJyrQjFRrGqnw5"
   },
   {
-    title: "CSR – Corporate Social Responsibility",
+    title: "CSR - Corporate Social Responsibility",
     short:
       "A social innovation challenge to design CSR initiatives for real impact.",
     details:
@@ -127,9 +138,10 @@ export const eventsData = [
     why: "Encourages balancing profit with purpose.",
     how: "Teams propose and present CSR projects.",
     outcome: "Best impactful idea wins.",
+    applyLink: "https://forms.gle/8DGrYa2nQZ76icbeA"
   },
   {
-    title: "Bootcamp – Workshop Live Development",
+    title: "Bootcamp - Workshop Live Development",
     short:
       "A hands-on skill-building workshop where participants collaboratively build projects.",
     details:
@@ -137,6 +149,7 @@ export const eventsData = [
     why: "Practical teamwork and mentor feedback.",
     how: "Live coding/design session → Final showcase.",
     outcome: "Best working project wins.",
+    // No applyLink provided
   },
   {
     title: "Campus Innovation",
@@ -146,6 +159,7 @@ export const eventsData = [
     how:
       "Teams identify issues → Submit proposals/prototypes → Present to judges.",
     outcome: "Most practical campus solution wins.",
+    // No applyLink provided
   },
   {
     title: "Etalk",
@@ -156,6 +170,7 @@ export const eventsData = [
     why: "Gain career and entrepreneurial insights from experts.",
     how: "Talks + Q&A/panel discussions.",
     outcome: "Participants gain inspiration and recognition.",
+    // No applyLink provided
   },
   {
     title: "Panel Discussion",
@@ -164,6 +179,7 @@ export const eventsData = [
     why: "Learn diverse perspectives and latest industry insights.",
     how: "Panel discussion + audience Q&A.",
     outcome: "Most engaged participants recognised.",
+    // No applyLink provided
   },
   {
     title: "Expert Nexus (Workshop)",
@@ -174,6 +190,7 @@ export const eventsData = [
     why: "Deep dive into specialised skills.",
     how: "Hands-on/lecture workshops + deliverables.",
     outcome: "Best project outputs or engagement recognised.",
+    // No applyLink provided
   },
 ]
 
@@ -201,7 +218,28 @@ export function EventCard({ event, compact = false }) {
     >
       <h3 className="text-lg md:text-xl font-semibold mb-2" style={{ color: 'var(--incub8-sand)' }}>{event.title}</h3>
       <p className="text-white/95">{event.short}</p>
-      <div className="h-1 w-full mt-4" style={{ background: 'linear-gradient(90deg, var(--incub8-coral), var(--incub8-wood))', opacity: 0.9 }} />
+      <div className="h-1 w-full mt-4" style={{ background: 'linear-gradient(90deg, var(--incub8-coral), var(--incub8-wood))', opacity: 0.3 }} />
+      <button
+        {...(!event.applyLink ? { style: { display: 'none' } } : {})}
+        className="cursor-pointer inline-flex items-center gap-2 px-4 py-2 mt-4 rounded-full transition-colors text-sm "
+        onClick={() => {
+          if (event.applyLink) window.open(event.applyLink, '_blank');
+        }}
+        style={{
+          border: '.5px solid color-mix(in oklab, var(--incub8-coral), white 25%)',
+          background: 'color-mix(in oklab, var(--incub8-coral), transparent 80%)',
+          color: 'white',
+          ...(event.applyLink ? {} : { display: 'none' })
+        }}
+        onMouseEnter={e => {
+          e.currentTarget.style.background = 'color-mix(in oklab, var(--incub8-coral), transparent 65%)';
+        }}
+        onMouseLeave={e => {
+          e.currentTarget.style.background = 'color-mix(in oklab, var(--incub8-coral), transparent 80%)';
+        }}
+      >
+        Apply
+      </button>
     </ParticleCard>
   )
 }
