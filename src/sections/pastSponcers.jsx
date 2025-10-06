@@ -38,7 +38,7 @@ export default function PastSponcers() {
             logos={imageLogos}
             speed={120}
             direction="left"
-            logoHeight={48}
+            logoHeight={80}
             gap={40}
             pauseOnHover
             scaleOnHover
