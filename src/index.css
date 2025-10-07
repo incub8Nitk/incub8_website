@@ -41,7 +41,7 @@ body {
 /* Compact variant for landing page (title + description only) */
 .event-card-compact {
   aspect-ratio: auto;
-  min-height: 240px;
+  min-height: 400px;
   height: auto;
   padding: 1.25rem;
   border-radius: 20px;

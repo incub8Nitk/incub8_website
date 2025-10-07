@@ -67,7 +67,7 @@ export default function EventsModal({ isOpen, onClose }) {
                   style={{
                     animationDelay: `${idx * 50}ms`,
                     width: '323px',
-                    height: '400px',
+                    height: '450px',
                     flexShrink: 0
                   }}
                 >
@@ -119,6 +119,18 @@ export default function EventsModal({ isOpen, onClose }) {
                           </span>
                           <span className="text-white/90 text-xs">{event.outcome}</span>
                         </div>
+                      </div>
+                      <div className="flex items-center gap-2 mt-3">
+                        <span style={{ display: 'inline-flex', alignItems: 'center' }}>
+                          {/* Location icon (SVG) */}
+                          <svg width="16" height="16" fill="none" viewBox="0 0 20 20" style={{ marginRight: '0.4em' }}>
+                            <path
+                              d="M10 2C6.686 2 4 4.686 4 8c0 4.418 5.09 9.36 5.307 9.57a1 1 0 0 0 1.386 0C10.91 17.36 16 12.418 16 8c0-3.314-2.686-6-6-6zm0 13.293C8.14 13.09 6 10.418 6 8a4 4 0 1 1 8 0c0 2.418-2.14 5.09-4 7.293zM10 5.5A2.5 2.5 0 1 0 10 10.5 2.5 2.5 0 0 0 10 5.5zm0 3A0.5 0.5 0 1 1 10 7.5a0.5 0.5 0 0 1 0 1z"
+                              fill="var(--incub8-sea)"
+                            />
+                          </svg>
+                        </span>
+                        <span className="text-xs text-white/80">{event.venue}</span>
                       </div>
                     </div>
                     {event.applyLink && (

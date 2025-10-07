@@ -14,9 +14,9 @@ export default function EventsPage() {
           <div className="max-w-7xl mx-auto">
             <div className="mb-8">
               <div>
-                <h1 
+                <h1
                   className="font-bold"
-                  style={{ 
+                  style={{
                     fontSize: '3rem',
                     color: 'var(--incub8-sand)',
                     marginBottom: '0.5rem',

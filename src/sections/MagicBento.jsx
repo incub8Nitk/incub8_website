@@ -147,12 +147,12 @@ export const ParticleCard = ({
         particlesRef.current.push(clone);
 
         // Enhanced particle entrance
-        gsap.fromTo(clone, 
+        gsap.fromTo(clone,
           { scale: 0, opacity: 0, rotation: 0 },
-          { 
-            scale: 1, 
-            opacity: 1, 
-            duration: 0.6, 
+          {
+            scale: 1,
+            opacity: 1,
+            duration: 0.6,
             ease: 'back.out(2)',
             delay: Math.random() * 0.2
           }
@@ -344,9 +344,9 @@ export const ParticleCard = ({
       );
 
       // Card bounce effect on click
-      gsap.fromTo(element, 
+      gsap.fromTo(element,
         { scale: 1.02 },
-        { 
+        {
           scale: 0.98,
           duration: 0.1,
           ease: 'power2.out',
@@ -399,8 +399,8 @@ const GlobalSpotlight = ({
     spotlight.className = 'global-spotlight';
     spotlight.style.cssText = `
       position: fixed;
-      width: 800px;
-      height: 800px;
+      width: 900px;
+      height: 900px;
       border-radius: 50%;
       pointer-events: none;
       background: radial-gradient(circle,

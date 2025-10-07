@@ -13,7 +13,9 @@ export const eventsData = [
       "Fosters critical thinking, problem-solving, and strategic consulting skills.",
     how: "Report submission → Shortlisting → Live presentations.",
     outcome: "Best actionable solution wins.",
-    applyLink: "https://forms.gle/riSjp7pDQPNAKC4z9"
+    img: "/events/casestudy.png",
+    applyLink: "https://forms.gle/riSjp7pDQPNAKC4z9",
+    venue: "LHC-C [9 AM - 12 PM]"
   },
   {
     title: "Ideathon - Where Ideas Meet Innovation 💡",
@@ -24,7 +26,9 @@ export const eventsData = [
     why: "Encourages entrepreneurial thinking, creativity, and pitching skills.",
     how: "Teams design and present business models or functional prototypes.",
     outcome: "Most innovative and feasible idea wins.",
-    applyLink: "https://forms.gle/cyrkGfACoCETthP96"
+    img: "/events/ideation.png",
+    applyLink: "https://forms.gle/cyrkGfACoCETthP96",
+    venue: "CIDS"
   },
   {
     title: "Local to Vocal - Amplify the Unsung Heroes 📢",
@@ -36,7 +40,9 @@ export const eventsData = [
       "Hands-on marketing with social impact, combining creativity with real-world results.",
     how: "Submit marketing plan → Execute strategy → Final presentations.",
     outcome: "Team with the greatest real impact wins.",
-    applyLink: "https://forms.gle/oUhYFtKPKKkkoB5w6"
+    img: "/events/localtovocal.png",
+    applyLink: "https://forms.gle/oUhYFtKPKKkkoB5w6",
+    venue: "CIDS"
   },
   {
     title: "Market Mavericks - The Trading Clash 📈",
@@ -48,7 +54,9 @@ export const eventsData = [
     how:
       "Participants trade on a virtual platform over a set time period.",
     outcome: "Highest net profit wins.",
-    applyLink: "https://forms.gle/TyT1dtEZbx9KvLfw8"
+    img: "/events/marketmaverks.png",
+    applyLink: "https://forms.gle/TyT1dtEZbx9KvLfw8",
+    venue: "Online / LHC-D"
   },
   {
     title: "Youth Parliament - Debate the Future 🗣️",
@@ -60,7 +68,9 @@ export const eventsData = [
     how:
       "Structured moderated rounds with arguments, rebuttals, and cross-questions.",
     outcome: "Most persuasive debaters declared winners.",
-    applyLink: "https://forms.gle/p7jpjFWnsDmcxpFy6"
+    img: "/events/youthparliment.png",
+    applyLink: "https://forms.gle/p7jpjFWnsDmcxpFy6",
+    venue: "LHC-C (MUN Setup)"
   },
   {
     title: "Product Advertising - Sell the Unsellable! 🎯",
@@ -71,7 +81,9 @@ export const eventsData = [
     why: "Improves creativity, salesmanship, and communication.",
     how: "Teams design and pitch ads for given products.",
     outcome: "Most entertaining and persuasive pitch wins.",
-    applyLink: "https://forms.gle/9egRiSY3B2TBEmRh7"
+    img: "/events/productad.png",
+    applyLink: "https://forms.gle/9egRiSY3B2TBEmRh7",
+    venue: "CIDS (Rebranding Event)"
   },
   {
     title: "Mock IPL Auction - The Game Behind the Game 🏏💰",
@@ -82,7 +94,9 @@ export const eventsData = [
     why: "Combines cricket knowledge, budgeting, and strategy.",
     how: "Finance/Cricket quiz → Top teams qualify → Auction round.",
     outcome: "Best balanced team strategy wins.",
-    applyLink: "https://forms.gle/JDYQf5qyQWCPtwx17"
+    img: "/events/mockiplauction.png",
+    applyLink: "https://forms.gle/JDYQf5qyQWCPtwx17",
+    venue: "Pavilion"
   },
   {
     title: "Pitch to VC",
@@ -93,7 +107,8 @@ export const eventsData = [
     how:
       "Teams create business plans and pitch decks, then present to VCs.",
     outcome: "Most convincing and investable pitch wins.",
-    applyLink: "https://forms.gle/oHNN5K9frihDuHei9"
+    applyLink: "https://forms.gle/oHNN5K9frihDuHei9",
+    venue: "Main Building [Morning]"
   },
   {
     title: "Hackathon",
@@ -104,7 +119,8 @@ export const eventsData = [
     why: "Encourages innovation, teamwork, and technical excellence.",
     how: "Coding sprint → Prototype submission → Presentations.",
     outcome: "Most innovative and functional prototype wins.",
-    applyLink: "https://forms.gle/PtdXATbxaCLJ2nEv6"
+    applyLink: "https://forms.gle/PtdXATbxaCLJ2nEv6",
+    venue: "CIDS"
   },
   {
     title: "Find your Mentor",
@@ -115,7 +131,7 @@ export const eventsData = [
     why: "One-on-one guidance and speed-mentoring opportunities.",
     how: "Networking sessions + reflections submission.",
     outcome: "Strongest engaged participants recognised.",
-    // No applyLink provided
+    venue: "LHC-D [Morning]"
   },
   {
     title: "Startup EXPO",
@@ -127,7 +143,8 @@ export const eventsData = [
     how: "Teams set up booths for demonstrations.",
     outcome:
       "Startup with strongest innovation and market potential wins.",
-    applyLink: "https://forms.gle/TRdcJyrQjFRrGqnw5"
+    applyLink: "https://forms.gle/TRdcJyrQjFRrGqnw5",
+    venue: "LHC-D"
   },
   {
     title: "CSR - Corporate Social Responsibility",
@@ -138,7 +155,8 @@ export const eventsData = [
     why: "Encourages balancing profit with purpose.",
     how: "Teams propose and present CSR projects.",
     outcome: "Best impactful idea wins.",
-    applyLink: "https://forms.gle/8DGrYa2nQZ76icbeA"
+    applyLink: "https://forms.gle/8DGrYa2nQZ76icbeA",
+    venue: "CIDS"
   },
   {
     title: "Bootcamp - Workshop Live Development",
@@ -149,7 +167,7 @@ export const eventsData = [
     why: "Practical teamwork and mentor feedback.",
     how: "Live coding/design session → Final showcase.",
     outcome: "Best working project wins.",
-    // No applyLink provided
+    venue: "CIDS"
   },
   {
     title: "Campus Innovation",
@@ -159,7 +177,7 @@ export const eventsData = [
     how:
       "Teams identify issues → Submit proposals/prototypes → Present to judges.",
     outcome: "Most practical campus solution wins.",
-    // No applyLink provided
+    venue: "LHC-A Seminar Hall"
   },
   {
     title: "Etalk",
@@ -170,7 +188,7 @@ export const eventsData = [
     why: "Gain career and entrepreneurial insights from experts.",
     how: "Talks + Q&A/panel discussions.",
     outcome: "Participants gain inspiration and recognition.",
-    // No applyLink provided
+    venue: "Main Auditorium"
   },
   {
     title: "Panel Discussion",
@@ -179,7 +197,7 @@ export const eventsData = [
     why: "Learn diverse perspectives and latest industry insights.",
     how: "Panel discussion + audience Q&A.",
     outcome: "Most engaged participants recognised.",
-    // No applyLink provided
+    venue: "SJA"
   },
   {
     title: "Expert Nexus (Workshop)",
@@ -190,9 +208,10 @@ export const eventsData = [
     why: "Deep dive into specialised skills.",
     how: "Hands-on/lecture workshops + deliverables.",
     outcome: "Best project outputs or engagement recognised.",
-    // No applyLink provided
+    venue: "SJA"
   },
-]
+];
+
 
 export function EventCard({ event, compact = false }) {
   function handleMouseMove(e) {
@@ -206,7 +225,7 @@ export function EventCard({ event, compact = false }) {
 
   return (
     <ParticleCard
-      className={`card card--border-glow ${compact ? 'event-card-compact' : 'event-card'}`}
+      className={`card card--border-glow ${compact ? 'event-card-compact  h-[700px]' : 'event-card'}`}
       glowColor="132, 0, 255"
       enableTilt={true}
       enableMagnetism={true}
@@ -216,9 +235,45 @@ export function EventCard({ event, compact = false }) {
         background: 'linear-gradient(180deg, color-mix(in oklab, var(--incub8-deep), black 10%) 0%, rgba(10,31,54,0.7) 100%)'
       }}
     >
+      {/* Thumbnail image */}
+      {event.img && (
+        <div className="w-full flex justify-center ">
+          <img
+            src={event.img}
+            alt={event.title}
+            className="rounded-xl object-cover"
+            style={{
+              width: compact ? 100 : 80,
+              height: compact ? 100 : 80,
+              objectFit: 'cover',
+              boxShadow: '0 2px 12px 0 rgba(0,0,0,0.18)',
+              background: '#181c24'
+            }}
+          />
+        </div>
+      )}
       <h3 className="text-lg md:text-xl font-semibold mb-2" style={{ color: 'var(--incub8-sand)' }}>{event.title}</h3>
-      <p className="text-white/95">{event.short}</p>
-      <div className="h-1 w-full mt-4" style={{ background: 'linear-gradient(90deg, var(--incub8-coral), var(--incub8-wood))', opacity: 0.3 }} />
+      <p className="text-white/95">
+        {event.short.length > 80
+          ? event.short.slice(0, 80) + '...'
+          : event.short}
+      </p>
+      {/* Location */}
+      {event.venue && (
+        <div className="flex items-center gap-2 mt-1 mb-1">
+          <span style={{ display: 'inline-flex', alignItems: 'center' }}>
+            {/* Location icon (SVG) */}
+            <svg width="16" height="16" fill="none" viewBox="0 0 20 20" style={{ marginRight: '0.4em' }}>
+              <path
+                d="M10 2C6.686 2 4 4.686 4 8c0 4.418 5.09 9.36 5.307 9.57a1 1 0 0 0 1.386 0C10.91 17.36 16 12.418 16 8c0-3.314-2.686-6-6-6zm0 13.293C8.14 13.09 6 10.418 6 8a4 4 0 1 1 8 0c0 2.418-2.14 5.09-4 7.293zM10 5.5A2.5 2.5 0 1 0 10 10.5 2.5 2.5 0 0 0 10 5.5zm0 3A0.5 0.5 0 1 1 10 7.5a0.5 0.5 0 0 1 0 1z"
+                fill="var(--incub8-sea)"
+              />
+            </svg>
+          </span>
+          <span className="text-xs text-white/80">{event.venue}</span>
+        </div>
+      )}
+      <div className="h-1 w-full" style={{ background: 'linear-gradient(90deg, var(--incub8-coral), var(--incub8-wood))', opacity: 0.3 }} />
       <button
         {...(!event.applyLink ? { style: { display: 'none' } } : {})}
         className="cursor-pointer inline-flex items-center gap-2 px-4 py-2 mt-4 rounded-full transition-colors text-sm "
