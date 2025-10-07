@@ -67,7 +67,7 @@ export default function EventsModal({ isOpen, onClose }) {
                   style={{
                     animationDelay: `${idx * 50}ms`,
                     width: '323px',
-                    height: '450px',
+                    height: '550px',
                     flexShrink: 0
                   }}
                 >
@@ -93,6 +93,22 @@ export default function EventsModal({ isOpen, onClose }) {
                     }}
                   >
                     <div className="flex-1 flex flex-col">
+                      {event.img && (
+                        <div className="w-full flex justify-center mb-3">
+                          <img
+                            src={event.img}
+                            alt={event.title}
+                            className="rounded-xl object-cover"
+                            style={{
+                              width: 80,
+                              height: 80,
+                              objectFit: 'cover',
+                              boxShadow: '0 2px 12px 0 rgba(0,0,0,0.18)',
+                              background: '#181c24'
+                            }}
+                          />
+                        </div>
+                      )}
                       <h3 className="text-lg font-semibold mb-2" style={{ color: 'var(--incub8-sand)' }}>
                         {event.title}
                       </h3>

@@ -107,20 +107,9 @@ export const eventsData = [
     how:
       "Teams create business plans and pitch decks, then present to VCs.",
     outcome: "Most convincing and investable pitch wins.",
+    img: "/events/pitchtovc.png",
     applyLink: "https://forms.gle/oHNN5K9frihDuHei9",
     venue: "Main Building [Morning]"
-  },
-  {
-    title: "Hackathon",
-    short:
-      "A 24-48 hour coding competition to build software/hardware solutions for a problem.",
-    details:
-      "A 24-48 hour coding competition where teams solve a given problem through software or hardware solutions.",
-    why: "Encourages innovation, teamwork, and technical excellence.",
-    how: "Coding sprint → Prototype submission → Presentations.",
-    outcome: "Most innovative and functional prototype wins.",
-    applyLink: "https://forms.gle/PtdXATbxaCLJ2nEv6",
-    venue: "CIDS"
   },
   {
     title: "Find your Mentor",
@@ -131,6 +120,7 @@ export const eventsData = [
     why: "One-on-one guidance and speed-mentoring opportunities.",
     how: "Networking sessions + reflections submission.",
     outcome: "Strongest engaged participants recognised.",
+    img: "/events/findmentors.png",
     venue: "LHC-D [Morning]"
   },
   {
@@ -143,8 +133,54 @@ export const eventsData = [
     how: "Teams set up booths for demonstrations.",
     outcome:
       "Startup with strongest innovation and market potential wins.",
+    img: "/events/startupexpo.png",
     applyLink: "https://forms.gle/TRdcJyrQjFRrGqnw5",
     venue: "LHC-D"
+  },
+  {
+    title: "Campus Innovation",
+    short: "Students propose solutions to real campus challenges.",
+    details: "Students propose solutions to real campus challenges.",
+    why: "Encourages localised innovation and practical problem-solving.",
+    how:
+      "Teams identify issues → Submit proposals/prototypes → Present to judges.",
+    outcome: "Most practical campus solution wins.",
+    img: "/events/campusinnovation.png",
+    venue: "LHC-A Seminar Hall"
+  },
+  {
+    title: "Panel Discussion",
+    short: "Experts debate trending topics in business and technology.",
+    details: "Experts debate trending topics in business and technology.",
+    why: "Learn diverse perspectives and latest industry insights.",
+    how: "Panel discussion + audience Q&A.",
+    outcome: "Most engaged participants recognised.",
+    img: "/events/paneldiscussion.png",
+    venue: "SJA"
+  },
+  {
+    title: "Expert Nexus (Workshop)",
+    short:
+      "Advanced workshops on niche topics like blockchain, analytics, or emerging tech.",
+    details:
+      "Advanced workshops on niche topics like blockchain, analytics, or emerging technologies.",
+    why: "Deep dive into specialised skills.",
+    how: "Hands-on/lecture workshops + deliverables.",
+    outcome: "Best project outputs or engagement recognised.",
+    img: "/events/expertnexus.png",
+    venue: "SJA"
+  },
+  {
+    title: "Hackathon",
+    short:
+      "A 24-48 hour coding competition to build software/hardware solutions for a problem.",
+    details:
+      "A 24-48 hour coding competition where teams solve a given problem through software or hardware solutions.",
+    why: "Encourages innovation, teamwork, and technical excellence.",
+    how: "Coding sprint → Prototype submission → Presentations.",
+    outcome: "Most innovative and functional prototype wins.",
+    applyLink: "https://forms.gle/PtdXATbxaCLJ2nEv6",
+    venue: "CIDS"
   },
   {
     title: "CSR - Corporate Social Responsibility",
@@ -170,16 +206,6 @@ export const eventsData = [
     venue: "CIDS"
   },
   {
-    title: "Campus Innovation",
-    short: "Students propose solutions to real campus challenges.",
-    details: "Students propose solutions to real campus challenges.",
-    why: "Encourages localised innovation and practical problem-solving.",
-    how:
-      "Teams identify issues → Submit proposals/prototypes → Present to judges.",
-    outcome: "Most practical campus solution wins.",
-    venue: "LHC-A Seminar Hall"
-  },
-  {
     title: "Etalk",
     short:
       "Industry leaders deliver inspirational talks on startups, technology, and leadership.",
@@ -189,27 +215,7 @@ export const eventsData = [
     how: "Talks + Q&A/panel discussions.",
     outcome: "Participants gain inspiration and recognition.",
     venue: "Main Auditorium"
-  },
-  {
-    title: "Panel Discussion",
-    short: "Experts debate trending topics in business and technology.",
-    details: "Experts debate trending topics in business and technology.",
-    why: "Learn diverse perspectives and latest industry insights.",
-    how: "Panel discussion + audience Q&A.",
-    outcome: "Most engaged participants recognised.",
-    venue: "SJA"
-  },
-  {
-    title: "Expert Nexus (Workshop)",
-    short:
-      "Advanced workshops on niche topics like blockchain, analytics, or emerging tech.",
-    details:
-      "Advanced workshops on niche topics like blockchain, analytics, or emerging technologies.",
-    why: "Deep dive into specialised skills.",
-    how: "Hands-on/lecture workshops + deliverables.",
-    outcome: "Best project outputs or engagement recognised.",
-    venue: "SJA"
-  },
+  }
 ];
 
 
