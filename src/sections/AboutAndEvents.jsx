@@ -38,7 +38,7 @@ export default function AboutAndEvents() {
               Explore our gallery showcasing moments from Incub8 events and experiences.
             </p>
           </div>
-          <div style={{ height: '90vh', minHeight: '600px' }}>
+          <div style={{ height: '90vh', minHeight: '601px' }}>
             <GallerySection />
           </div>
         </div>
