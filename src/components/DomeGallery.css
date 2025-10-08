@@ -11,9 +11,9 @@
   --item-height: calc(var(--circ) / var(--segments-y));
 }
 
-.sphere-root * {
+/* .sphere-root * {
   box-sizing: border-box;
-}
+} */
 
 .sphere,
 .item,
@@ -30,7 +30,7 @@ main.sphere-main {
   touch-action: none;
   user-select: none;
   -webkit-user-select: none;
-  background: linear-gradient(135deg, #0a1929 0%, #1e3a8a 25%, #1e40af 50%, #0f172a 75%, #020617 100%);
+  /* background: linear-gradient(135deg, #0a1929 0%, #1e3a8a 25%, #1e40af 50%, #0f172a 75%, #020617 100%); */
   background-size: 400% 400%;
   animation: oceanWave 20s ease-in-out infinite;
   
@@ -60,9 +60,9 @@ main.sphere-main {
   pointer-events: none;
 }
 
-.overlay {
+/* .overlay {
   background-image: radial-gradient(rgba(235, 235, 235, 0) 65%, var(--overlay-blur-color, #060010) 100%);
-}
+} */
 
 .overlay--blur {
   -webkit-mask-image: radial-gradient(rgba(235, 235, 235, 0) 70%, var(--overlay-blur-color, #060010) 90%);
@@ -114,7 +114,7 @@ main.sphere-main {
 
 .item__image:hover {
   transform: translateZ(20px) scale(1.05);
-  border-color: rgba(59, 130, 246, 0.8);
+  /* border-color: rgba(59, 130, 246, 0.8); */
   box-shadow: 
     0 8px 40px rgba(59, 130, 246, 0.4),
     0 2px 10px rgba(147, 197, 253, 0.3),
@@ -160,12 +160,12 @@ main.sphere-main {
   position: absolute;
   inset: 0;
   z-index: 10;
-  background: linear-gradient(
+  /* background: linear-gradient(
     135deg,
     rgba(15, 23, 42, 0.8) 0%,
     rgba(30, 58, 138, 0.6) 50%,
     rgba(15, 23, 42, 0.9) 100%
-  );
+  ); */
   pointer-events: none;
   opacity: 0;
   transition: opacity 500ms ease;
@@ -211,7 +211,7 @@ main.sphere-main {
   height: 120px;
   z-index: 5;
   pointer-events: none;
-  background: linear-gradient(to bottom, transparent, var(--overlay-blur-color, #060010));
+  /* background: linear-gradient(to bottom, transparent, var(--overlay-blur-color, #060010)); */
 }
 
 .edge-fade--top {
@@ -224,7 +224,7 @@ main.sphere-main {
 }
 
 /* Ocean wave animation */
-@keyframes oceanWave {
+/* @keyframes oceanWave {
   0% {
     background-position: 0% 50%;
   }
@@ -234,7 +234,7 @@ main.sphere-main {
   100% {
     background-position: 0% 50%;
   }
-}
+} */
 
 /* Floating particles animation */
 @keyframes float {
@@ -263,22 +263,22 @@ main.sphere-main {
     radial-gradient(1px 1px at 130px 80px, rgba(59, 130, 246, 0.3), transparent),
     radial-gradient(2px 2px at 160px 30px, rgba(147, 197, 253, 0.5), transparent);
   background-repeat: repeat;
-  background-size: 200px 100px;
+  /* background-size: 200px 100px; */
   animation: float 15s ease-in-out infinite;
   pointer-events: none;
   z-index: 1;
 }
 
 /* Enhanced overlay with ocean theme */
-.overlay {
-  background-image: radial-gradient(
+/* .overlay {
+  /* background-image: radial-gradient(
     circle at center,
     rgba(59, 130, 246, 0.1) 0%,
     rgba(30, 58, 138, 0.3) 40%,
     rgba(15, 23, 42, 0.7) 70%,
     var(--overlay-blur-color, #0a1929) 100%
-  );
-}
+  ); }*/
+
 
 /* Scroll lock utility class */
 .dg-scroll-lock {

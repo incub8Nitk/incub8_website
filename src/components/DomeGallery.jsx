@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useCallback } from 'react';
+import { useEffect, useMemo, useRef, useCallback, useState } from 'react';
 import { useGesture } from '@use-gesture/react';
 import './DomeGallery.css';
 
@@ -53,7 +53,7 @@ const DEFAULTS = {
   maxVerticalRotationDeg: 5,
   dragSensitivity: 20,
   enlargeTransitionMs: 300,
-  segments: 25
+  segments: 17
 
 };
 
@@ -118,8 +118,8 @@ function buildItems(pool, seg) {
   }));
 }
 
-function computeItemBaseRotation(offsetX, offsetY, sizeX, sizeY, segments) {
-  const unit = 360 / segments / 2;
+function computeItemBaseRotation(offsetX, offsetY, sizeX, sizeY, currentSegments) {
+  const unit = 360 / currentSegments / 2;
   const rotateY = unit * (offsetX + (sizeX - 1) / 2);
   const rotateX = unit * (offsetY - (sizeY - 1) / 2);
   return { rotateX, rotateY };
@@ -136,7 +136,7 @@ export default function DomeGallery({
   maxVerticalRotationDeg = DEFAULTS.maxVerticalRotationDeg,
   dragSensitivity = DEFAULTS.dragSensitivity,
   enlargeTransitionMs = DEFAULTS.enlargeTransitionMs,
-  segments = DEFAULTS.segments,
+  // segments = DEFAULTS.segments, // This will be managed by state
   dragDampening = 2,
   openedImageWidth = '300px',
   openedImageHeight = '400px',
@@ -152,6 +152,22 @@ export default function DomeGallery({
   const scrimRef = useRef(null);
   const focusedElRef = useRef(null);
   const originalTilePositionRef = useRef(null);
+
+  const [currentSegments, setCurrentSegments] = useState(DEFAULTS.segments);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 1080) {
+        setCurrentSegments(14);
+      } else {
+        setCurrentSegments(21);
+      }
+    };
+
+    handleResize(); // Set initial value
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const rotationRef = useRef({ x: 0, y: 0 });
   const startRotRef = useRef({ x: 0, y: 0 });
@@ -178,7 +194,7 @@ export default function DomeGallery({
     document.body.classList.remove('dg-scroll-lock');
   }, []);
 
-  const items = useMemo(() => buildItems(images, segments), [images, segments]);
+  const items = useMemo(() => buildItems(images, currentSegments), [images, currentSegments]);
 
   // Auto-rotation functionality
   const startAutoRotation = useCallback(() => {
@@ -511,7 +527,7 @@ export default function DomeGallery({
       scrim.removeEventListener('click', close);
       window.removeEventListener('keydown', onKey);
     };
-  }, [enlargeTransitionMs, unlockScroll]);
+  }, [enlargeTransitionMs, unlockScroll, openedImageHeight, openedImageWidth, currentSegments]);
 
   const openItemFromElement = useCallback(
     el => {
@@ -526,7 +542,7 @@ export default function DomeGallery({
       const offsetY = getDataNumber(parent, 'offsetY', 0);
       const sizeX = getDataNumber(parent, 'sizeX', 2);
       const sizeY = getDataNumber(parent, 'sizeY', 2);
-      const parentRot = computeItemBaseRotation(offsetX, offsetY, sizeX, sizeY, segments);
+      const parentRot = computeItemBaseRotation(offsetX, offsetY, sizeX, sizeY, currentSegments);
       const parentY = normalizeAngle(parentRot.rotateY);
       const globalY = normalizeAngle(rotationRef.current.y);
       let rotY = -(parentY + globalY) % 360;
@@ -605,7 +621,7 @@ export default function DomeGallery({
         overlay.addEventListener('transitionend', onFirstEnd);
       }
     },
-    [enlargeTransitionMs, lockScroll, openedImageHeight, openedImageWidth, segments]
+   [enlargeTransitionMs, lockScroll, openedImageHeight, openedImageWidth, currentSegments]
   );
 
   const onTileClick = useCallback(
@@ -668,8 +684,8 @@ export default function DomeGallery({
       ref={rootRef}
       className="sphere-root"
       style={{
-        ['--segments-x']: segments,
-        ['--segments-y']: segments,
+        ['--segments-x']: currentSegments,
+        ['--segments-y']: currentSegments,
         ['--overlay-blur-color']: overlayBlurColor,
         ['--tile-radius']: imageBorderRadius,
         ['--enlarge-radius']: openedImageBorderRadius,
