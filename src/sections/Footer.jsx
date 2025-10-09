@@ -65,23 +65,23 @@ export default function Footer() {
   };
 
   return (
-    <footer id="ocean-footer" className="ocean-footer">
+    <footer id="ocean-footer" className="relative bg-gradient-to-b from-slate-900 via-blue-900 to-slate-950 overflow-hidden mt-auto dark:from-slate-950 dark:via-blue-950 dark:to-slate-900">
       {/* Animated Ocean Waves */}
-      <div className="ocean-waves">
+      <div className="absolute -top-20 md:-top-24 left-0 w-full h-20 md:h-24 z-[1]">
         <div className="wave wave1"></div>
         <div className="wave wave2"></div>
         <div className="wave wave3"></div>
       </div>
 
       {/* Main Footer Content */}
-      <div className="footer-content">
+      <div className="relative z-[2] bg-slate-900/90 dark:bg-slate-950/95 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-16">
             
             {/* Brand Section */}
-            <div className="space-y-6">
-              <div className="flex items-center space-x-3">
-                <div className="logo-container">
+            <div className="space-y-6 text-center md:text-left">
+              <div className="flex items-center space-x-3 justify-center md:justify-start">
+                <div className="p-2 bg-blue-500/10 rounded-xl border border-blue-500/30 backdrop-blur-sm transition-all duration-300 ease-out hover:bg-blue-500/20 hover:border-blue-500/50 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/20">
                   <img 
                     src="/Incub8'25 logo dark bg 1.png" 
                     alt="Incub8 Logo" 
@@ -93,14 +93,14 @@ export default function Footer() {
                 Incub8 is the premier startup and entrepreneurship event that brings together 
                 innovators, investors, and industry leaders to shape the future of technology.
               </p>
-              <div className="flex space-x-4">
+              <div className="flex flex-row justify-center items-center space-x-4">
                 {socialLinks.map((social) => (
                   <a
                     key={social.name}
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="social-link"
+                    className="flex items-center justify-center w-10 h-10 md:w-11 md:h-11 bg-blue-500/10 border border-blue-500/30 rounded-xl text-blue-300 transition-all duration-300 ease-out backdrop-blur-sm hover:bg-blue-500/20 hover:border-blue-500/60 hover:text-blue-100 hover:-translate-y-1 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/30"
                     aria-label={`Follow us on ${social.name}`}
                   >
                     {social.icon}
@@ -110,14 +110,14 @@ export default function Footer() {
             </div>
 
             {/* Quick Links */}
-            <div className="space-y-6">
+            <div className="space-y-6 text-center md:text-left">
               <h3 className="text-xl font-semibold text-white">Quick Links</h3>
               <ul className="space-y-3">
                 {quickLinks.map((link) => (
                   <li key={link.name}>
                     <a
                       href={link.href}
-                      className="footer-link"
+                      className="text-blue-300 text-sm transition-all duration-300 ease-out relative inline-block hover:text-blue-100 hover:translate-x-1 before:content-[''] before:absolute before:bottom-[-2px] before:left-0 before:w-0 before:h-0.5 before:bg-gradient-to-r before:from-blue-500 before:to-blue-300 before:transition-all before:duration-300 before:ease-out hover:before:w-full"
                       onClick={handleNavClick}
                     >
                       {link.name}
@@ -128,27 +128,27 @@ export default function Footer() {
             </div>
 
             {/* Contact Info */}
-            <div className="space-y-6">
+            <div className="space-y-6 text-center md:text-left">
               <h3 className="text-xl font-semibold text-white">Contact Us</h3>
               <div className="space-y-4">
-                <div className="contact-item">
-                  <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-center gap-3 justify-center md:justify-start">
+                  <svg className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
-                  <a href={`mailto:${contactInfo.email}`} className="footer-link">
+                  <a href={`mailto:${contactInfo.email}`} className="text-blue-300 text-sm transition-all duration-300 ease-out relative inline-block hover:text-blue-100 hover:translate-x-1 before:content-[''] before:absolute before:bottom-[-2px] before:left-0 before:w-0 before:h-0.5 before:bg-gradient-to-r before:from-blue-500 before:to-blue-300 before:transition-all before:duration-300 before:ease-out hover:before:w-full">
                     {contactInfo.email}
                   </a>
                 </div>
-                <div className="contact-item">
-                  <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-center gap-3 justify-center md:justify-start">
+                  <svg className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
-                  <a href={`tel:${contactInfo.phone.replace(/\s/g, '')}`} className="footer-link">
+                  <a href={`tel:${contactInfo.phone.replace(/\s/g, '')}`} className="text-blue-300 text-sm transition-all duration-300 ease-out relative inline-block hover:text-blue-100 hover:translate-x-1 before:content-[''] before:absolute before:bottom-[-2px] before:left-0 before:w-0 before:h-0.5 before:bg-gradient-to-r before:from-blue-500 before:to-blue-300 before:transition-all before:duration-300 before:ease-out hover:before:w-full">
                     {contactInfo.phone}
                   </a>
                 </div>
-                <div className="contact-item">
-                  <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-center gap-3 justify-center md:justify-start">
+                  <svg className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
@@ -158,38 +158,18 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-
-            {/* Newsletter
-            <div className="space-y-6">
-              <h3 className="text-xl font-semibold text-white">Stay Updated</h3>
-              <p className="text-blue-200/80 text-sm">
-                Subscribe to our newsletter for the latest updates and announcements.
-              </p>
-              <div className="newsletter-form">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="newsletter-input"
-                />
-                <button className="newsletter-button">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                  </svg>
-                </button>
-              </div>
-            </div> */}
           </div>
 
           {/* Bottom Bar */}
           <div className="border-t border-blue-800/30 py-8">
-            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-center md:text-left">
               <div className="text-blue-200/60 text-sm">
                 © {currentYear} Incub8. All rights reserved. Built with passion for innovation.
               </div>
-              <div className="flex space-x-6 text-sm">
-                <a href="#privacy" className="footer-link">Privacy Policy</a>
-                <a href="#terms" className="footer-link">Terms of Service</a>
-                <a href="#cookies" className="footer-link">Cookie Policy</a>
+              <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-sm">
+                <a href="#privacy" className="text-blue-300 text-sm transition-all duration-300 ease-out relative inline-block hover:text-blue-100 hover:translate-x-1 before:content-[''] before:absolute before:bottom-[-2px] before:left-0 before:w-0 before:h-0.5 before:bg-gradient-to-r before:from-blue-500 before:to-blue-300 before:transition-all before:duration-300 before:ease-out hover:before:w-full">Privacy Policy</a>
+                <a href="#terms" className="text-blue-300 text-sm transition-all duration-300 ease-out relative inline-block hover:text-blue-100 hover:translate-x-1 before:content-[''] before:absolute before:bottom-[-2px] before:left-0 before:w-0 before:h-0.5 before:bg-gradient-to-r before:from-blue-500 before:to-blue-300 before:transition-all before:duration-300 before:ease-out hover:before:w-full">Terms of Service</a>
+                <a href="#cookies" className="text-blue-300 text-sm transition-all duration-300 ease-out relative inline-block hover:text-blue-100 hover:translate-x-1 before:content-[''] before:absolute before:bottom-[-2px] before:left-0 before:w-0 before:h-0.5 before:bg-gradient-to-r before:from-blue-500 before:to-blue-300 before:transition-all before:duration-300 before:ease-out hover:before:w-full">Cookie Policy</a>
               </div>
             </div>
           </div>
@@ -197,7 +177,7 @@ export default function Footer() {
       </div>
 
       {/* Floating Bubbles */}
-      <div className="floating-bubbles">
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-[1]">
         <div className="bubble bubble-1"></div>
         <div className="bubble bubble-2"></div>
         <div className="bubble bubble-3"></div>
