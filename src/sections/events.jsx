@@ -180,6 +180,7 @@ export const eventsData = [
     how: "Coding sprint → Prototype submission → Presentations.",
     outcome: "Most innovative and functional prototype wins.",
     applyLink: "https://forms.gle/PtdXATbxaCLJ2nEv6",
+    img: "/events/Hackathon.png",
     venue: "CIDS"
   },
   {
@@ -192,6 +193,7 @@ export const eventsData = [
     how: "Teams propose and present CSR projects.",
     outcome: "Best impactful idea wins.",
     applyLink: "https://forms.gle/8DGrYa2nQZ76icbeA",
+    img: "/events/CSR().png",
     venue: "CIDS"
   },
   {
@@ -203,6 +205,7 @@ export const eventsData = [
     why: "Practical teamwork and mentor feedback.",
     how: "Live coding/design session → Final showcase.",
     outcome: "Best working project wins.",
+    img: "/events/Bootcamp.png",
     venue: "CIDS"
   },
   {
@@ -214,6 +217,7 @@ export const eventsData = [
     why: "Gain career and entrepreneurial insights from experts.",
     how: "Talks + Q&A/panel discussions.",
     outcome: "Participants gain inspiration and recognition.",
+    img: "/events/Etalk.png",
     venue: "Main Auditorium"
   }
 ];
