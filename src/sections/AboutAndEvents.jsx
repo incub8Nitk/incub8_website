@@ -2,7 +2,7 @@ import React from 'react';
 import Whatisincub8 from './Whatisincub8';
 import EventsPage from './EventsPage';
 import PastSpeakers from './PastSpeakers';
-import imageincubbgext from '/imageincubbgext.jpg';
+import bg from '/bg.jpg';
 import PastSponcers from './pastSponcers';
 import DomeGallery from '../components/DomeGallery';
 import Footer from './Footer';
@@ -13,7 +13,7 @@ export default function AboutAndEvents() {
   return (
     <div style={{
       minHeight: '100vh', // Let content determine height naturally
-      backgroundImage: `url(${imageincubbgext})`,
+      backgroundImage: `url(${bg})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',

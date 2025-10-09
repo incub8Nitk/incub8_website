@@ -59,8 +59,8 @@ export default function Footer() {
   ];
 
   const contactInfo = {
-    email: 'contact@incub8.com',
-    phone: '+91 12345 67890',
+    email: 'incub8.convenor@nitk.edu.in',
+    phone: '+91 78922 64359',
     address: "NITK, NH 66, Srinivasnagar,Surathkal Mangalore, Karnataka - 575025"
   };
 
