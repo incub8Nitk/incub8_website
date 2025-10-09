@@ -1,6 +1,6 @@
 import React from 'react';
 import Whatisincub8 from './Whatisincub8';
-import EventsPage from './EventsPage';
+import EventsSection from './EventsSection';
 import PastSpeakers from './PastSpeakers';
 import bg from '/bg.jpg';
 import PastSponcers from './pastSponcers';
@@ -22,7 +22,7 @@ export default function AboutAndEvents() {
       flexDirection: 'column'
     }}>
       <Whatisincub8 />
-      <EventsPage />
+      <EventsSection />
       <PastSpeakers />
       <PastSponcers />
       {/* <GallerySection /> */}

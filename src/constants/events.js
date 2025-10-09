@@ -1,7 +1,3 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { ParticleCard } from './MagicBento'
-
 export const eventsData = [
   {
     title: "Case Study Challenge - Crack the Code of Business! 📊",
@@ -75,9 +71,9 @@ export const eventsData = [
   {
     title: "Product Advertising - Sell the Unsellable! 🎯",
     short:
-      "Teams market ordinary or “boring” products in the most creative way possible.",
+      "Teams market ordinary or \"boring\" products in the most creative way possible.",
     details:
-      "Teams are challenged to market ordinary or “boring” products in the most creative way possible.",
+      "Teams are challenged to market ordinary or \"boring\" products in the most creative way possible.",
     why: "Improves creativity, salesmanship, and communication.",
     how: "Teams design and pitch ads for given products.",
     outcome: "Most entertaining and persuasive pitch wins.",
@@ -221,148 +217,3 @@ export const eventsData = [
     venue: "Main Auditorium"
   }
 ];
-
-
-export function EventCard({ event, compact = false }) {
-  function handleMouseMove(e) {
-    const target = e.currentTarget
-    const rect = target.getBoundingClientRect()
-    const x = ((e.clientX - rect.left) / rect.width) * 100
-    const y = ((e.clientY - rect.top) / rect.height) * 100
-    target.style.setProperty('--x', `${x}%`)
-    target.style.setProperty('--y', `${y}%`)
-  }
-
-  return (
-    <ParticleCard
-      className={`card card--border-glow ${compact ? 'event-card-compact  h-[700px]' : 'event-card'}`}
-      glowColor="132, 0, 255"
-      enableTilt={true}
-      enableMagnetism={true}
-      onMouseMove={handleMouseMove}
-      style={{
-        border: '1px solid color-mix(in oklab, var(--incub8-sea), white 25%)',
-        background: 'linear-gradient(180deg, color-mix(in oklab, var(--incub8-deep), black 10%) 0%, rgba(10,31,54,0.7) 100%)'
-      }}
-    >
-      {/* Thumbnail image */}
-      {event.img && (
-        <div className="w-full flex justify-center ">
-          <img
-            src={event.img}
-            alt={event.title}
-            className="rounded-xl object-cover"
-            style={{
-              width: compact ? 100 : 80,
-              height: compact ? 100 : 80,
-              objectFit: 'cover',
-              boxShadow: '0 2px 12px 0 rgba(0,0,0,0.18)',
-              background: '#181c24'
-            }}
-          />
-        </div>
-      )}
-      <h3 className="text-lg md:text-xl font-semibold mb-2" style={{ color: 'var(--incub8-sand)' }}>{event.title}</h3>
-      <p className="text-white/95">
-        {event.short.length > 80
-          ? event.short.slice(0, 80) + '...'
-          : event.short}
-      </p>
-      {/* Location */}
-      {event.venue && (
-        <div className="flex items-center gap-2 mt-1 mb-1">
-          <span style={{ display: 'inline-flex', alignItems: 'center' }}>
-            {/* Location icon (SVG) */}
-            <svg width="16" height="16" fill="none" viewBox="0 0 20 20" style={{ marginRight: '0.4em' }}>
-              <path
-                d="M10 2C6.686 2 4 4.686 4 8c0 4.418 5.09 9.36 5.307 9.57a1 1 0 0 0 1.386 0C10.91 17.36 16 12.418 16 8c0-3.314-2.686-6-6-6zm0 13.293C8.14 13.09 6 10.418 6 8a4 4 0 1 1 8 0c0 2.418-2.14 5.09-4 7.293zM10 5.5A2.5 2.5 0 1 0 10 10.5 2.5 2.5 0 0 0 10 5.5zm0 3A0.5 0.5 0 1 1 10 7.5a0.5 0.5 0 0 1 0 1z"
-                fill="var(--incub8-sea)"
-              />
-            </svg>
-          </span>
-          <span className="text-xs text-white/80">{event.venue}</span>
-        </div>
-      )}
-      <div className="h-1 w-full" style={{ background: 'linear-gradient(90deg, var(--incub8-coral), var(--incub8-wood))', opacity: 0.3 }} />
-      <button
-        {...(!event.applyLink ? { style: { display: 'none' } } : {})}
-        className="cursor-pointer inline-flex items-center gap-2 px-4 py-2 mt-4 rounded-full transition-colors text-sm "
-        onClick={() => {
-          if (event.applyLink) window.open(event.applyLink, '_blank');
-        }}
-        style={{
-          border: '.5px solid color-mix(in oklab, var(--incub8-coral), white 25%)',
-          background: 'color-mix(in oklab, var(--incub8-coral), transparent 80%)',
-          color: 'white',
-          ...(event.applyLink ? {} : { display: 'none' })
-        }}
-        onMouseEnter={e => {
-          e.currentTarget.style.background = 'color-mix(in oklab, var(--incub8-coral), transparent 65%)';
-        }}
-        onMouseLeave={e => {
-          e.currentTarget.style.background = 'color-mix(in oklab, var(--incub8-coral), transparent 80%)';
-        }}
-      >
-        Apply
-      </button>
-    </ParticleCard>
-  )
-}
-
-export default function EventsHome() {
-  const top6 = eventsData.slice(0, 6)
-
-  return (
-    <section className="w-full py-14 px-6 md:px-12 lg:px-20 text-white" style={{
-      background: 'linear-gradient(180deg, rgba(0,0,0,0) 0%, var(--incub8-deep) 30%, var(--incub8-sea) 100%)'
-    }}>
-      <div className="max-w-7xl mx-auto">
-        <div className="flex items-end justify-between gap-4 mb-8">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-semibold" style={{ color: 'var(--incub8-sand)' }}>Events</h2>
-            <p className="text-white/95 mt-1">Top picks crafted for builders, thinkers, and doers.</p>
-          </div>
-          <Link
-            to="/events"
-            className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-full transition-colors"
-            style={{
-              border: '.5px solid color-mix(in oklab, var(--incub8-coral), white 25%)',
-              background: 'color-mix(in oklab, var(--incub8-coral), transparent 80%)',
-              color: 'white'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.background = 'color-mix(in oklab, var(--incub8-coral), transparent 65%)'
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background = 'color-mix(in oklab, var(--incub8-coral), transparent 80%)'
-            }}
-          >
-            View all events →
-          </Link>
-        </div>
-
-        <div className="grid gap-6 md:gap-8 grid-cols-1 md:grid-cols-3">
-          {top6.map((e, i) => (
-            <div key={i} className="fade-up" style={{ animationDelay: `${i * 70}ms` }}>
-              <EventCard event={e} compact={true} />
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-8 md:hidden flex justify-center">
-          <Link
-            to="/events"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full"
-            style={{
-              border: '1px solid color-mix(in oklab, var(--incub8-coral), white 25%)',
-              background: 'color-mix(in oklab, var(--incub8-coral), transparent 80%)',
-              color: 'white'
-            }}
-          >
-            View all events →
-          </Link>
-        </div>
-      </div>
-    </section>
-  )
-}

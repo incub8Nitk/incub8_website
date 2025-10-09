@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { eventsData } from '../sections/events';
+import { eventsData } from '../constants/events';
 import { ParticleCard } from '../sections/MagicBento';
 
 export default function EventsModal({ isOpen, onClose }) {
@@ -67,12 +67,11 @@ export default function EventsModal({ isOpen, onClose }) {
                   style={{
                     animationDelay: `${idx * 50}ms`,
                     width: '323px',
-                    height: '550px',
                     flexShrink: 0
                   }}
                 >
                   <ParticleCard
-                    className="card card--border-glow"
+                    className="flex flex-col justify-between relative w-full h-full p-5 rounded-[20px] border border-[#392e4e] bg-[#060010] font-light overflow-hidden transition-all duration-300 ease-in-out card--border-glow"
                     glowColor="132, 0, 255"
                     enableTilt={true}
                     enableMagnetism={true}

@@ -15,7 +15,7 @@ const SpotlightCard = ({ children, className = '', spotlightColor = 'rgba(255, 2
   };
 
   return (
-    <div ref={divRef} onMouseMove={handleMouseMove} className={`card-spotlight ${className}`}>
+    <div ref={divRef} onMouseMove={handleMouseMove} className={`relative rounded-[1.5rem] border border-[color-mix(in_oklab,var(--incub8-sea),white_20%)] bg-[color-mix(in_oklab,var(--incub8-deep),black_10%)] p-8 overflow-hidden transition-[transform,box-shadow,border-color] duration-[250ms] ease ${className}`}>
       {children}
     </div>
   );

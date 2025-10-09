@@ -48,7 +48,7 @@ const cardData = [
 
 const createParticleElement = (x, y, color = DEFAULT_GLOW_COLOR) => {
   const el = document.createElement('div');
-  el.className = 'particle';
+  el.className = 'absolute w-[6px] h-[6px] rounded-full';
   el.style.cssText = `
     position: absolute;
     width: 6px;
@@ -374,7 +374,7 @@ export const ParticleCard = ({
   return (
     <div
       ref={cardRef}
-      className={`${className} particle-container`}
+      className={`${className} relative overflow-hidden`}
       style={{ ...style, position: 'relative', overflow: 'hidden' }}
     >
       {children}
@@ -396,7 +396,7 @@ const GlobalSpotlight = ({
     if (disableAnimations || !gridRef?.current || !enabled) return;
 
     const spotlight = document.createElement('div');
-    spotlight.className = 'global-spotlight';
+    spotlight.className = 'mix-blend-screen will-change-transform will-change-opacity z-[200] pointer-events-none';
     spotlight.style.cssText = `
       position: fixed;
       width: 900px;
@@ -515,7 +515,7 @@ const GlobalSpotlight = ({
 };
 
 const BentoCardGrid = ({ children, gridRef }) => (
-  <div className="card-grid bento-section" ref={gridRef}>
+  <div className="grid gap-2 p-3 max-w-[54em] text-[clamp(1rem,0.9rem+0.5vw,1.5rem)] select-none relative" ref={gridRef}>
     {children}
   </div>
 );
@@ -587,12 +587,12 @@ const MagicBento = ({
                 clickEffect={clickEffect}
                 enableMagnetism={enableMagnetism}
               >
-                <div className="card__header">
-                  <div className="card__label">{card.label}</div>
+                <div className="flex relative text-white gap-3 justify-between">
+                  <div className="text-base">{card.label}</div>
                 </div>
-                <div className="card__content">
-                  <h2 className="card__title">{card.title}</h2>
-                  <p className="card__description">{card.description}</p>
+                <div className="flex flex-col relative text-white">
+                  <h2 className="font-normal text-base m-0 mb-1">{card.title}</h2>
+                  <p className="text-xs leading-[1.2] opacity-90">{card.description}</p>
                 </div>
               </ParticleCard>
             );
@@ -710,12 +710,12 @@ const MagicBento = ({
                 el.addEventListener('click', handleClick);
               }}
             >
-              <div className="card__header">
-                <div className="card__label">{card.label}</div>
+              <div className="flex relative text-white gap-3 justify-between">
+                <div className="text-base">{card.label}</div>
               </div>
-              <div className="card__content">
-                <h2 className="card__title">{card.title}</h2>
-                <p className="card__description">{card.description}</p>
+              <div className="flex flex-col relative text-white">
+                <h2 className="font-normal text-base m-0 mb-1">{card.title}</h2>
+                <p className="text-xs leading-[1.2] opacity-90">{card.description}</p>
               </div>
             </div>
           );
