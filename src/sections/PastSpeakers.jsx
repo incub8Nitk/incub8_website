@@ -45,7 +45,7 @@ export default function PastSpeakers() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mx-10">
           {speakersData.map((speaker, index) => (
             <SpotlightCard key={index} spotlightColor="rgba(17, 128, 132, 0.28)">
               <div 

@@ -135,7 +135,7 @@ export default function LandingPage() {
 
             {/* Mobile Logo */}
             <div className="relative z-10 flex flex-col items-center justify-center h-full text-white md:hidden px-8">
-                <img src="Incub8'25 logo dark bg 1.png" alt="Incub8 Logo" className="max-w-xs w-full h-auto" />
+                <img src="Incub8'25 logo dark bg 1.png" alt="Incub8 Logo" className="w-full h-auto mt-[-120px]" />
             </div>
         </div>
     )
