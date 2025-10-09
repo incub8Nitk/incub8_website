@@ -11,7 +11,7 @@ export const eventsData = [
     outcome: "Best actionable solution wins.",
     img: "/events/casestudy.png",
     applyLink: "https://forms.gle/riSjp7pDQPNAKC4z9",
-    venue: "LHC-C [9 AM - 12 PM]"
+    venue: "LHC-C [9 AM - 12 PM] - 17th Oct 2025"
   },
   {
     title: "Ideathon - Where Ideas Meet Innovation 💡",
@@ -24,7 +24,7 @@ export const eventsData = [
     outcome: "Most innovative and feasible idea wins.",
     img: "/events/ideation.png",
     applyLink: "https://forms.gle/cyrkGfACoCETthP96",
-    venue: "CIDS"
+    venue: "CIDS - 17th Oct 2025"
   },
   {
     title: "Local to Vocal - Amplify the Unsung Heroes 📢",
@@ -38,7 +38,7 @@ export const eventsData = [
     outcome: "Team with the greatest real impact wins.",
     img: "/events/localtovocal.png",
     applyLink: "https://forms.gle/oUhYFtKPKKkkoB5w6",
-    venue: "CIDS"
+    venue: "CIDS - 18th Oct 2025"
   },
   {
     title: "Market Mavericks - The Trading Clash 📈",
@@ -66,7 +66,7 @@ export const eventsData = [
     outcome: "Most persuasive debaters declared winners.",
     img: "/events/youthparliment.png",
     applyLink: "https://forms.gle/p7jpjFWnsDmcxpFy6",
-    venue: "LHC-C (MUN Setup)"
+    venue: "LHC-C (MUN Setup) - 18th Oct 2025"
   },
   {
     title: "Product Advertising - Sell the Unsellable! 🎯",
@@ -79,7 +79,7 @@ export const eventsData = [
     outcome: "Most entertaining and persuasive pitch wins.",
     img: "/events/productad.png",
     applyLink: "https://forms.gle/9egRiSY3B2TBEmRh7",
-    venue: "CIDS (Rebranding Event)"
+    venue: "CIDS (Rebranding Event) - 18th Oct 2025"
   },
   {
     title: "Mock IPL Auction - The Game Behind the Game 🏏💰",
@@ -92,7 +92,7 @@ export const eventsData = [
     outcome: "Best balanced team strategy wins.",
     img: "/events/mockiplauction.png",
     applyLink: "https://forms.gle/JDYQf5qyQWCPtwx17",
-    venue: "Pavilion"
+    venue: "Pavilion - 18th Oct 2025"
   },
   {
     title: "Pitch to VC",
@@ -105,7 +105,7 @@ export const eventsData = [
     outcome: "Most convincing and investable pitch wins.",
     img: "/events/pitchtovc.png",
     applyLink: "https://forms.gle/oHNN5K9frihDuHei9",
-    venue: "Main Building [Morning]"
+    venue: "Main Building [Morning] - 17th Oct 2025"
   },
   {
     title: "Find your Mentor",
@@ -117,7 +117,7 @@ export const eventsData = [
     how: "Networking sessions + reflections submission.",
     outcome: "Strongest engaged participants recognised.",
     img: "/events/findmentors.png",
-    venue: "LHC-D [Morning]"
+    venue: "LHC-D [Morning] - 17th Oct 2025"
   },
   {
     title: "Startup EXPO",
@@ -131,7 +131,7 @@ export const eventsData = [
       "Startup with strongest innovation and market potential wins.",
     img: "/events/startupexpo.png",
     applyLink: "https://forms.gle/TRdcJyrQjFRrGqnw5",
-    venue: "LHC-D"
+    venue: "LHC-D - 17th Oct 2025"
   },
   {
     title: "Campus Innovation",
@@ -142,7 +142,7 @@ export const eventsData = [
       "Teams identify issues → Submit proposals/prototypes → Present to judges.",
     outcome: "Most practical campus solution wins.",
     img: "/events/campusinnovation.png",
-    venue: "LHC-A Seminar Hall"
+    venue: "LHC-A Seminar Hall - 18th Oct 2025"
   },
   {
     title: "Panel Discussion",
@@ -152,7 +152,7 @@ export const eventsData = [
     how: "Panel discussion + audience Q&A.",
     outcome: "Most engaged participants recognised.",
     img: "/events/paneldiscussion.png",
-    venue: "SJA"
+    venue: "SJA - 18th Oct 2025"
   },
   {
     title: "Expert Nexus (Workshop)",
@@ -164,7 +164,7 @@ export const eventsData = [
     how: "Hands-on/lecture workshops + deliverables.",
     outcome: "Best project outputs or engagement recognised.",
     img: "/events/expertnexus.png",
-    venue: "SJA"
+    venue: "SJA - 18th Oct 2025"
   },
   {
     title: "Hackathon",
@@ -177,7 +177,7 @@ export const eventsData = [
     outcome: "Most innovative and functional prototype wins.",
     applyLink: "https://forms.gle/PtdXATbxaCLJ2nEv6",
     img: "/events/Hackathon.png",
-    venue: "CIDS"
+    venue: "CIDS - 17th Oct 2025"
   },
   {
     title: "CSR - Corporate Social Responsibility",
