@@ -18,8 +18,8 @@ export default function GallerySection() {
   ];
 
   return (
-    <section style={{ width: "100%"}}>
-      <div style={{ height: "450px", position: "relative" }}>
+    <section className="w-full">
+      <div className="h-64 sm:h-80 md:h-96 lg:h-[450px] relative">
         <CircularGallery bend={4} textColor="#ffffff" borderRadius={0.05} scrollEase={0.05} items={items} />
       </div>
     </section>

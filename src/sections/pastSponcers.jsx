@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import LogoLoop from './LogoLoop'
 
 const imageLogos = [
@@ -21,25 +21,47 @@ const imageLogos = [
 ]
 
 export default function PastSponcers() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
-    <section id="past-sponsors" className="relative text-white py-16">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
-        <div className="mb-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold" style={{ color: 'var(--incub8-sand)' }}>
+    <section id="past-sponsors" className="relative text-white py-12 sm:py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20">
+        <div className="mb-6 sm:mb-8 text-center">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-semibold mb-2" style={{
+          color: 'var(--incub8-sand)',
+          textShadow: '2px 2px 8px rgba(0,0,0,0.8)'}}>
             Past Sponsors
           </h2>
-          <p className="text-white/85 mt-2 max-w-2xl mx-auto">
+          <p className="text-white/85 mt-2 text-sm sm:text-base max-w-2xl mx-auto">
             Trusted by technology leaders. We will add the sponsor list here soon.
           </p>
         </div>
 
-        <div style={{ height: '140px', position: 'relative', overflow: 'hidden', background: 'linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0))', borderRadius: '16px' }}>
+        <div 
+          className="h-40 sm:h-48 md:h-56 lg:h-64 xl:h-72 2xl:h-80"
+          style={{ 
+            position: 'relative', 
+            overflow: 'hidden', 
+            background: 'linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0))', 
+            borderRadius: '16px' 
+          }}
+        >
           <LogoLoop
             logos={imageLogos}
-            speed={120}
+            speed={isMobile ? 60 : 80}
             direction="left"
-            logoHeight={80}
-            gap={40}
+            logoHeight={isMobile ? 72 : 90}
+            gap={isMobile ? 40 : 48}
             pauseOnHover
             scaleOnHover
             fadeOut

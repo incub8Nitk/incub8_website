@@ -30,17 +30,19 @@ export default function AboutAndEvents() {
       {/* <GallerySection /> */}
       
      
-      <section id="gallery" className="relative py-16">
-        <div >
-          <div className="mb-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-semibold" style={{ color: 'var(--incub8-sand)' }}>
+      <section id="gallery" className="relative py-12 sm:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20">
+          <div className="mb-6 sm:mb-8 text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-semibold mb-2" style={{
+          color: 'var(--incub8-sand)',
+          textShadow: '2px 2px 8px rgba(0,0,0,0.8)'}}>
               Gallery
             </h2>
-            <p className="text-white/85 mt-2 max-w-2xl mx-auto">
+            <p className="text-white/85 mt-2 text-sm sm:text-base max-w-2xl mx-auto">
               Explore our gallery showcasing moments from Incub8 events and experiences.
             </p>
           </div>
-          <div style={{ height: '90vh', minHeight: '601px' }}>
+          <div className="h-64 sm:h-80 md:h-96 lg:h-[500px] xl:h-[600px]">
             <GallerySection />
           </div>
         </div>

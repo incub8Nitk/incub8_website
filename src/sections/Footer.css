@@ -305,8 +305,8 @@
   }
   
   .social-link {
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
   }
   
   .wave {
@@ -316,6 +316,15 @@
   .ocean-waves {
     top: -80px;
     height: 80px;
+  }
+  
+  /* Better mobile alignment for social links */
+  .social-links-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
   }
 }
 
