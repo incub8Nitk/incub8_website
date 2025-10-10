@@ -7,6 +7,7 @@ import PastSponcers from './pastSponcers';
 import DomeGallery from '../components/DomeGallery';
 import Footer from './Footer';
 import GallerySection from './GallerySection';
+import Team from './team';
 
 
 export default function AboutAndEvents() {
@@ -25,6 +26,7 @@ export default function AboutAndEvents() {
       <EventsSection />
       <PastSpeakers />
       <PastSponcers />
+      
       {/* <GallerySection /> */}
       
      
@@ -43,7 +45,7 @@ export default function AboutAndEvents() {
           </div>
         </div>
       </section>
-      
+      <Team />
       {/* Footer Section */}
       <Footer />
     </div>
