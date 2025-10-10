@@ -2,19 +2,19 @@ import CircularGallery from "../components/CircularGallery";
 
 export default function GallerySection() {
   const items = [
-    { image: "/Gallery/DSC03049.JPG",  },
-    { image: "/Gallery/Incub8_Main.JPG" },
-    { image: "/Gallery/opening.JPG"},
-    { image: "/Gallery/speakers.JPG"},
-    { image: "/Gallery/audience.JPG" },
-    { image: "/Gallery/iplAuction.JPG" },
-    { image: "/Gallery/striver_1.JPG" },
-    { image: "/Gallery/striver_2.JPG" },
-    { image: "/Gallery/grover.JPG" },
-    { image: "/Gallery/grover_2.JPG" },
-    { image: "/Gallery/Nova_1.JPG" },
-    { image: "/Gallery/Nova_2.JPG" },
-    { image: "/Gallery/speakers.JPG" },
+    { image: "/Gallery/DSC03049.jpg",  },
+    { image: "/Gallery/Incub8_Main.jpg" },
+    { image: "/Gallery/opening.jpg"},
+    { image: "/Gallery/speakers.jpg"},
+    { image: "/Gallery/audience.jpg" },
+    { image: "/Gallery/iplAuction.jpg" },
+    { image: "/Gallery/striver_1.jpg" },
+    { image: "/Gallery/striver_2.jpg" },
+    { image: "/Gallery/grover.jpg" },
+    { image: "/Gallery/grover_2.jpg" },
+    { image: "/Gallery/Nova_1.jpg" },
+    { image: "/Gallery/Nova_2.jpg" },
+    { image: "/Gallery/speakers.jpg" },
   ];
 
   return (

@@ -200,7 +200,9 @@ class Media {
     img.crossOrigin = 'anonymous';
     img.src = this.image;
     img.onload = () => {
+      this.gl.pixelStorei(this.gl.UNPACK_FLIP_Y_WEBGL, true);
       texture.image = img;
+      texture.needsUpdate = true;
       this.program.uniforms.uImageSizes.value = [img.naturalWidth, img.naturalHeight];
     };
   }
