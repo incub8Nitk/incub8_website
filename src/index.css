@@ -32,19 +32,32 @@ body {
 /* Equal sizing for all event cards */
 .event-card {
   aspect-ratio: auto;
-  min-height: 360px;
-  height: 420px;           /* default for mobile/tablet */
-  padding: 1.25rem;        /* match card default */
+  min-height: 300px;
+  height: 360px;           /* default for mobile */
+  padding: 1rem;           /* reduced padding for mobile */
   border-radius: 20px;
 }
 
 /* Compact variant for landing page (title + description only) */
 .event-card-compact {
   aspect-ratio: auto;
-  min-height: 400px;
+  min-height: 320px;
   height: auto;
-  padding: 1.25rem;
+  padding: 1rem;
   border-radius: 20px;
+}
+
+/* Mobile responsive adjustments */
+@media (min-width: 640px) { /* sm */
+  .event-card { 
+    min-height: 360px; 
+    height: 400px;
+    padding: 1.25rem;
+  }
+  .event-card-compact { 
+    min-height: 400px; 
+    padding: 1.25rem;
+  }
 }
 
 /* Interactive hover utility for all-events cards */
@@ -58,11 +71,138 @@ body {
 }
 
 @media (min-width: 768px) { /* md */
-  .event-card { min-height: 480px; }
+  .event-card { 
+    min-height: 420px; 
+    height: 480px;
+  }
+  .event-card-compact { 
+    min-height: 450px; 
+  }
 }
 
 @media (min-width: 1024px) { /* lg */
-  .event-card { min-height: 520px; }
+  .event-card { 
+    min-height: 480px; 
+    height: 520px;
+  }
+  .event-card-compact { 
+    min-height: 500px; 
+  }
+}
+
+/* Prevent horizontal overflow */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Smooth scrolling for mobile */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mobile touch optimizations */
+@media (max-width: 768px) {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Improve touch targets */
+  .logoloop__link {
+    min-height: 44px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* ScrollReveal responsive text */
+.custom-scroll-reveal-text {
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+@media (max-width: 640px) {
+  .custom-scroll-reveal-text {
+    font-size: 1rem !important; /* text-base - increased from text-sm */
+    line-height: 1.6;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+  .custom-scroll-reveal-text {
+    font-size: 1.125rem !important; /* text-lg - increased from text-base */
+    line-height: 1.7;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .custom-scroll-reveal-text {
+    font-size: 1.25rem !important; /* text-xl - increased from text-lg */
+    line-height: 1.8;
+  }
+}
+
+@media (min-width: 1025px) {
+  .custom-scroll-reveal-text {
+    font-size: 1.5rem !important; /* text-2xl - increased from text-xl */
+    line-height: 1.9;
+  }
+}
+
+/* Mobile-first responsive utilities */
+@media (max-width: 640px) {
+  .text-responsive {
+    font-size: 0.875rem; /* text-sm */
+  }
+  
+  .container-responsive {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .grid-responsive {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .text-responsive {
+    font-size: 1rem; /* text-base */
+  }
+  
+  .container-responsive {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
+  .grid-responsive {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-responsive {
+    font-size: 1.125rem; /* text-lg */
+  }
+  
+  .container-responsive {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  .grid-responsive {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
 }
 
 @keyframes fadeUp {

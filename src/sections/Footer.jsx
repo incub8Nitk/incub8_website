@@ -75,32 +75,32 @@ export default function Footer() {
 
       {/* Main Footer Content */}
       <div className="relative z-[2] bg-slate-900/90 dark:bg-slate-950/95 backdrop-blur-md">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 py-12 sm:py-16">
             
             {/* Brand Section */}
-            <div className="space-y-6 text-center md:text-left">
+            <div className="space-y-4 sm:space-y-6 text-center md:text-left">
               <div className="flex items-center space-x-3 justify-center md:justify-start">
                 <div className="p-2 bg-blue-500/10 rounded-xl border border-blue-500/30 backdrop-blur-sm transition-all duration-300 ease-out hover:bg-blue-500/20 hover:border-blue-500/50 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/20">
                   <img 
                     src="/Incub8'25 logo dark bg 1.png" 
                     alt="Incub8 Logo" 
-                    className="h-12 w-auto"
+                    className="h-10 sm:h-12 w-auto"
                   />
                 </div>
               </div>
-              <p className="text-blue-200/80 text-sm leading-relaxed">
+              <p className="text-blue-200/80 text-xs sm:text-sm leading-relaxed px-2 sm:px-0">
                 Incub8 is the premier startup and entrepreneurship event that brings together 
                 innovators, investors, and industry leaders to shape the future of technology.
               </p>
-              <div className="flex flex-row justify-center items-center space-x-4">
+              <div className="flex flex-row justify-center items-center space-x-3 sm:space-x-4 social-links-container">
                 {socialLinks.map((social) => (
                   <a
                     key={social.name}
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center w-10 h-10 md:w-11 md:h-11 bg-blue-500/10 border border-blue-500/30 rounded-xl text-blue-300 transition-all duration-300 ease-out backdrop-blur-sm hover:bg-blue-500/20 hover:border-blue-500/60 hover:text-blue-100 hover:-translate-y-1 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/30"
+                    className="flex items-center justify-center w-12 h-12 sm:w-10 sm:h-10 md:w-11 md:h-11 bg-blue-500/10 border border-blue-500/30 rounded-xl text-blue-300 transition-all duration-300 ease-out backdrop-blur-sm hover:bg-blue-500/20 hover:border-blue-500/60 hover:text-blue-100 hover:-translate-y-1 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/30"
                     aria-label={`Follow us on ${social.name}`}
                   >
                     {social.icon}
@@ -110,8 +110,8 @@ export default function Footer() {
             </div>
 
             {/* Quick Links */}
-            <div className="space-y-6 text-center md:text-left">
-              <h3 className="text-xl font-semibold text-white">Quick Links</h3>
+            <div className="space-y-4 sm:space-y-6 text-center md:text-left">
+              <h3 className="text-lg sm:text-xl font-semibold text-white">Quick Links</h3>
               <ul className="space-y-3">
                 {quickLinks.map((link) => (
                   <li key={link.name}>
@@ -128,8 +128,8 @@ export default function Footer() {
             </div>
 
             {/* Contact Info */}
-            <div className="space-y-6 text-center md:text-left">
-              <h3 className="text-xl font-semibold text-white">Contact Us</h3>
+            <div className="space-y-4 sm:space-y-6 text-center md:text-left">
+              <h3 className="text-lg sm:text-xl font-semibold text-white">Contact Us</h3>
               <div className="space-y-4">
                 <div className="flex items-center gap-3 justify-center md:justify-start">
                   <svg className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -161,9 +161,9 @@ export default function Footer() {
           </div>
 
           {/* Bottom Bar */}
-          <div className="border-t border-blue-800/30 py-8">
+          <div className="border-t border-blue-800/30 py-6 sm:py-8">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-center md:text-left">
-              <div className="text-blue-200/60 text-sm">
+              <div className="text-blue-200/60 text-xs sm:text-sm px-4 sm:px-0">
                 © {currentYear} Incub8. All rights reserved. Built with passion for innovation.
               </div>
               <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-sm">
