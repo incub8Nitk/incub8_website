@@ -3,14 +3,28 @@ import { Linkedin, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const CoreTeamCarousel = () => {
   const teamMembers = [
-    { name: "Katapally SaiKiran", role: "CEO, SUMVN", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop", bio: "Visionary leader driving innovation", linkedin: "https://www.linkedin.com/in/saikiran" },
-    { name: "Vahini Devi", role: "Director VIBA", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop", bio: "Strategic thinker with passion", linkedin: "https://www.linkedin.com/in/vahinidevi" },
-    { name: "Salim Amirali Jiwani", role: "CEO, VIBA", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop", bio: "Expert in business development", linkedin: "https://www.linkedin.com/in/salimjiwani" },
-    { name: "Domalapally Vamshi", role: "Lead", image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop", bio: "Tech enthusiast & problem solver", linkedin: "https://www.linkedin.com/in/vamshi" },
-    { name: "Cheguri Rishwanth", role: "Lead", image: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=400&h=400&fit=crop", bio: "Creative mind behind solutions", linkedin: "https://www.linkedin.com/in/rishwanth" },
-    { name: "Bollu Shrekanth", role: "Team Member", image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop", bio: "Dedicated and result-oriented", linkedin: "https://www.linkedin.com/in/shrekanth" },
-    { name: "Leela Glory Gazal", role: "Team Member", image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop", bio: "Passionate about excellence", linkedin: "https://www.linkedin.com/in/leelaglory" },
-    { name: "Sriraj Dingiri", role: "Team Member", image: "https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?w=400&h=400&fit=crop", bio: "Innovative thinker & collaborator", linkedin: "https://www.linkedin.com/in/sriraj" },
+    { name: "Guru Kiran", role: "Chief Coordinator", image: "ublhohoh", bio: "A dedicated team member.", linkedin: "ublhohoh" },
+    { name: "Dhanush T", role: "Chief Coordinator", image: "", bio: "A dedicated team member.", linkedin: "https://www.linkedin.com/in/dhanush-t-a6b479206/" },
+    { name: "Vijay D", role: "Treasurer ", image: "/coreTeam/Danush.JPG", bio: "A dedicated team member.", linkedin: "https://www.linkedin.com/in/vijay-d-revenkar/" },
+    { name: "Manvith M", role: "Head of Speakers and Panel", image: "/coreTeam/Manvith.jpg", bio: "A dedicated team member.", linkedin: "https://www.linkedin.com/in/manvithm/" },
+    { name: "Sukanak Biradar", role: "Admin Head", image: "/coreTeam/Sukanak.jpg", bio: "A dedicated team member.", linkedin: "https://www.linkedin.com/in/sukanak-biradar-14b7b4258?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+    { name: "Mohak N", role: "Head of Operations", image: "/coreTeam/Mohak N.jpg", bio: "A dedicated team member.", linkedin: "http://www.linkedin.com/in/mohakn" }, 
+    { name: "Suyash Deshmukh", role: "Curation Lead", image: "https://drive.google.com/uc?export=view&id=1K5-p7JsxZk6gPQLuwlRe400Uq4o0YOGA", bio: "A dedicated team member.", linkedin: "http://www.linkedin.com/in/suyash-deshmukh14" },
+    { name: "Abhay Tai", role: "Co-Convenor", image: "/coreTeam/Abhay Tai.png", bio: "A dedicated team member.", linkedin: "http://www.linkedin.com/in/taipreneur" },
+    { name: "Prasanna R T", role: "Production Head", image: "/coreTeam/Prasanna.jpg", bio: "A dedicated team member.", linkedin: "https://www.linkedin.com/in/prasannartalawar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+    { name: "Dhanaraj Yaradoni", role: "Hospitality & Stall Incharge ", image: "/coreTeam/Dhanaraj Yaradoni.jpg", bio: "A dedicated team member.", linkedin: "https://www.linkedin.com/in/dhanaraj-yaradoni-b08b0a223?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+    { name: "Vishwanath matiwad", role: "Creative head", image: "https://via.placeholder.com/400", bio: "A dedicated team member.", linkedin: "" },
+    { name: "Vishwajit", role: "Marketing head", image: "https://via.placeholder.com/400", bio: "A dedicated team member.", linkedin: "" },
+    { name: "Bharath Kumar V N", role: "Curation Head", image: "/coreTeam/Bharath_Kumar.jpg", bio: "A dedicated team member.", linkedin: "https://www.linkedin.com/in/bharath-kumar-v-naik-873789257/" },
+    { name: "Mohan C", role: "Hospitality Head", image: "/coreTeam/IMG_1613.heic", bio: "A dedicated team member.", linkedin: "https://drive.google.com/file/d/1n_Dzttiop7Vn0z376OZU21G_zi5_dF2J/view?usp=drivesdk" },
+    { name: "Sachin", role: "Convenor", image: "https://via.placeholder.com/400", bio: "A dedicated team member.", linkedin: "" },
+    { name: "Tejas Chopade", role: "Media Head", image: "/coreTeam/tejas_chopade.jpg", bio: "A dedicated team member.", linkedin: "https://www.linkedin.com/in/tejas-chopade-89a0401ba/" },
+    { name: "Sahan", role: "Incub8 office", image: "https://via.placeholder.com/400", bio: "A dedicated team member.", linkedin: "" },
+    { name: "Pooja", role: "Hospitality Head", image: "https://via.placeholder.com/400", bio: "A dedicated team member.", linkedin: "" },
+    { name: "Shubhank Hiremath", role: "Web Team", image: "/coreTeam/Shubhank.jpg", bio: "A dedicated team member.", linkedin: "https://www.linkedin.com/in/shubhank-hiremath-0b255725b/" },
+    { name: "Abhijith Sogal", role: "Web Team", image: "/coreTeam/Abhijeeth.jpg", bio: "A dedicated team member.", linkedin: "https://www.linkedin.com/in/abhijith-sogal" },
+    
+    { name: "Mayank Tiwari", role: "Web Team", image: "https://via.placeholder.com/400", bio: "A dedicated team member.", linkedin: "https://linkedin.com/in/mayank-tiwari-0a0287324" },
   ];
 
   const [startIdx, setStartIdx] = useState(0);

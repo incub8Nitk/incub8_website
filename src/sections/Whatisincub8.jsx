@@ -10,8 +10,7 @@ export default function Whatisincub8() {
           textShadow: '2px 2px 8px rgba(0,0,0,0.8)'
         }}> */}
 
-         <h2 class="text-3xl sm:text-4xl md:text-5xl font-semibold mb-2" style={{
-          color: 'var(--incub8-sand)',
+         <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-2" style={{          color: 'var(--incub8-sand)',
           textShadow: '2px 2px 8px rgba(0,0,0,0.8)'}}>
           What is Incub8?
           </h2>
