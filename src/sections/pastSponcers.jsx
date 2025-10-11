@@ -27,16 +27,15 @@ export default function PastSponcers() {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
-    
     checkMobile();
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
   return (
-    <section id="past-sponsors" className="relative text-white py-12 sm:py-16">
+    <section id="past-sponsors" className="relative text-white py-6 sm:py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20">
-        <div className="mb-6 sm:mb-8 text-center">
+  <div className="mb-2 sm:mb-2 text-center">
           <h2 class="text-3xl sm:text-4xl md:text-5xl font-semibold mb-2" style={{
           color: 'var(--incub8-sand)',
           textShadow: '2px 2px 8px rgba(0,0,0,0.8)'}}>

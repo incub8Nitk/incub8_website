@@ -28,9 +28,9 @@ export default function Whatisincub8() {
             rotationEnd="bottom bottom"
             wordAnimationEnd="top 35%"
           >
-            {`Incub8, one of the flagship events of NITK, is an innovative platform designed as a laboratory for aspiring entrepreneurs. Participants will develop key venture-building skills, refine business ideas, and receive guidance from industry experts.
+            {`Incub8, one of the flagship events of NITK, is an innovative platform designed as a laboratory for aspiring entrepreneurs. Participants will develop key venture building skills, refine business ideas, and receive guidance from industry experts.
 
-Through hands-on activities and real-world simulations, Incub8 provides practical tools and mentorship to support entrepreneurial growth. The event fosters collaboration and equips individuals to turn their entrepreneurial ambitions into successful ventures.`}
+Through hands on activities and real world simulations, Incub8 provides practical tools and mentorship to support entrepreneurial growth. The event fosters collaboration and equips individuals to turn their entrepreneurial ambitions into successful ventures.`}
           </ScrollReveal>
         </div>
       </div>

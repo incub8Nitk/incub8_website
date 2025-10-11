@@ -249,7 +249,7 @@ class Media {
     }
 
     this.speed = scroll.current - scroll.last;
-    this.program.uniforms.uTime.value += 0.04;
+    this.program.uniforms.uTime.value += 0.01;
     this.program.uniforms.uSpeed.value = this.speed;
 
     const planeOffset = this.plane.scale.x / 2;
@@ -379,7 +379,8 @@ class App {
   onTouchMove(e) {
     if (!this.isDown) return;
     const x = e.touches ? e.touches[0].clientX : e.clientX;
-    const distance = (this.start - x) * (this.scrollSpeed * 0.025);
+    // Increase scroll sensitivity for better response
+    const distance = (this.start - x) * (this.scrollSpeed * 0.06);
     this.scroll.target = this.scroll.position + distance;
   }
   onTouchUp() {
@@ -388,7 +389,8 @@ class App {
   }
   onWheel(e) {
     const delta = e.deltaY || e.wheelDelta || e.detail;
-    this.scroll.target += (delta > 0 ? this.scrollSpeed : -this.scrollSpeed) * 0.2;
+    // Increase scroll sensitivity for mouse wheel
+    this.scroll.target += (delta > 0 ? this.scrollSpeed : -this.scrollSpeed) * 0.5;
     this.onCheckDebounce();
   }
   onCheck() {

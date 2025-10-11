@@ -29,9 +29,9 @@ export default function PastSpeakers() {
   return (
     <section id="past-speakers" className="relative text-white py-12 sm:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20">
-        <div className="mb-8 sm:mb-12 text-center">
+        <div className="mb-6 sm:mb-8 text-center">
           <h1 
-            className="font-bold mb-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
+            className="font-bold mb-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
             style={{ 
               color: 'var(--incub8-sand)',
               textShadow: '2px 2px 8px rgba(0,0,0,0.8)'
@@ -48,15 +48,16 @@ export default function PastSpeakers() {
           {speakersData.map((speaker, index) => (
             <SpotlightCard key={index} spotlightColor="rgba(17, 128, 132, 0.28)">
               <div 
-                className="fade-up flex flex-col items-center p-4 sm:p-6"
+                className="fade-up flex flex-col items-center p-3 sm:p-4"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
                 <div 
-                  className="w-58 h-58 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 xl:w-80 xl:h-80"
+                  className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-[28rem] xl:h-[28rem]"
                   style={{
                     borderRadius: '12px',
                     overflow: 'hidden',
-                    marginBottom: '16px'
+                    marginBottom: '10px',
+                    marginTop: '0px'
                   }}
                 >
                   <img
