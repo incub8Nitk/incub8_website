@@ -105,7 +105,7 @@ export default function PastSpeakers() {
                     </p>
                   </div>
                 ) : (
-                  <div className="absolute bottom-6 bg-black/50 rounded-full px-5 py-2 backdrop-blur-sm transition-all duration-500">
+                  <div className="absolute bottom-0 mb-[-10px] bg-black/50 rounded-full px-5 py-2 backdrop-blur-sm transition-all duration-500">
                     <span
                       className="text-base sm:text-lg font-semibold"
                       style={{ color: "var(--incub8-sand)" }}
