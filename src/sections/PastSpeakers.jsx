@@ -5,21 +5,21 @@ const speakersData = [
     name: "Ashneer Grover",
     title: "Co-founder & former Managing Director",
     company: "BharatPe",
-    image: "/ashneer.png",
+    image: "public/asneer-ezgif.com-webp-to-jpg-converter-removebg-preview.png",
     description: "Entrepreneur and former Shark Tank India judge",
   },
   {
     name: "Raj Vikramaditya",
     title: "Co-founder",
     company: "@Striver Co-founder takeUforward",
-    image: "/TUF.png",
+    image: "public/tuf-removebg-preview.png",
     description: "Tech entrepreneur and coding educator",
   },
   {
     name: "Iqlipse Nova",
     title: "Singer & Artist",
     company: "Independent Artist",
-    image: "/iqlip.png",
+    image: "public/unnamed-removebg-preview.png",
     description: "Popular singer and social media influencer",
   },
 ];
@@ -60,29 +60,30 @@ export default function PastSpeakers() {
                 key={index}
                 onClick={() => handleClick(index)}
                 className={`relative flex flex-col items-center justify-center cursor-pointer transition-all duration-500 ease-in-out 
-                  ${
-                    isActive
-                      ? "w-[24rem] h-[28rem] rounded-2xl bg-[rgba(17,128,132,0.15)] shadow-[0_0_50px_rgba(17,128,132,0.6)] scale-105"
-                      : "w-72 h-72 sm:w-80 sm:h-80 rounded-full bg-[rgba(17,128,132,0.15)] shadow-[0_0_40px_rgba(17,128,132,0.4)]"
+                  ${isActive
+                    ? "w-[24rem] h-[28rem] rounded-2xl bg-[rgba(17,128,132,0.15)] shadow-[0_0_50px_rgba(17,128,132,0.6)] scale-105"
+                    : "w-72 h-72 sm:w-80 sm:h-80 rounded-full bg-[rgba(17,128,132,0.15)] shadow-[0_0_40px_rgba(17,128,132,0.4)]"
                   }`}
               >
                 {/* Speaker Image */}
                 <div
-                  className={`transition-all duration-500 flex items-center justify-center ${
-                    isActive
+                  className={`transition-all duration-500 flex items-center justify-center ${isActive
                       ? "w-[24rem] h-[28rem] rounded-2xl overflow-hidden"
                       : "w-72 h-72 sm:w-80 sm:h-80 rounded-full overflow-hidden p-2"
-                  }`}
+                    }`}
                 >
                   <img
                     src={speaker.image}
                     alt={speaker.name}
-                    className={`transition-all duration-500 ${
-                      isActive
+                    className={`transition-all duration-500 ${isActive
                         ? "object-cover w-full h-full rounded-2xl brightness-75"
                         : "object-contain w-[90%] h-[90%] rounded-full"
-                    }`}
+                      } ${speaker.image.includes("tuf-removebg-preview.png")
+                        ? "scale-125" // zoom in tuf image
+                        : ""
+                      }`}
                   />
+
                 </div>
 
                 {/* Info Overlay */}

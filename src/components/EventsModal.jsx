@@ -166,7 +166,7 @@ export default function EventsModal({ isOpen, onClose }) {
                           e.currentTarget.style.background = 'color-mix(in oklab, var(--incub8-coral), transparent 80%)';
                         }}
                       >
-                        Registration
+                        Register
                       </button>
                     )}
                     {/* <div className="h-1 w-full mt-4" style={{ background: 'linear-gradient(90deg, var(--incub8-coral), var(--incub8-wood))', opacity: 0.9 }} /> */}
