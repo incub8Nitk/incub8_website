@@ -54,9 +54,9 @@ export default function LandingPage() {
     }
 
     .logo-fade-in {
-        opacity: 0; /* stay invisible initially */
-        animation: fadeInLogo 2s ease-in forwards; /* slow fade */
-        animation-delay: 7s; /* fade starts after 7 seconds */
+        opacity: 0;
+        animation: fadeInLogo 0.8s ease-in forwards;
+        animation-delay: 0.2s;
     }
 `}</style>
 
@@ -167,12 +167,12 @@ export default function LandingPage() {
 
             {/* Desktop Logo */}
             <div className="relative z-10 flex flex-col items-start mt-29 ml-20 h-full text-white hidden md:flex logo-fade-in">
-                <img src="Incub8'25 logo dark bg 1.png" alt="Incub8 Logo" />
+                <img src="Incub8'25 logo dark bg 1.png" alt="Incub8 Logo" loading="eager" fetchpriority="high" />
             </div>
 
             {/* Mobile Logo */}
             <div className="relative z-10 flex flex-col items-center justify-center h-full text-white md:hidden px-4 sm:px-8 logo-fade-in">
-                <img src="Incub8'25 logo dark bg 1.png" alt="Incub8 Logo" className="w-full max-w-sm h-auto" />
+                <img src="Incub8'25 logo dark bg 1.png" alt="Incub8 Logo" className="w-full max-w-sm h-auto" loading="eager" fetchpriority="high" />
             </div>
         </div>
     )

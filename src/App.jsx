@@ -1,15 +1,16 @@
-import React from 'react';
-import LandingPage from './sections/LandingPage';
-import AboutAndEvents from './sections/AboutAndEvents';
-import TransitionSection from './sections/TransitionSection';
+import React, { Suspense, lazy } from 'react';
+const LandingPage = lazy(() => import('./sections/LandingPage'));
+const AboutAndEvents = lazy(() => import('./sections/AboutAndEvents'));
+// const TransitionSection = lazy(() => import('./sections/TransitionSection'));
+import FullScreenLoader from './components/FullScreenLoader.jsx';
 
 function App() {
   return (
-    <>
+    <Suspense fallback={<FullScreenLoader />}>
       <LandingPage />
       {/* <TransitionSection /> */}
       <AboutAndEvents />
-    </>
+    </Suspense>
   );
 }
 

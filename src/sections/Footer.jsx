@@ -162,14 +162,9 @@ export default function Footer() {
 
           {/* Bottom Bar */}
           <div className="border-t border-blue-800/30 py-6 sm:py-8">
-            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-center md:text-left">
-              <div className="text-blue-200/60 text-xs sm:text-sm px-4 sm:px-0">
+            <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 text-center">
+              <div className="text-blue-200/60 text-xs sm:text-sm px-4 sm:px-0 text-center">
                 © {currentYear} Incub8. All rights reserved. Built with passion for innovation.
-              </div>
-              <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-sm">
-                <a href="#privacy" className="text-blue-300 text-sm transition-all duration-300 ease-out relative inline-block hover:text-blue-100 hover:translate-x-1 before:content-[''] before:absolute before:bottom-[-2px] before:left-0 before:w-0 before:h-0.5 before:bg-gradient-to-r before:from-blue-500 before:to-blue-300 before:transition-all before:duration-300 before:ease-out hover:before:w-full">Privacy Policy</a>
-                <a href="#terms" className="text-blue-300 text-sm transition-all duration-300 ease-out relative inline-block hover:text-blue-100 hover:translate-x-1 before:content-[''] before:absolute before:bottom-[-2px] before:left-0 before:w-0 before:h-0.5 before:bg-gradient-to-r before:from-blue-500 before:to-blue-300 before:transition-all before:duration-300 before:ease-out hover:before:w-full">Terms of Service</a>
-                <a href="#cookies" className="text-blue-300 text-sm transition-all duration-300 ease-out relative inline-block hover:text-blue-100 hover:translate-x-1 before:content-[''] before:absolute before:bottom-[-2px] before:left-0 before:w-0 before:h-0.5 before:bg-gradient-to-r before:from-blue-500 before:to-blue-300 before:transition-all before:duration-300 before:ease-out hover:before:w-full">Cookie Policy</a>
               </div>
             </div>
           </div>
