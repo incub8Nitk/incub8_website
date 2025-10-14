@@ -19,7 +19,7 @@ const speakersData = [
     name: "Iqlipse Nova",
     title: "Singer & Artist",
     company: "Independent Artist",
-    image: "public/unnamed-removebg-preview.png",
+    image: "public/novs.png",
     description: "Popular singer and social media influencer",
   },
 ];
