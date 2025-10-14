@@ -4,7 +4,7 @@ import { Linkedin, ChevronLeft, ChevronRight } from 'lucide-react';
 const CoreTeamCarousel = () => {
   const teamMembers = [
     { name: "Sachin", role: "Convenor", image: "https://via.placeholder.com/400", bio: "A dedicated team member.", linkedin: "" },
-    { name: "Dhanush T", role: "Chief Coordinator", image: "public/coreTeam/dhanush2.png", bio: "A dedicated team member.", linkedin: "https://www.linkedin.com/in/dhanush-t-a6b479206/" },
+    { name: "Dhanush T", role: "Chief Coordinator", image: "/coreTeam/dhanush2.png", bio: "A dedicated team member.", linkedin: "https://www.linkedin.com/in/dhanush-t-a6b479206/" },
     { name: "Prasanna R T", role: "Production Head", image: "/coreTeam/Prasanna.jpg", bio: "A dedicated team member.", linkedin: "https://www.linkedin.com/in/prasannartalawar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
     { name: "Guru Kiran", role: "Corporate Hospitality", image: "/coreTeam/guru.jpg", bio: "A dedicated team member.", linkedin: "ublhohoh" },
     { name: "Vijay D", role: "Treasurer ", image: "/coreTeam/Danush.JPG", bio: "A dedicated team member.", linkedin: "https://www.linkedin.com/in/vijay-d-revenkar/" },
