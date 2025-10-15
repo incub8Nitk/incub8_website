@@ -12,7 +12,7 @@ const speakersData = [
     name: "Raj Vikramaditya",
     title: "Co-founder",
     company: "@Striver Co-founder takeUforward",
-    image: "public/tuf-removebg-preview.png",
+    image: "public/strivertuf1.png",
     description: "Tech entrepreneur and coding educator",
   },
   {
