@@ -29,7 +29,7 @@ export default function Whatisincub8() {
           >
             {`Every startup begins with a spark, and Incub8 turns that spark into a voyage.
 
-Hosted by NITK Surathkal, Incub8 is a three day entrepreneurship summit that brings together founders, investors, creators, and changemakers who believe in building what’s next. It’s where campus innovation meets real-world ambition through talks, pitch battles, exhibitions, and partnerships that go beyond the event itself.
+Hosted by NITK Surathkal, Incub8 is a two day entrepreneurship summit that brings together founders, investors, creators, and changemakers who believe in building what’s next. It’s where campus innovation meets real world ambition through talks, pitch battles, exhibitions, and partnerships that go beyond the event itself.
 
 Rooted in NITK’s legacy of innovation since 1960, Incub8 is more than a summit. It’s a movement where ideas take shape, networks deepen, and visions set sail.`}
           </ScrollReveal>

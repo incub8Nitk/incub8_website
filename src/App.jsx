@@ -1,15 +1,17 @@
 import React, { Suspense, lazy } from 'react';
 import MerchPopup from './components/MerchPopup.jsx';
+import FullScreenLoader from './components/FullScreenLoader.jsx'; // Import the loader
+
+// These components will be loaded only after the main assets are ready
 const LandingPage = lazy(() => import('./sections/LandingPage'));
 const AboutAndEvents = lazy(() => import('./sections/AboutAndEvents'));
-// const TransitionSection = lazy(() => import('./sections/TransitionSection'));
-import FullScreenLoader from './components/FullScreenLoader.jsx';
 
 function App() {
   return (
-    <Suspense fallback={null}>
+    // Use your FullScreenLoader as the fallback for Suspense.
+    // This handles the brief moment while the lazy-loaded component code is fetched.
+    <Suspense fallback={<FullScreenLoader />}>
       <LandingPage />
-      {/* <TransitionSection /> */}
       <AboutAndEvents />
       <MerchPopup />
     </Suspense>
