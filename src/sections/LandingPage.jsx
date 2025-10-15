@@ -84,7 +84,8 @@ export default function LandingPage() {
                 <video
                     ref={mobileVideoRef}
                     onTimeUpdate={handleTimeUpdate}
-                    autoPlay loop muted playsInline preload="auto"
+                    // The 'loop' prop has been removed to play the video only once
+                    autoPlay muted playsInline preload="auto"
                     poster="/imageincubbgext.jpg"
                     className="absolute inset-0 w-full h-full object-cover"
                     src="landing-bg-mobile.mp4"
