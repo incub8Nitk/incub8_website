@@ -7,7 +7,7 @@ import FullScreenLoader from './components/FullScreenLoader.jsx';
 
 function App() {
   return (
-    <Suspense fallback={<FullScreenLoader />}>
+    <Suspense fallback={null}>
       <LandingPage />
       {/* <TransitionSection /> */}
       <AboutAndEvents />

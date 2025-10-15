@@ -43,6 +43,8 @@ export default function LandingPage() {
 
     return (
         <div className="relative w-full h-screen overflow-hidden">
+            {/* Conditional video preload to avoid loading both variants */}
+            <link rel="preload" as="video" href={isMobileView ? '/landing-bg-mobile.mp4' : '/landing-bg-pc.mp4'} />
             <style>{`
     @keyframes fadeInLogo {
         from {
@@ -61,14 +63,18 @@ export default function LandingPage() {
 `}</style>
 
 
-            {/* Video Background - Desktop */}
+{/* Video Background - Desktop */}
 {!isMobileView && (
     <video
         autoPlay
         loop
         muted
+        playsInline
+        preload="auto"
+        poster="/imageincubbgext.jpg"
         className="absolute inset-0 w-full h-full object-cover"
         src="landing-bg-pc.mp4"
+        onCanPlay={() => window.dispatchEvent(new Event('hero-ready'))}
     />
 )}
 
@@ -78,8 +84,12 @@ export default function LandingPage() {
         autoPlay
         loop
         muted
+        playsInline
+        preload="auto"
+        poster="/imageincubbgext.jpg"
         className="absolute inset-0 w-full h-full object-cover"
         src="landing-bg-mobile.mp4"
+        onCanPlay={() => window.dispatchEvent(new Event('hero-ready'))}
     />
 )}
             {/* Desktop Navigation */}
@@ -167,12 +177,12 @@ export default function LandingPage() {
 
             {/* Desktop Logo */}
             <div className="relative z-10 flex flex-col items-start mt-29 ml-20 h-full text-white hidden md:flex logo-fade-in">
-                <img src="Incub8'25 logo dark bg 1.png" alt="Incub8 Logo" loading="eager" fetchpriority="high" />
+                <img src="Incub8'25 logo dark bg 1.png" alt="Incub8 Logo" loading="eager" fetchPriority="high" onLoad={() => window.dispatchEvent(new Event('hero-logo-ready'))} />
             </div>
 
             {/* Mobile Logo */}
             <div className="relative z-10 flex flex-col items-center justify-center h-full text-white md:hidden px-4 sm:px-8 logo-fade-in">
-                <img src="Incub8'25 logo dark bg 1.png" alt="Incub8 Logo" className="w-full max-w-sm h-auto" loading="eager" fetchpriority="high" />
+                <img src="Incub8'25 logo dark bg 1.png" alt="Incub8 Logo" className="w-full max-w-sm h-auto" loading="eager" fetchPriority="high" onLoad={() => window.dispatchEvent(new Event('hero-logo-ready'))} />
             </div>
         </div>
     )
