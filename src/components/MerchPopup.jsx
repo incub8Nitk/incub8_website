@@ -1,5 +1,6 @@
 import React, { useState, useEffect, memo, useCallback } from "react";
 import { X, ShoppingCart } from "lucide-react";
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 // --- ANIMATION COMPONENTS ---
 
@@ -57,23 +58,6 @@ const SplitText = memo(({ text, startDelay = 0.4 }) => {
   );
 });
 
-// 3. NEW Sparkle Burst Component for the blast effect
-const SparkleBurst = () => (
-  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-    {Array.from({ length: 10 }).map((_, i) => (
-      <div
-        key={i}
-        className="sparkle"
-        style={{
-          animationDelay: `${i * 0.08}s`, // Staggered delay for each sparkle
-          // Random initial positions around the center for a burst effect
-          transform: `translate(${Math.random() * 50 - 25}%, ${Math.random() * 50 - 25}%)`
-        }}
-      />
-    ))}
-  </div>
-);
-
 
 // --- MAIN POPUP COMPONENT ---
 
@@ -84,7 +68,7 @@ const MerchPopup = () => {
   const [isChestOpened, setIsChestOpened] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const [showTshirt, setShowTshirt] = useState(false);
-  const [showSparkles, setShowSparkles] = useState(false); // Renamed from showBlast
+  const [showConfetti, setShowConfetti] = useState(false);
 
   const description = `The Official Incub8 Merch Is Here!\nWhere vision becomes a voyage and style meets spirit. Grab your merch before they're gone!`;
   const orderLink = `https://forms.gle/uki8iNHxioyPBVGcA`;
@@ -103,13 +87,12 @@ const MerchPopup = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Effect to hide the sparkle animation after it plays
   useEffect(() => {
-    if (showSparkles) {
-      const timer = setTimeout(() => setShowSparkles(false), 1200); // Increased duration
+    if (showConfetti) {
+      const timer = setTimeout(() => setShowConfetti(false), 2000);
       return () => clearTimeout(timer);
     }
-  }, [showSparkles]);
+  }, [showConfetti]);
 
   const togglePopup = () => {
     if (!isOpen) {
@@ -119,11 +102,9 @@ const MerchPopup = () => {
         setIsChestOpening(false);
         setIsChestOpened(true);
       }, 700);
-
       setTimeout(() => {
         setShowPopup(true);
       }, 900);
-
       setTimeout(() => {
         setShowTshirt(true);
       }, 1500);
@@ -136,44 +117,15 @@ const MerchPopup = () => {
   };
 
   const handleCountUpComplete = useCallback(() => {
-    setShowSparkles(true);
+    setShowConfetti(true);
   }, []);
 
   return (
     <>
       <style>{`
-        /* --- Text & Sparkle Animations --- */
+        /* --- Text Animations --- */
         @keyframes split-text-fade-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         .split-text-char { display: inline-block; opacity: 0; animation: split-text-fade-in 0.4s forwards cubic-bezier(0.2, 0.8, 0.2, 1); }
-        
-        @keyframes sparkle-fade-grow {
-          0% { transform: scale(0.2); opacity: 1; }
-          100% { transform: scale(1); opacity: 0; }
-        }
-        @keyframes sparkle-travel {
-          0% { transform: translate(0, 0) scale(0.2); opacity: 1; }
-          100% {
-            transform: translate(
-              calc(var(--rand-x, 0) * 10px), /* Use CSS variables for random offset */
-              calc(var(--rand-y, 0) * 10px)
-            ) scale(1);
-            opacity: 0;
-          }
-        }
-        .sparkle {
-          position: absolute;
-          width: 8px; /* Size of the sparkle */
-          height: 8px; /* Size of the sparkle */
-          background-color: #FFD700; /* Gold color */
-          border-radius: 50%;
-          filter: blur(1px); /* Soften the edges */
-          opacity: 0;
-          animation: sparkle-fade-grow 0.6s ease-out forwards, sparkle-travel 1.2s ease-out forwards;
-          /* Setting random CSS variables for sparkle-travel animation */
-          --rand-x: ${Math.random() * 2 - 1}; /* -1 to 1 */
-          --rand-y: ${Math.random() * 2 - 1}; /* -1 to 1 */
-        }
-
         .price-gradient { background-image: linear-gradient(to right, #fde047, #fbbf24, #f59e0b); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
         /* --- Other Animations & Styles --- */
@@ -203,7 +155,7 @@ const MerchPopup = () => {
           <div className="fixed inset-0 flex items-center justify-center z-50 p-4">
             <div className="animate-popup relative w-full max-w-sm max-h-[90vh] overflow-y-auto md:max-w-4xl md:h-auto md:max-h-[unset] rounded-2xl bg-gradient-to-br from-slate-900 via-[#10182B] to-black border border-gray-700/50">
               <div className="sticky top-0 z-10">
-                <button onClick={togglePopup} className="absolute top-4 right-4 p-2 rounded-full bg-gray-800/80 hover:bg-gray-700 text-gray-300 hover:text-red-400 transition-all duration-300 backdrop-blur-sm border border-gray-600/50 hover:border-red-500/50">
+                <button onClick={togglePopup} className="absolute top-4 right-4 p-2 rounded-full bg-gray-800/80 hover:bg-gray-700 text-gray-300 hover:text-red-400">
                   <X className="w-6 h-6" />
                 </button>
               </div>
@@ -217,11 +169,21 @@ const MerchPopup = () => {
                     <SplitText text={title} startDelay={0.4} />
                   </h2>
                   <div className="flex flex-col md:flex-row items-center justify-center md:justify-start gap-1 md:gap-4 text-gray-300 font-semibold text-sm md:text-base">
-                    <div className="relative">
-                      <p className="text-4xl md:text-5xl font-black price-gradient">
+                    <div className="relative flex items-center justify-center">
+                      <p className="relative z-10 text-4xl md:text-5xl font-black price-gradient">
                         ₹<CountUp end={299} onComplete={handleCountUpComplete} />
                       </p>
-                      {showSparkles && <SparkleBurst />} {/* Renamed from showBlast */}
+                      {showConfetti && (
+                        <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
+                          {/* UPDATED: Increased size */}
+                          <div className="w-[750px] h-[750px]">
+                            <DotLottieReact
+                              src="/Blast Confetti.json"
+                              autoplay
+                            />
+                          </div>
+                        </div>
+                      )}
                     </div>
                     <p className="text-sm md:mt-2">SIZES: S, M, L, XL</p>
                   </div>
