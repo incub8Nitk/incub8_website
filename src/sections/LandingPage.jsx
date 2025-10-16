@@ -14,11 +14,52 @@ export default function LandingPage() {
         const handleResize = () => {
             setIsMobileView(window.innerWidth < 768);
         };
-
         handleResize();
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
+
+    // This consolidated hook handles all video-based animations
+    useEffect(() => {
+        const video = mobileVideoRef.current;
+        if (!isMobileView || !video) return;
+
+        let logoTriggered = false;
+        let scrollTriggered = false;
+
+        const handleTimeUpdate = () => {
+            if (!video.duration) return; // Wait until video duration is available
+
+            // 1. UPDATED: Trigger the logo fade-in at 6.3 seconds (1 second earlier)
+            if (!logoTriggered && video.currentTime >= 6.3) {
+                setIsMobileLogoVisible(true);
+                logoTriggered = true; // Ensure this only runs once
+            }
+
+            // 2. Trigger the scroll 1 second before the video ends
+            if (!scrollTriggered && video.currentTime >= video.duration - 1) {
+                gsap.to(window, {
+                    duration: 1.5,
+                    scrollTo: { y: "#whatisincub8", offsetY: 70 },
+                    ease: "power2.inOut"
+                });
+                scrollTriggered = true; // Ensure this only runs once
+            }
+
+            // If both actions are done, remove the listener to save resources
+            if (logoTriggered && scrollTriggered) {
+                video.removeEventListener('timeupdate', handleTimeUpdate);
+            }
+        };
+
+        video.addEventListener('timeupdate', handleTimeUpdate);
+
+        return () => {
+            if (video) {
+                video.removeEventListener('timeupdate', handleTimeUpdate);
+            }
+        };
+    }, [isMobileView]); // This effect re-runs if the view changes
 
     const handleNavClick = (e) => {
         e.preventDefault();
@@ -35,15 +76,6 @@ export default function LandingPage() {
         setIsMenuOpen(!isMenuOpen);
     };
 
-    // This function checks the video's current time to trigger the logo fade-in
-    const handleTimeUpdate = () => {
-        if (mobileVideoRef.current && mobileVideoRef.current.currentTime >= 7.0) {
-            setIsMobileLogoVisible(true);
-            // Remove the event listener after it has fired once to save resources
-            mobileVideoRef.current.ontimeupdate = null; 
-        }
-    };
-
     const navItems = [
         { href: "#whatisincub8", label: "About" },
         { href: "#events-section", label: "Events" },
@@ -54,7 +86,7 @@ export default function LandingPage() {
 
     return (
         <div className="relative w-full h-screen overflow-hidden">
-            <link rel="preload" as="video" href={isMobileView ? '/landing-bg-mobile.mp4' : '/landing-bg-pc.mp4'} />
+            <link rel="preload" as="video" href={isMobileView ? '/encodedforiphone.mp4' : '/landing-bg-pc.mp4'} />
             <style>{`
                 @keyframes fadeInLogo {
                     from { opacity: 0; transform: translateY(10px); }
@@ -63,9 +95,8 @@ export default function LandingPage() {
                 .logo-fade-in {
                     animation: fadeInLogo 0.8s ease-out forwards;
                 }
-                /* NEW: Slower fade-in for mobile logo */
                 .logo-slow-fade-in {
-                    animation: fadeInLogo 1.5s ease-out forwards; /* Increased duration */
+                    animation: fadeInLogo 1.0s ease-out forwards;
                 }
             `}</style>
 
@@ -79,12 +110,10 @@ export default function LandingPage() {
                 />
             )}
 
-            {/* Video Background - Mobile (with event listener) */}
+            {/* Video Background - Mobile (no loop) */}
             {isMobileView && (
                 <video
                     ref={mobileVideoRef}
-                    onTimeUpdate={handleTimeUpdate}
-                    // The 'loop' prop has been removed to play the video only once
                     autoPlay muted playsInline preload="auto"
                     poster="/imageincubbgext.jpg"
                     className="absolute inset-0 w-full h-full object-cover"
@@ -106,11 +135,7 @@ export default function LandingPage() {
             </nav>
 
             {/* Mobile Hamburger Button */}
-            <button
-                onClick={toggleMenu}
-                className="absolute top-6 right-6 z-30 md:hidden p-3 rounded-lg bg-black/20 backdrop-blur-sm border border-white/20 text-white hover:bg-black/30 transition-all duration-300"
-                aria-label="Toggle navigation menu"
-            >
+            <button onClick={toggleMenu} className="absolute top-6 right-6 z-30 md:hidden p-3 rounded-lg bg-black/20 backdrop-blur-sm border border-white/20 text-white hover:bg-black/30" aria-label="Toggle navigation menu">
                 <div className="w-6 h-6 flex flex-col justify-center items-center">
                     <span className={`block w-5 h-0.5 bg-white transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-1' : '-translate-y-1'}`}></span>
                     <span className={`block w-5 h-0.5 bg-white transition-all duration-300 ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
@@ -128,22 +153,21 @@ export default function LandingPage() {
                         </div>
                         <nav className="space-y-6">
                             {navItems.map((item, index) => (
-                                <a key={index} href={item.href} onClick={handleNavClick} className="block text-white text-xl font-medium py-3 px-4 rounded-lg hover:bg-white/10 hover:text-blue-300 transition-all duration-300 border border-transparent hover:border-white/20">
+                                <a key={index} href={item.href} onClick={handleNavClick} className="block text-white text-xl font-medium py-3 px-4 rounded-lg hover:bg-white/10 hover:text-blue-300 transition-all duration-300">
                                     {item.label}
                                 </a>
                             ))}
                         </nav>
-                        {/* Social links can be added here if needed */}
                     </div>
                 </div>
             </div>
 
-            {/* Desktop Logo (fades in immediately) */}
+            {/* Desktop Logo */}
             <div className="relative z-10 flex-col items-start mt-29 ml-20 h-full text-white hidden md:flex logo-fade-in">
                 <img src="Incub8'25 logo dark bg 1.png" alt="Incub8 Logo" loading="eager" fetchPriority="high" />
             </div>
 
-            {/* Mobile Logo (fades in based on video time) */}
+            {/* Mobile Logo */}
             <div className={`relative z-10 flex flex-col items-center justify-center h-full text-white md:hidden px-4 sm:px-8 ${isMobileLogoVisible ? 'logo-slow-fade-in' : 'opacity-0'}`}>
                 <img src="Incub8'25 logo dark bg 1.png" alt="Incub8 Logo" className="w-full max-w-sm h-auto" loading="eager" fetchPriority="high" />
             </div>
