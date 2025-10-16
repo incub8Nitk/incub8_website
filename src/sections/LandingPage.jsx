@@ -115,9 +115,8 @@ export default function LandingPage() {
                 <video
                     ref={mobileVideoRef}
                     autoPlay muted playsInline preload="auto"
-                    poster="/imageincubbgext.jpg"
                     className="absolute inset-0 w-full h-full object-cover"
-                    src="landing-bg-mobile.mp4"
+                    src="/encodedforiphone.mp4"
                 />
             )}
             
