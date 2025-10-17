@@ -1,6 +1,6 @@
 # Multi-stage build for React application
 # Stage 1: Build the application
-FROM node:20-alpine AS builder
+FROM node:20 AS builder
 
 # Set working directory
 WORKDIR /app
@@ -27,11 +27,14 @@ COPY --from=builder /app/dist /usr/share/nginx/html
 # Copy custom nginx configuration
 COPY nginx.conf /etc/nginx/nginx.conf
 
+# Install curl for healthcheck
+RUN apk add --no-cache curl
+
 # Expose port 80
 EXPOSE 80
 
 # Simple healthcheck
-HEALTHCHECK --interval=30s --timeout=3s CMD wget -qO- http://localhost/ || exit 1
+HEALTHCHECK --interval=30s --timeout=3s CMD curl -fsS http://localhost/ || exit 1
 
 # Start nginx
 CMD ["nginx", "-g", "daemon off;"]

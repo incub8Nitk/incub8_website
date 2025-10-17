@@ -1,0 +1,4 @@
+services:
+  incub8-website:
+    ports:
+      - "8080:80"
