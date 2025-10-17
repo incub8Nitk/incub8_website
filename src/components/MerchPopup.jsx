@@ -76,7 +76,7 @@ const MerchPopup = () => {
 
   const closedChestImage = "/vaultclose.png";
   const openChestImage = "/vaultopen.png";
-  const merchTshirtImage = "/Incub8_merch.jpg";
+  const merchTshirtImage = "/incubmearch2.jpeg";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -193,7 +193,7 @@ const MerchPopup = () => {
                   <a href={orderLink} target="_blank" rel="noopener noreferrer" className="block pt-4">
                     <button className="btn-vintage-gold w-full py-2.5 text-base md:py-3 md:text-lg font-bold flex items-center justify-center gap-2">
                       <ShoppingCart className="w-5 h-5" />
-                      BUY NOW
+                      ORDER NOW
                     </button>
                   </a>
                 </div>

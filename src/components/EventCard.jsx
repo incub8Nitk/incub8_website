@@ -15,7 +15,7 @@ export default function EventCard({ event, compact = false }) {
     <ParticleCard
       className={`h-full flex flex-col p-3 rounded-[20px] border font-light overflow-hidden transition-all duration-300 ease-in-out card--border-glow`}
       glowColor="132, 0, 255"
-      enableTilt={false} // UPDATED: Changed from true to false to disable tilt
+      enableTilt={false}
       enableMagnetism={true}
       onMouseMove={handleMouseMove}
       style={{
@@ -24,7 +24,8 @@ export default function EventCard({ event, compact = false }) {
       }}
     >
       <div className="flex-1 flex flex-col text-center">
-        <h3 className="text-base sm:text-lg font-semibold mb-2" style={{ color: 'var(--incub8-sand)' }}>
+        {/* UPDATED: Increased font size for a more noticeable change */}
+        <h3 className="text-xl sm:text-2xl font-semibold mb-2" style={{ color: 'var(--incub8-sand)' }}>
           {event.title}
         </h3>
         
@@ -68,9 +69,11 @@ export default function EventCard({ event, compact = false }) {
         </div>
       </div>
 
-      <button
+      <a
+        href={event.applyLink}
+        target="_blank"
+        rel="noopener noreferrer"
         className="cursor-pointer w-full flex items-center justify-center gap-2 px-5 py-2 mt-3 rounded-full transition-colors text-xs sm:text-sm font-medium"
-        onClick={() => { if (event.applyLink) window.open(event.applyLink, '_blank'); }}
         style={{
           border: '.5px solid color-mix(in oklab, var(--incub8-coral), white 25%)',
           background: 'color-mix(in oklab, var(--incub8-coral), transparent 80%)',
@@ -81,7 +84,7 @@ export default function EventCard({ event, compact = false }) {
         onMouseLeave={(e) => (e.currentTarget.style.background = 'color-mix(in oklab, var(--incub8-coral), transparent 80%)')}
       >
         Register
-      </button>
+      </a>
     </ParticleCard>
   );
 }

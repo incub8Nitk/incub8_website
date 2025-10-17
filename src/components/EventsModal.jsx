@@ -40,12 +40,10 @@ export default function EventsModal({ isOpen, onClose }) {
             </button>
           </div>
           <div className="p-6 max-h-[calc(90vh-120px)] overflow-y-auto">
-            {/* 1. UPDATED: Switched from flex-wrap to a responsive grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {eventsData.map((event, idx) => (
                 <div key={idx} className="fade-up" style={{ animationDelay: `${idx * 50}ms` }}>
                   <ParticleCard
-                    // 2. UPDATED: Added h-full and flex layout to ensure cards stretch
                     className="h-full flex flex-col p-5 rounded-[20px] border font-light overflow-hidden transition-all duration-300 ease-in-out card--border-glow"
                     glowColor="132, 0, 255"
                     enableTilt={false}
@@ -57,10 +55,12 @@ export default function EventsModal({ isOpen, onClose }) {
                       backdropFilter: 'blur(10px)',
                     }}
                   >
-                    {/* 3. UPDATED: This inner div grows to push the button to the bottom */}
                     <div className="flex-1 flex flex-col text-center">
                       {event.img && (<div className="w-full flex justify-center mb-3"><img src={event.img} alt={event.title} className="rounded-xl object-cover w-20 h-20 bg-[#181c24] shadow-md" /></div>)}
-                      <h3 className="text-lg font-semibold mb-2" style={{ color: 'var(--incub8-sand)' }}>{event.title}</h3>
+                      
+                      {/* UPDATED: Increased font size */}
+                      <h3 className="text-2xl font-semibold mb-2" style={{ color: 'var(--incub8-sand)' }}>{event.title}</h3>
+                      
                       <p className="flex-1 text-white/95 mb-3 text-sm">{event.short}</p>
                       
                       {event.prizePool && (
