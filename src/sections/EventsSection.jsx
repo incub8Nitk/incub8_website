@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { eventsData } from '../constants/events';
-import { EventCard } from '../components/EventCard';
+import  EventCard  from '../components/EventCard';
 import EventsModal from '../components/EventsModal';
 
 export default function EventsSection() {
