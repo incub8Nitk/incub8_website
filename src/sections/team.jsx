@@ -14,7 +14,7 @@ const CoreTeamCarousel = () => {
     { name: "Suyash Deshmukh", role: "Curation Lead", image: "/coreTeam/image.png", bio: "A dedicated team member.", linkedin: "http://www.linkedin.com/in/suyash-deshmukh14" },
     { name: "Abhay Tai", role: "Co-Convenor", image: "/coreTeam/Abhay Tai.png", bio: "A dedicated team member.", linkedin: "http://www.linkedin.com/in/taipreneur" },
     { name: "Dhanaraj Yaradoni", role: "Hospitality & Stall Incharge ", image: "/coreTeam/Dhanaraj Yaradoni.jpg", bio: "A dedicated team member.", linkedin: "https://www.linkedin.com/in/dhanaraj-yaradoni-b08b0a223?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
-    { name: "Vishwanath matiwad", role: "Creative head", image: "https://via.placeholder.com/400", bio: "A dedicated team member.", linkedin: "" },
+    { name: "Vishwanath matiwad", role: "Creative head", image: "coreTeam/Vishwanath matiwad.jpg", bio: "A dedicated team member.", linkedin: "" },
     { name: "Vishwajit", role: "Marketing head", image: "/coreTeam/Gemini_Generated_Image_dnmrssdnmrssdnmr.png", bio: "A dedicated team member.", linkedin: "" },
     { name: "Bharath Kumar V N", role: "Curation Head", image: "/coreTeam/Bharath_Kumar.jpg", bio: "A dedicated team member.", linkedin: "https://www.linkedin.com/in/bharath-kumar-v-naik-873789257/" },
     { name: "Mohan C", role: "Hospitality Head", image: "/coreTeam/mohan.png", bio: "A dedicated team member.", linkedin: "https://drive.google.com/file/d/1n_Dzttiop7Vn0z376OZU21G_zi5_dF2J/view?usp=drivesdk" },
@@ -22,7 +22,7 @@ const CoreTeamCarousel = () => {
     { name: "Sahana", role: "Incub8 office", image: "/coreTeam/sahana.png", bio: "A dedicated team member.", linkedin: "" },
     { name: "Pooja", role: "Hospitality Head", image: "/coreTeam/pooja.png", bio: "A dedicated team member.", linkedin: "" },
     { name: "Shubhank Hiremath", role: "Web Team", image: "/coreTeam/Shubhank.jpg", bio: "A dedicated team member.", linkedin: "https://www.linkedin.com/in/shubhank-hiremath-0b255725b/" },
-    { name: "Abhijith Sogal", role: "Web Team", image: "/coreTeam/Abhijeeth.jpg", bio: "A dedicated team member.", linkedin: "https://www.linkedin.com/in/abhijith-sogal" },
+    { name: "Abhijith Sogal", role: "Web Team", image: "/coreTeam/Abhijith.jpg", bio: "A dedicated team member.", linkedin: "https://www.linkedin.com/in/abhijith-sogal" },
     { name: "Mayank Tiwari", role: "Web Team", image: "https://via.placeholder.com/400", bio: "A dedicated team member.", linkedin: "https://linkedin.com/in/mayank-tiwari-0a0287324" },
   ];
 
