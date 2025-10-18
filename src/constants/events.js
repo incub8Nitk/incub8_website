@@ -9,7 +9,7 @@ export const eventsData = [
     how: "Teams design and present business models or functional prototypes.",
     outcome: "Most innovative and feasible idea wins.",
     img: "/events/ideation.png",
-    applyLink: "https://unstop.com/p/aarambh-2025-nitk-surathkal-1575274?utm_medium=Share&utm_source=incuband8644&utm_campaign=Competitions",
+    applyLink: "https://unstop.com/o/TeqESwu?lb=sqNMBd3M&utm_medium=Share&utm_source=incuband8644&utm_campaign=Competitions",
     venue: "CIDS [10 AM - 10 AM] - 25th Oct - 26th Oct 2025",
     prizePool: "₹30,000"
   },
@@ -44,7 +44,7 @@ export const eventsData = [
     prizePool: "₹30,000"
   },
   {
-    title: "BidSanity",
+    title: "Mock IPL Auction",
     short:
       "A simulated IPL style auction where teams act as franchise owners.",
     details:
@@ -53,7 +53,7 @@ export const eventsData = [
     how: "Cricket quiz → Top teams qualify → Auction round.",
     outcome: "Best balanced team strategy wins.",
     img: "/events/mockiplauction.png",
-    applyLink: "https://unstop.com/o/uvIQUxF?lb=sqNMBd3M&utm_medium=Share&utm_source=incuband8644&utm_campaign=Quizzes",
+    applyLink: "https://unstop.com/o/mB9fzKk?lb=sqNMBd3M&utm_medium=Share&utm_source=incuband8644&utm_campaign=Competitions",
     venue: "Pavilion [9 AM - 5 PM] - 26th Oct 2025",
     prizePool: "₹25,000"
   },
