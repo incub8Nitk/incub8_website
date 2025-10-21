@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const speakersData = [
   {
     name: "Ajith Pai",
-    title: "CEO",
+    title: "COO",
     company: "Delhivery",
     image: "/ajithpai.png",
     description: "Leading one of India's largest logistics companies.",

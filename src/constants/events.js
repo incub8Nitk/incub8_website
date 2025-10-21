@@ -9,7 +9,7 @@ export const eventsData = [
     how: "Teams design and present business models or functional prototypes.",
     outcome: "Most innovative and feasible idea wins.",
     img: "/events/buildbillion.png",
-    applyLink: "https://unstop.com/o/TeqESwu?lb=sqNMBd3M&utm_medium=Share&utm_source=incuband8644&utm_campaign=Competitions",
+    applyLink: "https://unstop.com/o/ndFXuTr?lb=logged_out_user?utm_medium=Share&utm_source=logged_out_user&utm_campaign=Online_coding_challenge",
     venue: "CIDS [10 AM - 10 AM] - 25th Oct - 26th Oct 2025",
     prizePool: "₹1,00,000",
     flagship: true
@@ -154,7 +154,7 @@ export const eventsData = [
     how: "You’ll receive free premium JustPlaced login access. Submit your details, ensure your mic and camera are ON, and begin your interview.",
     outcome: "Get a complete interview performance analysis, understand your strengths and weaknesses, and refine your behavior.",
     img: "/events/justplaced.png", // <-- Remember to add this image to your /public/events/ folder
-    applyLink: "https://forms.gle/z7gvnPY8FH9pc3Sm6",
+    applyLink: "https://unstop.com/p/virtual-interview-national-institute-of-technology-surathkal-1577443",
     venue: "Online Event",
     prizePool: "₹5,000"
   },
