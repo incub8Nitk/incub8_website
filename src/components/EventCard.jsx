@@ -13,7 +13,8 @@ export default function EventCard({ event, compact = false }) {
 
   return (
     <ParticleCard
-      className={`h-full flex flex-col p-3 rounded-[20px] border font-light overflow-hidden transition-all duration-300 ease-in-out card--border-glow`}
+      // UPDATED: Conditionally add 'flagship-pulse' class
+      className={`h-full flex flex-col p-3 rounded-[20px] border font-light overflow-hidden transition-all duration-300 ease-in-out card--border-glow ${event.flagship ? 'flagship-pulse' : ''}`}
       glowColor="132, 0, 255"
       enableTilt={false}
       enableMagnetism={true}
@@ -23,8 +24,8 @@ export default function EventCard({ event, compact = false }) {
         background: 'linear-gradient(180deg, color-mix(in oklab, var(--incub8-deep), black 10%) 0%, rgba(10,31,54,0.7) 100%)'
       }}
     >
+      {/* UPDATED: Removed the pt-10 from here */}
       <div className="flex-1 flex flex-col text-center">
-        {/* UPDATED: Increased font size for a more noticeable change */}
         <h3 className="text-xl sm:text-2xl font-semibold mb-2" style={{ color: 'var(--incub8-sand)' }}>
           {event.title}
         </h3>
@@ -59,9 +60,7 @@ export default function EventCard({ event, compact = false }) {
             {event.venue && (
               <div className="flex items-center justify-center gap-1 sm:gap-2 mb-1">
                 <span style={{ display: 'inline-flex', alignItems: 'center' }}>
-                  <svg width="12" height="12" fill="none" viewBox="0 0 20 20" style={{ marginRight: '0.3em' }}>
-                    <path d="M10 2C6.686 2 4 4.686 4 8c0 4.418 5.09 9.36 5.307 9.57a1 1 0 0 0 1.386 0C10.91 17.36 16 12.418 16 8c0-3.314-2.686-6-6-6zm0 13.293C8.14 13.09 6 10.418 6 8a4 4 0 1 1 8 0c0 2.418-2.14 5.09-4 7.293zM10 5.5A2.5 2.5 0 1 0 10 10.5 2.5 2.5 0 0 0 10 5.5zm0 3A0.5 0.5 0 1 1 10 7.5a0.5 0.5 0 0 1 0 1z" fill="var(--incub8-sea)" />
-                  </svg>
+                  <svg width="12" height="12" fill="none" viewBox="0 0 20 20" style={{ marginRight: '0.3em' }}><path d="M10 2C6.686 2 4 4.686 4 8c0 4.418 5.09 9.36 5.307 9.57a1 1 0 0 0 1.386 0C10.91 17.36 16 12.418 16 8c0-3.314-2.686-6-6-6zm0 13.293C8.14 13.09 6 10.418 6 8a4 4 0 1 1 8 0c0 2.418-2.14 5.09-4 7.293zM10 5.5A2.5 2.5 0 1 0 10 10.5 2.5 2.5 0 0 0 10 5.5zm0 3A0.5 0.5 0 1 1 10 7.5a0.5 0.5 0 0 1 0 1z" fill="var(--incub8-sea)" /></svg>
                 </span>
                 <span className="text-xs text-white/80">{event.venue}</span>
               </div>

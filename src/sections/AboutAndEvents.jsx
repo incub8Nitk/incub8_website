@@ -2,13 +2,14 @@ import React from 'react';
 import Whatisincub8 from './Whatisincub8';
 import EventsSection from './EventsSection';
 import PastSpeakers from './PastSpeakers';
+import PresentSpeakers from './PresentSpeakers'; // 1. IMPORT the new component
 import bg from '/bg.jpg';
 import PastSponcers from './pastSponcers';
 import DomeGallery from '../components/DomeGallery';
 import Footer from './Footer';
 import GallerySection from './GallerySection';
 import Team from './team';
-import FacultySection from './FacultySection'; // 1. IMPORT the new component
+import FacultySection from './FacultySection';
 
 export default function AboutAndEvents() {
   return (
@@ -24,6 +25,10 @@ export default function AboutAndEvents() {
     }}>
       <Whatisincub8 />
       <EventsSection />
+      
+      {/* 2. PLACE the new component here */}
+      <PresentSpeakers /> 
+      
       <PastSpeakers />
       <PastSponcers />
 
@@ -47,7 +52,6 @@ export default function AboutAndEvents() {
         </div>
       </section>
 
-      {/* 2. ADD the new FacultySection here, above the Team section */}
       <FacultySection />
       
       <Team />

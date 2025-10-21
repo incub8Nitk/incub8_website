@@ -31,20 +31,16 @@ export default function EventsModal({ isOpen, onClose }) {
       <div className="relative w-full max-w-7xl mx-4 max-h-[90vh] overflow-hidden">
         <div className="bg-gradient-to-br from-slate-900/95 to-slate-800/95 backdrop-blur-md rounded-2xl border border-white/10 shadow-2xl">
           <div className="flex items-center justify-between p-6 border-b border-white/10">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold" style={{ color: 'var(--incub8-sand)' }}>All Events</h2>
-              <p className="text-white/80 mt-1">Discover our complete lineup of events</p>
-            </div>
-            <button onClick={onClose} className="p-2 rounded-full hover:bg-white/10 transition-colors text-white/70 hover:text-white">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
-            </button>
+            <div><h2 className="text-3xl md:text-4xl font-bold" style={{ color: 'var(--incub8-sand)' }}>All Events</h2><p className="text-white/80 mt-1">Discover our complete lineup of events</p></div>
+            <button onClick={onClose} className="p-2 rounded-full hover:bg-white/10 transition-colors text-white/70 hover:text-white"><svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg></button>
           </div>
           <div className="p-6 max-h-[calc(90vh-120px)] overflow-y-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {eventsData.map((event, idx) => (
                 <div key={idx} className="fade-up" style={{ animationDelay: `${idx * 50}ms` }}>
                   <ParticleCard
-                    className="h-full flex flex-col p-5 rounded-[20px] border font-light overflow-hidden transition-all duration-300 ease-in-out card--border-glow"
+                    // UPDATED: Conditionally add 'flagship-pulse' class
+                    className={`h-full flex flex-col p-5 rounded-[20px] border font-light overflow-hidden transition-all duration-300 ease-in-out card--border-glow ${event.flagship ? 'flagship-pulse' : ''}`}
                     glowColor="132, 0, 255"
                     enableTilt={false}
                     enableMagnetism={true}
@@ -55,22 +51,12 @@ export default function EventsModal({ isOpen, onClose }) {
                       backdropFilter: 'blur(10px)',
                     }}
                   >
+                    {/* UPDATED: Removed the pt-8 from here */}
                     <div className="flex-1 flex flex-col text-center">
                       {event.img && (<div className="w-full flex justify-center mb-3"><img src={event.img} alt={event.title} className="rounded-xl object-cover w-20 h-20 bg-[#181c24] shadow-md" /></div>)}
-                      
-                      {/* UPDATED: Increased font size */}
                       <h3 className="text-2xl font-semibold mb-2" style={{ color: 'var(--incub8-sand)' }}>{event.title}</h3>
-                      
                       <p className="flex-1 text-white/95 mb-3 text-sm">{event.short}</p>
-                      
-                      {event.prizePool && (
-                        <div className="flex items-baseline justify-center gap-2 my-2">
-                            <p className="font-bold text-lg" style={{ color: 'var(--incub8-sand)' }}>
-                                Prize Pool: {event.prizePool}
-                            </p>
-                        </div>
-                      )}
-
+                      {event.prizePool && (<div className="flex items-baseline justify-center gap-2 my-2"><p className="font-bold text-lg" style={{ color: 'var(--incub8-sand)' }}>Prize Pool: {event.prizePool}</p></div>)}
                       <div className="space-y-2 text-sm mt-2">
                         <div className="flex flex-col gap-1"><span className="text-xs font-medium" style={{ color: 'var(--incub8-sea)' }}>Why join?</span><span className="text-white/90 text-xs">{event.why}</span></div>
                         <div className="flex flex-col gap-1"><span className="text-xs font-medium" style={{ color: 'var(--incub8-sea)' }}>How it works:</span><span className="text-white/90 text-xs">{event.how}</span></div>

@@ -2,9 +2,13 @@ import React from 'react';
 
 const facultyMembers = [
   {
-    name: "Dr. Gangadharan K V",
-    designation: "Professor",
-    image: "/Faculties/Gangadharan_K_V.jpg"
+    name: "Dr. B Dastagiri Reddy",
+    designation: "Assistant Professor",
+    image: "/Faculties/dasthagiri.jpeg" 
+  },  {
+    name: "Dr. Suprabha K R",
+    designation: "Associate Professor",
+    image: "/Faculties/Suprabha_K_R.jpg"
   },
   {
     name: "Dr. Subray R. Hegde",
@@ -12,14 +16,9 @@ const facultyMembers = [
     image: "/Faculties/Subray_R_Hegde.webp"
   },
   {
-    name: "Dr. Suprabha K R",
-    designation: "Associate Professor",
-    image: "/Faculties/Suprabha_K_R.jpg"
-  },
-  {
-    name: "Dr. B Dastagiri Reddy",
-    designation: "Assistant Professor",
-    image: "/Faculties/dasthagiri.jpeg" 
+    name: "Dr. Gangadharan K V",
+    designation: "Professor",
+    image: "/Faculties/Gangadharan_K_V.jpg"
   }
 ];
 

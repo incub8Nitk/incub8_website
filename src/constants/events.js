@@ -1,5 +1,35 @@
 export const eventsData = [
   {
+    title: "Build for Billions",
+    short:
+      "24-hour software hackathon designed to bring together the brightest minds from across the country to innovate, collaborate, and shape the future of technology.",
+    details:
+      "A platform for participants to act as entrepreneurs, developing innovative business models or prototypes. Tracks include Business and Tech.",
+    why: "Encourages entrepreneurial thinking, creativity, and pitching skills.",
+    how: "Teams design and present business models or functional prototypes.",
+    outcome: "Most innovative and feasible idea wins.",
+    img: "/events/buildbillion.png",
+    applyLink: "https://unstop.com/o/TeqESwu?lb=sqNMBd3M&utm_medium=Share&utm_source=incuband8644&utm_campaign=Competitions",
+    venue: "CIDS [10 AM - 10 AM] - 25th Oct - 26th Oct 2025",
+    prizePool: "₹1,00,000",
+    flagship: true
+  },
+    {
+    title: "Mock IPL Auction",
+    short:
+      "A simulated IPL style auction where teams act as franchise owners.",
+    details:
+      "A simulated IPL style auction where teams act as franchise owners.",
+    why: "Combines cricket knowledge, budgeting, and strategy.",
+    how: "Cricket quiz → Top teams qualify → Auction round.",
+    outcome: "Best balanced team strategy wins.",
+    img: "/events/mockiplauction.png",
+    applyLink: "https://unstop.com/o/mB9fzKk?lb=sqNMBd3M&utm_medium=Share&utm_source=incuband8644&utm_campaign=Competitions",
+    venue: "Pavilion [9 AM - 5 PM] - 26th Oct 2025",
+    prizePool: "₹25,000",
+    flagship: true
+  },
+  {
     title: "AARAMBH",
     short:
       "Participants act as entrepreneurs, creating innovative business models or prototypes in Business or Tech tracks to address problem statements.",
@@ -11,8 +41,10 @@ export const eventsData = [
     img: "/events/ideation.png",
     applyLink: "https://unstop.com/o/TeqESwu?lb=sqNMBd3M&utm_medium=Share&utm_source=incuband8644&utm_campaign=Competitions",
     venue: "CIDS [10 AM - 10 AM] - 25th Oct - 26th Oct 2025",
-    prizePool: "₹30,000"
+    prizePool: "₹30,000",
+    flagship: true
   },
+
   {
     title: "Startup EXPO",
     short:
@@ -26,7 +58,8 @@ export const eventsData = [
     img: "/events/startupexpo.png",
     applyLink: "https://unstop.com/competitions/startup-expo-nitk-surathkal-1575619?lb=sqNMBd3M&utm_medium=Share&utm_source=incuband8644&utm_campaign=Competitions",
     venue: "LHC-D [10 AM - 3 PM] - 25th Oct 2025",
-    prizePool: "₹30,000"
+    prizePool: "₹30,000",
+    flagship: true
   },
  {
     title: "CaseLink",
@@ -41,22 +74,10 @@ export const eventsData = [
     img: "/events/casestudy.png",
     applyLink: "https://unstop.com/o/BlWxhQo?lb=sqNMBd3M&utm_medium=Share&utm_source=incuband8644&utm_campaign=Competitions",
     venue: "LHC-C [9 AM - 12 PM] - 26th Oct 2025",
-    prizePool: "₹30,000"
+    prizePool: "₹30,000",
+    flagship: true
   },
-  {
-    title: "Mock IPL Auction",
-    short:
-      "A simulated IPL style auction where teams act as franchise owners.",
-    details:
-      "A simulated IPL style auction where teams act as franchise owners.",
-    why: "Combines cricket knowledge, budgeting, and strategy.",
-    how: "Cricket quiz → Top teams qualify → Auction round.",
-    outcome: "Best balanced team strategy wins.",
-    img: "/events/mockiplauction.png",
-    applyLink: "https://unstop.com/o/mB9fzKk?lb=sqNMBd3M&utm_medium=Share&utm_source=incuband8644&utm_campaign=Competitions",
-    venue: "Pavilion [9 AM - 5 PM] - 26th Oct 2025",
-    prizePool: "₹25,000"
-  },
+
  {
     title: "Pitch Drunk",
     short: "Teams devise strategies to revive struggling startups, focusing on innovative solutions and sustainable growth.",
@@ -67,7 +88,8 @@ export const eventsData = [
     img: "/events/startup_revival.png",
     applyLink: "https://unstop.com/o/Km7eYuj?lb=sqNMBd3M&utm_medium=Share&utm_source=incuband8644&utm_campaign=Competitions",
     venue: "CIDS [1 PM - 4 PM] - 26th Oct 2025",
-    prizePool: "₹20,000" 
+    prizePool: "₹20,000" ,
+    flagship: true
   },
     {
     title: "Campus Innovation ",
@@ -113,9 +135,9 @@ export const eventsData = [
   {
     title: "Revit-athon",
     short:
-      "A 24 hour coding competition to build software/hardware solutions for a problem.",
+      "A 3 hour coding competition to build software/hardware solutions for a problem.",
     details:
-      "A 24 hour coding competition where teams solve a given problem through software or hardware solutions.",
+      "A 3 hour coding competition where teams solve a given problem through software or hardware solutions.",
     why: "Encourages innovation, teamwork, and technical excellence.",
     how: "Coding sprint → Prototype submission → Presentations.",
     outcome: "Most innovative and functional prototype wins.",
@@ -123,6 +145,18 @@ export const eventsData = [
     img: "/events/Hackathon.png",
     venue: "CIDS [9.30 AM - 12.30 PM] - 26th Oct 2025",
     prizePool: "₹10,000"
+  },
+  {
+    title: "JustPlaced Virtual Interview",
+    short: "Test your skills in a 15-minute virtual interview based on your domain.",
+    details: "Test your skills in a 15-minute virtual interview. Simply fill in your details, upload your resume, and start your mock interview.",
+    why: "Sharpen your interview skills and boost your confidence. Improve communication and body language through real-time practice.",
+    how: "You’ll receive free premium JustPlaced login access. Submit your details, ensure your mic and camera are ON, and begin your interview.",
+    outcome: "Get a complete interview performance analysis, understand your strengths and weaknesses, and refine your behavior.",
+    img: "/events/justplaced.png", // <-- Remember to add this image to your /public/events/ folder
+    applyLink: "https://forms.gle/z7gvnPY8FH9pc3Sm6",
+    venue: "Online Event",
+    prizePool: "₹5,000"
   },
  // <<< THIS COMMA WAS MISSING
   {
