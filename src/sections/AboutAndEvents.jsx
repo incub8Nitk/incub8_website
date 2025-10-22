@@ -1,8 +1,8 @@
 import React from 'react';
 import Whatisincub8 from './Whatisincub8';
 import EventsSection from './EventsSection';
-import PastSpeakers from './PastSpeakers';
-import PresentSpeakers from './PresentSpeakers'; // 1. IMPORT the new component
+// import PastSpeakers from './PastSpeakers'; // REMOVED
+import EventTimeline from './EventTimeline'; // 1. IMPORT the new component
 import bg from '/bg.jpg';
 import PastSponcers from './pastSponcers';
 import DomeGallery from '../components/DomeGallery';
@@ -10,6 +10,7 @@ import Footer from './Footer';
 import GallerySection from './GallerySection';
 import Team from './team';
 import FacultySection from './FacultySection';
+import PartnersSection from './PartnersSection'; // 1. IMPORTED PartnersSection
 
 export default function AboutAndEvents() {
   return (
@@ -26,14 +27,16 @@ export default function AboutAndEvents() {
       <Whatisincub8 />
       <EventsSection />
       
-      {/* 2. PLACE the new component here */}
-      <PresentSpeakers /> 
+      <EventTimeline /> 
       
-      <PastSpeakers />
+      {/* 2. PLACED PartnersSection here */}
+      <PartnersSection />
+
       <PastSponcers />
 
       <section id="gallery" className="relative py-6 sm:py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 mb-3 sm:mb-4">
+        {/* 3. FIXED Gallery heading visibility */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-20 mb-3 sm:mb-4">
           <div className="text-center mt-0">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-1" style={{
               color: 'var(--incub8-sand)',

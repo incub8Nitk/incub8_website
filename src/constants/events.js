@@ -1,36 +1,29 @@
 export const eventsData = [
   {
-    title: "Build for Billions",
-    short:
-      "24-hour software hackathon designed to bring together the brightest minds from across the country to innovate, collaborate, and shape the future of technology.",
-    details:
-      "A platform for participants to act as entrepreneurs, developing innovative business models or prototypes. Tracks include Business and Tech.",
-    why: "Encourages entrepreneurial thinking, creativity, and pitching skills.",
-    how: "Teams design and present business models or functional prototypes.",
-    outcome: "Most innovative and feasible idea wins.",
+    title: "Build for Billions", 
+    short: 
+      "Hackathon leveraging India Stack APIs (Aadhaar, UPI, etc.) to build solutions for India's next billion users.", 
+    details: 
+      "Join the Build for Billions Hackathon and use the power of India Stack's open APIs (like Aadhaar, UPI, DigiLocker, and Account Aggregator) to create impactful digital solutions. Address challenges in areas like financial inclusion, healthcare access, education, or citizen services, focusing on scalability and user experience for India's diverse population.", 
+    why: 
+      "Drive innovation using powerful national digital infrastructure, solve real-world problems for a massive user base, and showcase technical skills.", 
+    how: 
+      "Teams develop and present functional prototypes or solutions using India Stack APIs within the event duration.", 
+    outcome: 
+      "Most innovative, impactful, and well-executed solution using India Stack wins.", 
+    applyLink: 
+      "https://unstop.com/hackathons/build-for-billions-indiastackonline-hackathon-incub8-institution-of-engineering-and-technology-iet-1576758?lb=logged_out_user%3Futm_medium%3DShare", 
     img: "/events/buildbillion.png",
-    applyLink: "https://unstop.com/o/ndFXuTr?lb=logged_out_user?utm_medium=Share&utm_source=logged_out_user&utm_campaign=Online_coding_challenge",
-    venue: "CIDS [10 AM - 10 AM] - 25th Oct - 26th Oct 2025",
+    venue: "CIDS [9.30 AM - 12.30 PM] - 26th Oct 2025", 
+    mapLink: "https://www.google.com/maps/search/?api=1&query=CIDS%2C%20NITK%20Surathkal", // <-- ADDED
     prizePool: "₹1,00,000",
-    flagship: true
-  },
-    {
-    title: "Mock IPL Auction",
-    short:
-      "A simulated IPL style auction where teams act as franchise owners.",
-    details:
-      "A simulated IPL style auction where teams act as franchise owners.",
-    why: "Combines cricket knowledge, budgeting, and strategy.",
-    how: "Cricket quiz → Top teams qualify → Auction round.",
-    outcome: "Best balanced team strategy wins.",
-    img: "/events/mockiplauction.png",
-    applyLink: "https://unstop.com/o/mB9fzKk?lb=sqNMBd3M&utm_medium=Share&utm_source=incuband8644&utm_campaign=Competitions",
-    venue: "Pavilion [9 AM - 5 PM] - 26th Oct 2025",
-    prizePool: "₹25,000",
-    flagship: true
+    flagship: true,
+    contact: [
+      { name: "Atharv Vats", phone: "7906984090" }
+    ]
   },
   {
-    title: "AARAMBH",
+    title: "Aarambh",
     short:
       "Participants act as entrepreneurs, creating innovative business models or prototypes in Business or Tech tracks to address problem statements.",
     details:
@@ -41,10 +34,13 @@ export const eventsData = [
     img: "/events/ideation.png",
     applyLink: "https://unstop.com/o/TeqESwu?lb=sqNMBd3M&utm_medium=Share&utm_source=incuband8644&utm_campaign=Competitions",
     venue: "CIDS [10 AM - 10 AM] - 25th Oct - 26th Oct 2025",
+    mapLink: "https://www.google.com/maps/search/?api=1&query=CIDS%2C%20NITK%20Surathkal", // <-- ADDED
     prizePool: "₹30,000",
-    flagship: true
+    flagship: true,
+    contact: [
+      { name: "Ansh Malhotra", phone: "7483954676" }
+    ]
   },
-
   {
     title: "Startup EXPO",
     short:
@@ -58,8 +54,12 @@ export const eventsData = [
     img: "/events/startupexpo.png",
     applyLink: "https://unstop.com/competitions/startup-expo-nitk-surathkal-1575619?lb=sqNMBd3M&utm_medium=Share&utm_source=incuband8644&utm_campaign=Competitions",
     venue: "LHC-D [10 AM - 3 PM] - 25th Oct 2025",
+    mapLink: "https://www.google.com/maps/search/?api=1&query=Lecture%20Hall%20Complex%20D%2C%20NITK%20Surathkal", // <-- ADDED
     prizePool: "₹30,000",
-    flagship: true
+    flagship: true,
+    contact: [
+      { name: "Abhay Tai", phone: "8084630858" }
+    ]
   },
  {
     title: "CaseLink",
@@ -74,10 +74,34 @@ export const eventsData = [
     img: "/events/casestudy.png",
     applyLink: "https://unstop.com/o/BlWxhQo?lb=sqNMBd3M&utm_medium=Share&utm_source=incuband8644&utm_campaign=Competitions",
     venue: "LHC-C [9 AM - 12 PM] - 26th Oct 2025",
+    mapLink: "https://www.google.com/maps/search/?api=1&query=Lecture%20Hall%20Complex%20C%2C%20NITK%20Surathkal", // <-- ADDED
     prizePool: "₹30,000",
-    flagship: true
-  },
+    flagship: true,
+    contact: [
+      { name: "Shubhankar Ghosh", phone: "7204851706" }
 
+    ]
+  },
+  {
+    title: "The IPL Mock Auction",
+    short:
+      "A simulated IPL style auction where teams act as franchise owners.",
+    details:
+      "A simulated IPL style auction where teams act as franchise owners.",
+    why: "Combines cricket knowledge, budgeting, and strategy.",
+    how: "Cricket quiz → Top teams qualify → Auction round.",
+    outcome: "Best balanced team strategy wins.",
+    img: "/events/mockiplauction.png",
+    applyLink: "https://unstop.com/o/mB9fzKk?lb=sqNMBd3M&utm_medium=Share&utm_source=incuband8644&utm_campaign=Competitions",
+    venue: "Pavilion [9 AM - 5 PM] - 26th Oct 2025",
+    mapLink: "https://www.google.com/maps/search/?api=1&query=NITK%20Surathkal%20Pavilion", // <-- ADDED
+    prizePool: "₹25,000",
+    flagship: true,
+    contact: [
+       { name: "Pradyumna Bhat", phone: "7349373105" }
+
+    ]
+  },
  {
     title: "Pitch Drunk",
     short: "Teams devise strategies to revive struggling startups, focusing on innovative solutions and sustainable growth.",
@@ -88,8 +112,12 @@ export const eventsData = [
     img: "/events/startup_revival.png",
     applyLink: "https://unstop.com/o/Km7eYuj?lb=sqNMBd3M&utm_medium=Share&utm_source=incuband8644&utm_campaign=Competitions",
     venue: "CIDS [1 PM - 4 PM] - 26th Oct 2025",
-    prizePool: "₹20,000" ,
-    flagship: true
+    mapLink: "https://www.google.com/maps/search/?api=1&query=CIDS%2C%20NITK%20Surathkal", // <-- ADDED
+    prizePool: "₹20,000",
+    flagship: true,
+    contact: [
+      { name: "Suhas ", phone: "7019089332" }
+    ]
   },
     {
     title: "Campus Innovation ",
@@ -102,7 +130,13 @@ export const eventsData = [
     applyLink: "https://unstop.com/o/jn8zKto?lb=sqNMBd3M&utm_medium=Share&utm_source=incuband8644&utm_campaign=Competitions",
     img: "/events/campusinnovation.png",
     venue: "LHC-A [10 AM - 12 PM] - 26th Oct 2025",
-    prizePool: "₹20,000"
+    mapLink: "https://www.google.com/maps/search/?api=1&query=Lecture%20Hall%20Complex%20A%2C%20NITK%20Surathkal", // <-- ADDED
+    prizePool: "₹20,000",
+    flagship: true,
+    contact: [
+        { name: "Sarthak Sharma", phone: "9459911411" }
+
+    ]
   },
  {
     title: "Flight Craft",
@@ -116,7 +150,13 @@ export const eventsData = [
     img: "/events/flight_craft.png",
     applyLink: "https://unstop.com/o/F9OafB8?lb=sqNMBd3M&utm_medium=Share&utm_source=incuband8644&utm_campaign=Competitions",
     venue: "New Sports Complex [Morning] - 25th Oct 2025",
-    prizePool: "₹15,000"
+    mapLink: "https://www.google.com/maps/search/?api=1&query=NITK%20New%20Sports%20Complex", // <-- ADDED
+    prizePool: "₹15,000",
+    flagship: true,
+    contact: [
+        { name: "Bhimu D", phone: "6363760236" }
+
+    ]
   },
   {
     title: "Anunāda",
@@ -130,7 +170,13 @@ export const eventsData = [
     img: "/events/unnamed-removebg-preview (1).png",
     applyLink: "https://unstop.com/o/xMs7DSb?lb=sqNMBd3M&utm_medium=Share&utm_source=incuband8644&utm_campaign=Cultural",
     venue: "Pavillion [2 PM - 5 PM] - 25th Oct 2025 ",
-    prizePool: "₹10,000"
+    mapLink: "https://www.google.com/maps/search/?api=1&query=NITK%20Surathkal%20Pavilion", // <-- ADDED
+    prizePool: "₹10,000",
+    flagship: true,
+    contact: [
+       { name: "Swati Bhat", phone: "9480278499" }
+
+    ]
   },
   {
     title: "Revit-athon",
@@ -141,24 +187,34 @@ export const eventsData = [
     why: "Encourages innovation, teamwork, and technical excellence.",
     how: "Coding sprint → Prototype submission → Presentations.",
     outcome: "Most innovative and functional prototype wins.",
-    applyLink: "https://unstop.com/o/bJsegVR?lb=ig5GoGgN&utm_medium=Share&utm_source=pacenit57156&utm_campaign=Online_coding_challenge",
+    applyLink: "https.unstop.com/o/bJsegVR?lb=ig5GoGgN&utm_medium=Share&utm_source=pacenit57156&utm_campaign=Online_coding_challenge",
     img: "/events/Hackathon.png",
     venue: "CIDS [9.30 AM - 12.30 PM] - 26th Oct 2025",
-    prizePool: "₹10,000"
+    mapLink: "https://www.google.com/maps/search/?api=1&query=CIDS%2C%20NITK%20Surathkal", // <-- ADDED
+    prizePool: "₹10,000",
+    flagship: true,
+    contact: [
+       { name: "Subhodeep Dey", phone: "7483455317" }
+
+    ]
   },
-  {
+    {
     title: "JustPlaced Virtual Interview",
     short: "Test your skills in a 15-minute virtual interview based on your domain.",
     details: "Test your skills in a 15-minute virtual interview. Simply fill in your details, upload your resume, and start your mock interview.",
     why: "Sharpen your interview skills and boost your confidence. Improve communication and body language through real-time practice.",
     how: "You’ll receive free premium JustPlaced login access. Submit your details, ensure your mic and camera are ON, and begin your interview.",
     outcome: "Get a complete interview performance analysis, understand your strengths and weaknesses, and refine your behavior.",
-    img: "/events/justplaced.png", // <-- Remember to add this image to your /public/events/ folder
-    applyLink: "https://unstop.com/p/virtual-interview-national-institute-of-technology-surathkal-1577443",
+    img: "/events/justplaced.png",
+    applyLink: "https://forms.gle/z7gvnPY8FH9pc3Sm6",
     venue: "Online Event",
-    prizePool: "₹5,000"
+    // No mapLink for online events
+    prizePool: "Worth ₹5K + Goodies",
+    flagship: true,
+    contact: [
+       { name: "Abhay Tai", phone: "8084630858" }
+    ]
   },
- // <<< THIS COMMA WAS MISSING
   {
     title: "Pitch to VC ",
     short: "Teams present a startup idea to mock venture capitalists.",
@@ -171,19 +227,30 @@ export const eventsData = [
     img: "/events/pitchtovc.png",
     applyLink: "https://unstop.com/o/WdxPh1i?lb=sqNMBd3M&utm_medium=Share&utm_source=WhatsApp",
     venue: "Main Building [Morning] - 26th Oct 2025",
+    mapLink: "https://www.google.com/maps/search/?api=1&query=NITK%20Main%20Building", 
+    flagship: true,// <-- ADDED
+    contact: [
+       { name: "Abhay Tai", phone: "8084630858" }
+
+    ]
   },
   {
     title: "Find your Mentor - Speed Mentoring",
    short:
       "A high-energy networking event where students get direct, one-on-one time with industry mentors.",
-    // UPDATED: New, more engaging description
     details:
       "This isn't your typical networking session. 'Find Your Mentor' is a speed-dating style event where you get direct access to industry experts, founders, and investors. In a series of fast-paced, one-on-one rounds, you can get personalized advice on your career path, receive feedback on a startup idea, and build meaningful connections that last.",
     why: "One on one guidance and speed mentoring opportunities.",
     how: "Networking sessions + reflections submission.",
     outcome: "Strongest engaged participants recognised.",
     img: "/events/findmentors.png",
-    venue: "LHC-D [11 AM - 3 PM] - 25th Oct 2025"
+    venue: "LHC-D [11 AM - 3 PM] - 25th Oct 2025",
+    mapLink: "https://www.google.com/maps/search/?api=1&query=Lecture%20Hall%20Complex%20D%2C%20NITK%20Surathkal",
+    flagship: true, // <-- ADDED
+    contact: [
+      { name: "Abhay Tai", phone: "8084630858" }
+
+    ]
   },
   {
     title: "Panel Discussion - Voices of Experience",
@@ -193,7 +260,12 @@ export const eventsData = [
     how: "Panel discussion + audience Q&A.",
     outcome: "Most engaged participants recognised.",
     img: "/events/paneldiscussion.png",
-    venue: "SJA [5.30 PM - 6.30 PM] - 25th Oct 2025"
+    venue: "SJA [5.30 PM - 6.30 PM] - 25th Oct 2025",
+    mapLink: "https://www.google.com/maps/search/?api=1&query=SJA%2C%20NITK%20Surathkal",
+    flagship: true, // <-- ADDED
+    contact: [
+      { name: "Sachin", phone: "9876543210" }
+    ]
   },
   {
     title: "Expert Nexus (Workshop) - Learn from the Best",
@@ -205,7 +277,12 @@ export const eventsData = [
     how: "Hands on/lecture workshops + deliverables.",
     outcome: "Best project outputs or engagement recognised.",
     img: "/events/expertnexus.png",
-    venue: "SJA [3 PM - 5 PM] - 26th Oct 2025"
+    venue: "SJA [3 PM - 5 PM] - 26th Oct 2025",
+    mapLink: "https://www.google.com/maps/search/?api=1&query=SJA%2C%20NITK%20Surathkal",
+    flagship: true, // <-- ADDED
+    contact: [
+      { name: "Sachin", phone: "9876543210" }
+    ]
   },
   {
     title: "CSR - Corporate Social Responsibility",
@@ -217,7 +294,12 @@ export const eventsData = [
     how: "Teams propose and present CSR projects.",
     outcome: "Best impactful idea wins.",
     img: "/events/CSR__-removebg-preview.png",
-    venue: "CIDS [Morning] - 25th Oct 2025"
+    venue: "CIDS [Morning] - 25th Oct 2025",
+    mapLink: "https://www.google.com/maps/search/?api=1&query=CIDS%2C%20NITK%20Surathkal",
+    flagship: true, // <-- ADDED
+    contact: [
+       { name: "Monish", phone: "8123216007" }
+    ]
   },
   {
     title: "Etalk - Inspiring Talks by Industry Leaders",
@@ -229,5 +311,12 @@ export const eventsData = [
     how: "Talks + Q&A/panel discussions.",
     outcome: "Participants gain inspiration and recognition.",
     img: "/events/Etalk.png",
-    venue: "SJA" }
+    venue: "Main Auditorium",
+    mapLink: "https://www.google.com/maps/search/?api=1&query=NITK%20Main%20Auditorium",
+    flagship: true, // <-- ADDED
+    contact: [
+      { name: "Sachin", phone: "9876543210" }
+    ]
+  }
+
 ];

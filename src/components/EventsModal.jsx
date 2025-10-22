@@ -39,7 +39,6 @@ export default function EventsModal({ isOpen, onClose }) {
               {eventsData.map((event, idx) => (
                 <div key={idx} className="fade-up" style={{ animationDelay: `${idx * 50}ms` }}>
                   <ParticleCard
-                    // UPDATED: Conditionally add 'flagship-pulse' class
                     className={`h-full flex flex-col p-5 rounded-[20px] border font-light overflow-hidden transition-all duration-300 ease-in-out card--border-glow ${event.flagship ? 'flagship-pulse' : ''}`}
                     glowColor="132, 0, 255"
                     enableTilt={false}
@@ -51,21 +50,54 @@ export default function EventsModal({ isOpen, onClose }) {
                       backdropFilter: 'blur(10px)',
                     }}
                   >
-                    {/* UPDATED: Removed the pt-8 from here */}
                     <div className="flex-1 flex flex-col text-center">
                       {event.img && (<div className="w-full flex justify-center mb-3"><img src={event.img} alt={event.title} className="rounded-xl object-cover w-20 h-20 bg-[#181c24] shadow-md" /></div>)}
                       <h3 className="text-2xl font-semibold mb-2" style={{ color: 'var(--incub8-sand)' }}>{event.title}</h3>
                       <p className="flex-1 text-white/95 mb-3 text-sm">{event.short}</p>
-                      {event.prizePool && (<div className="flex items-baseline justify-center gap-2 my-2"><p className="font-bold text-lg" style={{ color: 'var(--incub8-sand)' }}>Prize Pool: {event.prizePool}</p></div>)}
+                      
+                      {event.prizePool && (
+                        <div className="flex items-baseline justify-center gap-2 my-2">
+                            <p className="font-bold text-lg" style={{ color: 'var(--incub8-sand)' }}>
+                                Prize Pool: {event.prizePool}
+                            </p>
+                        </div>
+                      )}
+
                       <div className="space-y-2 text-sm mt-2">
                         <div className="flex flex-col gap-1"><span className="text-xs font-medium" style={{ color: 'var(--incub8-sea)' }}>Why join?</span><span className="text-white/90 text-xs">{event.why}</span></div>
                         <div className="flex flex-col gap-1"><span className="text-xs font-medium" style={{ color: 'var(--incub8-sea)' }}>How it works:</span><span className="text-white/90 text-xs">{event.how}</span></div>
-                        <div className="flex flex-col gap-1"><span className="text-xs font-medium" style={{ color: 'var(--incub8-sea)' }}>Outcome:</span><span className="text-white/90 text-xs">{event.outcome}</span></div>
+                        
+                        {event.contact && (
+                          <div className="flex flex-col gap-1">
+                            <span className="text-xs font-medium" style={{ color: 'var(--incub8-sea)' }}>
+                              Point of Contact:
+                            </span>
+                            {event.contact.map((person, i) => (
+                              <span key={i} className="text-white/90 text-xs">{person.name}: {person.phone}</span>
+                            ))}
+                          </div>
+                        )}
                       </div>
-                      <div className="flex items-center justify-center gap-2 mt-3">
-                        <span className="inline-flex items-center"><svg width="16" height="16" fill="none" viewBox="0 0 20 20" className="mr-1.5"><path d="M10 2C6.686 2 4 4.686 4 8c0 4.418 5.09 9.36 5.307 9.57a1 1 0 0 0 1.386 0C10.91 17.36 16 12.418 16 8c0-3.314-2.686-6-6-6zm0 13.293C8.14 13.09 6 10.418 6 8a4 4 0 1 1 8 0c0 2.418-2.14 5.09-4 7.293zM10 5.5A2.5 2.5 0 1 0 10 10.5 2.5 2.5 0 0 0 10 5.5zm0 3A0.5 0.5 0 1 1 10 7.5a0.5 0.5 0 0 1 0 1z" fill="var(--incub8-sea)" /></svg></span>
-                        <span className="text-xs text-white/80">{event.venue}</span>
-                      </div>
+
+                      {/* UPDATED: Replaced <a> tag with explicit "Get Directions" link */}
+                      {event.venue && (
+                        <div className="flex items-center justify-center gap-2 mt-3">
+                          <span className="inline-flex items-center">
+                            <svg width="16" height="16" fill="none" viewBox="0 0 20 20" className="mr-1.5"><path d="M10 2C6.686 2 4 4.686 4 8c0 4.418 5.09 9.36 5.307 9.57a1 1 0 0 0 1.386 0C10.91 17.36 16 12.418 16 8c0-3.314-2.686-6-6-6zm0 13.293C8.14 13.09 6 10.418 6 8a4 4 0 1 1 8 0c0 2.418-2.14 5.09-4 7.293zM10 5.5A2.5 2.5 0 1 0 10 10.5 2.5 2.5 0 0 0 10 5.5zm0 3A0.5 0.5 0 1 1 10 7.5a0.5 0.5 0 0 1 0 1z" fill="var(--incub8-sea)" /></svg>
+                          </span>
+                          <span className="text-xs text-white/80">{event.venue}</span>
+                        </div>
+                      )}
+                      {event.mapLink && (
+                        <a
+                          href={event.mapLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm text-blue-300 hover:text-blue-100 hover:underline transition-colors font-semibold mt-1"
+                        >
+                          Get Directions 📍
+                        </a>
+                      )}
                     </div>
                     {event.applyLink && (
                       <a href={event.applyLink} target="_blank" rel="noopener noreferrer" className="cursor-pointer inline-flex items-center justify-center gap-2 px-4 py-2 mt-4 rounded-full transition-colors text-sm" style={{ border: '.5px solid color-mix(in oklab, var(--incub8-coral), white 25%)', background: 'color-mix(in oklab, var(--incub8-coral), transparent 80%)', color: 'white' }} onMouseEnter={e => e.currentTarget.style.background = 'color-mix(in oklab, var(--incub8-coral), transparent 65%)'} onMouseLeave={e => e.currentTarget.style.background = 'color-mix(in oklab, var(--incub8-coral), transparent 80%)'}>

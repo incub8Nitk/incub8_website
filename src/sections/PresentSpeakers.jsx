@@ -2,6 +2,13 @@ import React, { useState } from "react";
 
 const speakersData = [
   {
+    name: "BVR Mohan Reddy",
+    title: "Former chairperson",
+    company: "NASSCOM",
+    image: "/mohanreddy.png",
+    description: "A stalwart in the Indian IT industry with decades of leadership experience.",
+  },
+  {
     name: "Ajith Pai",
     title: "COO",
     company: "Delhivery",
@@ -31,6 +38,24 @@ const speakersData = [
   },
 ];
 
+// Helper function to apply special grid classes for desktop
+const getGridClasses = (index) => {
+  switch (index) {
+    case 0:
+      return 'lg:col-span-2 lg:col-start-1'; // Speaker 1
+    case 1:
+      return 'lg:col-span-2 lg:col-start-3'; // Speaker 2
+    case 2:
+      return 'lg:col-span-2 lg:col-start-5'; // Speaker 3
+    case 3:
+      return 'lg:col-span-2 lg:col-start-2'; // Speaker 4
+    case 4:
+      return 'lg:col-span-2 lg:col-start-4'; // Speaker 5
+    default:
+      return 'lg:col-span-2';
+  }
+};
+
 export default function PresentSpeakers() {
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -40,8 +65,8 @@ export default function PresentSpeakers() {
 
   return (
     <section id="present-speakers" className="relative text-white py-16 sm:py-20">
-      {/* Container with padding */}
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* UPDATED: Changed to max-w-6xl for a better 3-2 grid fit */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-12 text-center">
           <h1
@@ -58,19 +83,21 @@ export default function PresentSpeakers() {
           </p>
         </div>
 
-        {/* UPDATED: Grid Layout for Speakers */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-12 md:gap-16 justify-items-center">
+        {/* UPDATED: New grid layout for 5 speakers (1 mobile, 2 tablet, 3-2 desktop) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8 sm:gap-12 justify-items-center">
           {speakersData.map((speaker, index) => {
             const isActive = activeIndex === index;
+            const gridClasses = getGridClasses(index); // Get desktop grid classes
+
             return (
               <div
                 key={index}
                 onClick={() => handleClick(index)}
-                // Adjusted width/height slightly for better balance in 2x2 grid
-                className={`relative flex flex-col items-center justify-center cursor-pointer transition-all duration-500 ease-in-out 
+                // Apply grid classes and adjust card sizing
+                className={`${gridClasses} relative w-full flex flex-col items-center justify-center cursor-pointer transition-all duration-500 ease-in-out 
                   ${isActive
-                    ? "w-full max-w-[24rem] h-[28rem] rounded-2xl bg-[rgba(17,128,132,0.15)] shadow-[0_0_50px_rgba(17,128,132,0.6)] scale-105"
-                    : "w-64 h-64 sm:w-72 sm:h-72 rounded-full bg-[rgba(17,128,132,0.15)] shadow-[0_0_40px_rgba(17,128,132,0.4)]" 
+                    ? "max-w-[24rem] h-[28rem] rounded-2xl bg-[rgba(17,128,132,0.15)] shadow-[0_0_50px_rgba(17,128,132,0.6)] scale-105 z-10"
+                    : "w-64 h-64 sm:w-72 sm:h-72 rounded-full bg-[rgba(17,128,132,0.15)] shadow-[0_0_40px_rgba(17,128,132,0.4)] z-0" 
                   }`}
               >
                 <div
