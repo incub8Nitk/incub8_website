@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import MerchPopup from './components/MerchPopup.jsx';
 import FullScreenLoader from './components/FullScreenLoader.jsx'; // Import the loader
+import BackToTop from './components/BackToTop.jsx'; // Import the BackToTop component
 
 // These components will be loaded only after the main assets are ready
 const LandingPage = lazy(() => import('./sections/LandingPage'));
@@ -14,6 +15,7 @@ function App() {
       <LandingPage />
       <AboutAndEvents />
       <MerchPopup />
+      <BackToTop />
     </Suspense>
   );
 }
