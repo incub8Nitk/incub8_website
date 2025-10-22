@@ -85,6 +85,14 @@ export default function LandingPage() {
         setIsMenuOpen(false);
     };
 
+    const scrollToContent = () => {
+        gsap.to(window, {
+            duration: 0.8,
+            scrollTo: { y: "#whatisincub8", offsetY: 70 },
+            ease: "power2.inOut"
+        });
+    };
+
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
@@ -110,6 +118,23 @@ export default function LandingPage() {
                 }
                 .logo-slow-fade-in {
                     animation: fadeInLogo 1.0s ease-out forwards;
+                }
+                @keyframes bounce {
+                    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+                    40% { transform: translateY(-10px); }
+                    60% { transform: translateY(-5px); }
+                }
+                .scroll-indicator {
+                    animation: bounce 2s infinite;
+                }
+                @keyframes fadeIn {
+                    from { opacity: 0; }
+                    to { opacity: 1; }
+                }
+                .fade-in {
+                    animation: fadeIn 1s ease-out forwards;
+                    animation-delay: 1s;
+                    opacity: 0;
                 }
             `}</style>
 
@@ -168,6 +193,30 @@ export default function LandingPage() {
             </div>
             <div className={`relative z-10 flex flex-col items-center justify-center h-full text-white md:hidden px-4 sm:px-8 ${isMobileLogoVisible ? 'logo-slow-fade-in' : 'opacity-0'}`}>
                 <img src="Incub8'25 logo dark bg 1.png" alt="Incub8 Logo" className="w-full max-w-sm h-auto" loading="eager" fetchPriority="high" />
+            </div>
+
+            {/* Scroll Down Indicator */}
+            <div 
+                className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 cursor-pointer fade-in"
+                onClick={scrollToContent}
+            >
+                <div className="flex flex-col items-center">
+                    <span className="text-white text-sm mb-2">Scroll Down</span>
+                    <svg 
+                        className="w-6 h-6 text-white scroll-indicator" 
+                        fill="none" 
+                        stroke="currentColor" 
+                        viewBox="0 0 24 24" 
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path 
+                            strokeLinecap="round" 
+                            strokeLinejoin="round" 
+                            strokeWidth={2} 
+                            d="M19 14l-7 7m0 0l-7-7m7 7V3" 
+                        />
+                    </svg>
+                </div>
             </div>
         </div>
     );
