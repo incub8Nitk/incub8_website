@@ -21,6 +21,8 @@ const CoreTeamCarousel = () => {
     { name: "Tejas Chopade", role: "Media Head", image: "/coreTeam/tejas_chopade.jpg", bio: "A dedicated team member.", linkedin: "https://www.linkedin.com/in/tejas-chopade-89a0401ba/" },
     { name: "Sahana", role: "Incub8 office", image: "/coreTeam/sahana.png", bio: "A dedicated team member.", linkedin: "" },
     { name: "Pooja", role: "Hospitality Head", image: "/coreTeam/pooja.png", bio: "A dedicated team member.", linkedin: "" },
+    { name: "Prajwal Ambekar", role: "General Secretary", image: "/coreTeam/Prajwal.jpg", bio: "A dedicated team member.", linkedin: "https://www.linkedin.com/in/prajwal-ambekar-21b955286/" },
+    { name: "Pratham", role: " Joint secretary", image: "/coreTeam/Pratham.jpg", bio: "A dedicated team member.", linkedin: "https://www.linkedin.com/in/pratham-aditya-mohan-76193132b/" },
     { name: "Shubhank Hiremath", role: "Web Team", image: "/coreTeam/Shubhank.jpg", bio: "A dedicated team member.", linkedin: "https://www.linkedin.com/in/shubhank-hiremath-0b255725b/" },
     { name: "Abhijith Sogal", role: "Web Team", image: "/coreTeam/Abhijith.jpg", bio: "A dedicated team member.", linkedin: "https://www.linkedin.com/in/abhijith-sogal" },
     { name: "Mayank Tiwari", role: "Web Team", image: "https://via.placeholder.com/400", bio: "A dedicated team member.", linkedin: "https://linkedin.com/in/mayank-tiwari-0a0287324" },
